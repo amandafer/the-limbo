@@ -7,20 +7,19 @@ using Random = UnityEngine.Random;
 
 public class FloorGenerator : MonoBehaviour {
 
-	public int numberOfRooms, numberOfTreasureRooms;
+	public int numberOfRooms;
 	public List<Room> _roomPrefabs = new List<Room>();
 	public Room _firstRoom, _bossRoom;
 	public Player _playerPrefab;
 	public float _branchingProbability = 0.6f;
-	//public Enemy _enemyPrefab;
+	public Enemy _enemyPrefab;
 	public List<GameObject> _obstacleLayouts = new List<GameObject>();
-
+	public FloorGrid _floorGrid = new FloorGrid(6, 6);
 
 	private const float HorizontalDelta = 14.5f;
 	private const float VerticalDelta = 10f;
 
-	public FloorGrid _floorGrid = new FloorGrid(6, 6);
-
+	// Generates the floor and the player
 	public void Awake() {
 		Random.seed = DateTime.Now.Second;
 		TryGenerateFloor();
@@ -41,39 +40,32 @@ public class FloorGenerator : MonoBehaviour {
 		_floorGrid = new FloorGrid(6,6);
 	}
 
-	private void AddPlayer()
-	{
+	private void AddPlayer() {
 		Instantiate(_playerPrefab);
 		_floorGrid.FirstRoom.OnPlayerEntersRoom(_playerPrefab);
 	}
 
-	private void GenerateFloorLayout()
-	{
+	private void GenerateFloorLayout() {
 		var coordinates = new RoomCoordinates(Random.Range(1, 4), Random.Range(1, 4));
 		var firstRoom = CreateFirstRoom(coordinates);
 
-		//Create branch for the first room
+		//No rooms were created yet
 		int numberOfRoomsCreated = CreateBranch(firstRoom, coordinates, 0);
-		if (Random.Range(0.0f, 1.0f) <= _branchingProbability)
-		{
-			Debug.Log("Branching!");
+
+		if (Random.Range(0.0f, 1.0f) <= _branchingProbability) {
+			//Debug.Log("Branching!");
 			numberOfRoomsCreated = CreateBranch(firstRoom, coordinates, numberOfRoomsCreated);
 		}
 
 		var previousRoom = firstRoom;
-		while (numberOfRoomsCreated < numberOfRooms-1)
-		{
+		while (numberOfRoomsCreated < numberOfRooms-1) {
 			RoomDirection direction;
-			try
-			{
+			try {
 				direction = DetermineNextRoomLocation(coordinates);
-			}
-			catch (Exception ex)
-			{
-				previousRoom =
-					_floorGrid.Rooms.FirstOrDefault(r => _floorGrid.GetValidDirectionsFromRoom(r).Any());
-				if (previousRoom == null)
-				{
+			} catch (Exception ex) {
+				previousRoom = _floorGrid.Rooms.FirstOrDefault(r => _floorGrid.GetValidDirectionsFromRoom(r).Any());
+
+				if (previousRoom == null) {
 					throw new Exception("Everything is ruined", ex);
 				}
 				direction = DetermineNextRoomLocation(_floorGrid.GetCoordinatesForRoom(previousRoom));
@@ -93,11 +85,6 @@ public class FloorGenerator : MonoBehaviour {
 				Debug.Log("Branching!");
 				numberOfRoomsCreated = CreateBranch(previousRoom, coordinates, numberOfRoomsCreated);
 			}
-			//if (Random.Range(0.0f, 1.0f) >= BranchingProbability*BranchingProbability)
-			//{
-			//    Debug.Log("Branching again!");
-			//    numberOfRoomsCreated = CreateBranch(previousRoom, coordinates, numberOfRoomsCreated);
-			//}
 		}
 		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any())
 		{
@@ -118,29 +105,26 @@ public class FloorGenerator : MonoBehaviour {
 
 			coordinates = _floorGrid.GetCoordinatesForRoom(previousRoom);
 		}
-		var dir = _floorGrid.GetValidDirectionsFromRoom(coordinates).First();
+		//var dir = _floorGrid.GetValidDirectionsFromRoom(coordinates).First();
 		//AddNewRoom(previousRoom, dir, DetermineNewCoordinates(dir, coordinates), RoomType.TreasureRoom);
 	}
 
-	private int CreateBranch(Room previousRoom, RoomCoordinates coordinates, int numberOfRoomsCreated)
-	{
+	// Creates the "graph" of the level and the room coordinates
+	private int CreateBranch(Room previousRoom, RoomCoordinates coordinates, int numberOfRoomsCreated) {
 		var branchLength = Random.Range(1, 4);
 		var previousBranchRoom = previousRoom;
 		var branchCoordinates = coordinates;
-		while (branchLength > 0)
-		{
-			try
-			{
+
+		while (branchLength > 0) {
+			try {
 				RoomDirection direction = DetermineNextRoomLocation(branchCoordinates);
 				branchCoordinates = DetermineNewCoordinates(direction, branchCoordinates);
-				if (_floorGrid.CanRoomBeAdded(branchCoordinates.X, branchCoordinates.Y))
-				{
+
+				if (_floorGrid.CanRoomBeAdded(branchCoordinates.X, branchCoordinates.Y)) {
 					previousBranchRoom = AddNewRoom(previousBranchRoom, direction, branchCoordinates);
 					numberOfRoomsCreated++;
 				}
-			}
-			catch (Exception)
-			{
+			} catch (Exception) {
 				Debug.Log("Branching failed :(");
 				break;
 			}
@@ -149,61 +133,59 @@ public class FloorGenerator : MonoBehaviour {
 		return numberOfRoomsCreated;
 	}
 
-	private Room CreateFirstRoom(RoomCoordinates coordinates)
-	{
+
+	private Room CreateFirstRoom(RoomCoordinates coordinates) {
 		Room previousRoom;
-		if (_firstRoom != null)
-		{
+
+		if (_firstRoom != null) {
 			previousRoom = (Room) Instantiate(_firstRoom);
 			_floorGrid.AddRoom(coordinates.X, coordinates.Y, previousRoom);
-		}
-		else
-		{
+		} else {
 			previousRoom = (Room) Instantiate(_roomPrefabs.First());
 			_floorGrid.AddRoom(coordinates.X, coordinates.Y, previousRoom);
 		}
+
 		return previousRoom;
 	}
 
-	private RoomDirection DetermineNextRoomLocation(RoomCoordinates coordinates)
-	{
+
+	private RoomDirection DetermineNextRoomLocation(RoomCoordinates coordinates) {
 		var validDirections = _floorGrid.GetValidDirectionsFromRoom(coordinates.X, coordinates.Y).ToList();
-		if (!validDirections.Any())
-		{
+
+		if (!validDirections.Any()) 
 			throw new Exception("Created dead-end :(");
-		}
 
 		return validDirections.ElementAt(Random.Range(0, validDirections.Count()));
 	}
 
-	private RoomCoordinates DetermineNewCoordinates(RoomDirection direction, RoomCoordinates previousCoordinates)
-	{
-		switch (direction)
-		{
-		case RoomDirection.North:
-			return new RoomCoordinates(previousCoordinates.X, previousCoordinates.Y + 1);
-		case RoomDirection.East:
-			return new RoomCoordinates(previousCoordinates.X + 1, previousCoordinates.Y);
-		case RoomDirection.South:
-			return new RoomCoordinates(previousCoordinates.X, previousCoordinates.Y - 1);
-		case RoomDirection.West:
-			return new RoomCoordinates(previousCoordinates.X - 1, previousCoordinates.Y);
-		default:
-			return previousCoordinates;
+
+	private RoomCoordinates DetermineNewCoordinates(RoomDirection direction, RoomCoordinates previousCoordinates) {
+		switch (direction) {
+			case RoomDirection.North:
+				return new RoomCoordinates(previousCoordinates.X, previousCoordinates.Y + 1);
+			case RoomDirection.East:
+				return new RoomCoordinates(previousCoordinates.X + 1, previousCoordinates.Y);
+			case RoomDirection.South:
+				return new RoomCoordinates(previousCoordinates.X, previousCoordinates.Y - 1);
+			case RoomDirection.West:
+				return new RoomCoordinates(previousCoordinates.X - 1, previousCoordinates.Y);
+			default:
+				return previousCoordinates;
 		}
 	}
 
-	private Room AddNewRoom(Room previousRoom, RoomDirection direction, RoomCoordinates coordinates, RoomType roomType = RoomType.NormalRoom)
-	{
+
+	private Room AddNewRoom(Room previousRoom, RoomDirection direction, RoomCoordinates coordinates, RoomType roomType = RoomType.NormalRoom) {
 		var newRoom = CreateRoom(previousRoom, direction, roomType);
-		if (previousRoom != null)
-		{
+
+		if (previousRoom != null) {
 			previousRoom.SetAdjacentRoom(newRoom, direction);
 			newRoom.SetAdjacentRoom(previousRoom, GetOppositeRoomDirection(direction));
 		}
-		_floorGrid.AddRoom(coordinates.X, coordinates.Y, newRoom);
 
+		_floorGrid.AddRoom(coordinates.X, coordinates.Y, newRoom);
 		previousRoom = newRoom;
+
 		return previousRoom;
 	}
 
@@ -280,7 +262,8 @@ public class FloorGenerator : MonoBehaviour {
 			obstacleLayout.transform.parent = room.transform;
 			obstacleLayout.transform.localPosition = Vector3.zero;
 
-			/* add enemies
+			// Add fixed enemies to the floors for rooms type normal
+			/*
 			var enemyLayouts = obstacleLayout.GetComponent<EnemyLayout>().EnemyLayouts;
 			var enemyLayout = (GameObject)Instantiate (enemyLayouts.ElementAt(Random.Range(0, enemyLayouts.Count)));
 			//enemyLayout.transform.localPosition = Vector3.zero;
@@ -294,8 +277,7 @@ public class FloorGenerator : MonoBehaviour {
 	}
 }
 
-public class FloorGrid
-{
+public class FloorGrid {
 	private readonly Room[,] _rooms;
 
 	private readonly List<Room> _roomList = new List<Room>();

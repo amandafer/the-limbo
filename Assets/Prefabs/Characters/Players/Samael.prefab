@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _bloodPrefab: []
-  _maxHealth: 10
+  _maxHealth: 20
   _range: 8
   _takeDamageClips: []
   MinDamagedPitch: 0.98

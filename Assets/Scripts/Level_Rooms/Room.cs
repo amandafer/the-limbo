@@ -21,7 +21,7 @@ namespace Assets.Scripts
         }
 
         public BoxCollider2D _northDoorWall, _southDoorWall, _eastDoorWall, _westDoorWall;
-        //public List<Enemy> _enemies = new List<Enemy>(); 
+        public List<Enemy> _enemies = new List<Enemy>(); 
 
         public bool IsVisibleOnMap { get; set; }
         public bool PlayerHasVisited { get; private set; }
@@ -48,14 +48,14 @@ namespace Assets.Scripts
                         EastDoor.ConnectingRoom.IsVisibleOnMap = true;
                     }
 
-                    //StartCoroutine(WakeUpEnemies());
+                    StartCoroutine(WakeUpEnemies());
                 }
             }
         }
 
         IEnumerator WakeUpEnemies() {
             yield return new WaitForSeconds(1f);
-            //_enemies.ForEach(e => e.Enable());
+            _enemies.ForEach(e => e.Enable());
 
             if (_roomType == RoomType.BossRoom) {
                 _bossBar = (GameObject)Instantiate(bossBarPrefab);
@@ -64,7 +64,7 @@ namespace Assets.Scripts
             yield return null;
         }
 
-        //public bool ContainsEnemies { get { return _enemies.Count > 0; } }
+        public bool ContainsEnemies { get { return _enemies.Count > 0; } }
 
         public void SetAdjacentRoom(Room room, RoomDirection direction) {
             var position = new Vector3();
@@ -127,7 +127,7 @@ namespace Assets.Scripts
             _doors.Add(door);
         }
 
-		/*
+
         public void InstantiateEnemy(Enemy enemyPrefab, Vector2 positionInRoom)
         {   
             var enemy = (Enemy) Instantiate(enemyPrefab);
@@ -137,6 +137,7 @@ namespace Assets.Scripts
             _enemies.Add(enemy);
             enemy.Disable();
         }
+
 
 		public void AddEnemy(Enemy enemy, Vector2 positionInRoom)
 		{   
@@ -153,9 +154,9 @@ namespace Assets.Scripts
             if (!ContainsEnemies)
             {
                 _doors.ForEach(d => d.IsOpen = true);
+				/*
                 Destroy(_bossBar);
-                if (_roomType == RoomType.BossRoom)
-                {
+                if (_roomType == RoomType.BossRoom) {
                     var audioSources = GameObject.FindGameObjectWithTag("MainCamera").GetComponents<AudioSource>();
                     audioSources.ElementAt(1).Stop();
                     audioSources.ElementAt(2).Play();
@@ -164,10 +165,12 @@ namespace Assets.Scripts
                     d.transform.parent = transform;
                     d.transform.localPosition = Vector3.zero;
                 }
-                SpawnItem();
+                */
+                //SpawnItem();
             }
         }
 
+		/*
         private void SpawnItem()
         {
             if (_roomType != RoomType.NormalRoom)
@@ -190,33 +193,28 @@ namespace Assets.Scripts
         public void OnPlayerEntersRoom(Player player) {
             var audioSources = GameObject.FindGameObjectWithTag("MainCamera").GetComponents<AudioSource>();
 
-            if (_roomType == RoomType.BossRoom)
-            {
+            if (_roomType == RoomType.BossRoom) {
                 audioSources.ElementAt(0).Stop();
                 audioSources.ElementAt(1).Play();
-            }
-            else
-                if (!audioSources.ElementAt(0).isPlaying)
-                    audioSources.ElementAt(0).Play();
-            PlayerIsInRoom = true;
-			/*
-            if (ContainsEnemies)
-            {
+            } else if (!audioSources.ElementAt(0).isPlaying)
+                audioSources.ElementAt(0).Play();
+            
+			PlayerIsInRoom = true;
+
+            if (ContainsEnemies) {
                 _doors.ForEach(d => d.IsOpen = false);
-                var doorOpenClip = _doors.First().DoorOpenClip;
-                if (doorOpenClip != null)
-                {
+                var doorOpenClip = _doors.First()._doorOpenClip;
+                
+				if (doorOpenClip != null)
                     doorOpenClip.Play();
-                }
-            }
-            else*/
-            {
+            } else {
                 _doors.ForEach(d => d.IsOpen = true);
-                var doorCloseClip = _doors.First()._doorCloseClip;
+                /*var doorCloseClip = _doors.First()._doorCloseClip;
 
                 if (doorCloseClip != null) {
                     doorCloseClip.Play();
                 }
+                */
             }
 
             player.CurrentRoom = this;

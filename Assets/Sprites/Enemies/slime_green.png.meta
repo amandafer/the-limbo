@@ -1,0 +1,114 @@
+fileFormatVersion: 2
+guid: 4cf7a9e275ab144e59f6ad773b5de818
+timeCreated: 1463893982
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slime_green_0
+    21300002: slime_green_1
+    21300004: slime_green_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: slime_green_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 146
+        height: 150
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 75}
+        - {x: 0, y: 10}
+        - {x: 0, y: -62}
+        - {x: 18, y: -75}
+        - {x: 146, y: -75}
+        - {x: 146, y: 41}
+        - {x: 102, y: 75}
+    - name: slime_green_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 146
+        height: 150
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 74}
+        - {x: 0, y: 14}
+        - {x: 0, y: -56}
+        - {x: 16, y: -60}
+        - {x: 135, y: -60}
+        - {x: 146, y: -51}
+        - {x: 146, y: 32}
+        - {x: 93, y: 74}
+    - name: slime_green_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 0
+        width: 158
+        height: 150
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 33}
+        - {x: 0, y: -15}
+        - {x: 0, y: -75}
+        - {x: 158, y: -75}
+        - {x: 158, y: -9}
+        - {x: 136, y: 33}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

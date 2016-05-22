@@ -2,6 +2,7 @@
 using System.Linq;
 using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(PlayerShootController))]
 public class Player : CharacterBase
@@ -185,7 +186,7 @@ public class Player : CharacterBase
 
 	IEnumerator Restart() {
 		yield return new WaitForSeconds (1.8f);
-		Application.LoadLevel (Application.loadedLevel);
+		SceneManager.LoadScene (Application.loadedLevel);
 	}
 
     private void DisableCharacter()
