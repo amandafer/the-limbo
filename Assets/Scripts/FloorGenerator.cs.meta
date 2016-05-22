@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 00a20c92bdaceee4db00a797f01898e5
+timeCreated: 1463199336
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - firstRoom: {fileID: 11400000, guid: c7ecfa70cc4d9be4facf8cef76b022e4, type: 2}
+  - bossRoom: {fileID: 11400000, guid: 250b1ec9be8354f4cb40cfe1e982e938, type: 2}
+  - treasureRoom: {fileID: 11400000, guid: 1687394c527a5be46a9b64dc3fcdecfc, type: 2}
+  - playerPrefab: {fileID: 11400000, guid: c760a6803e7caac4a88b2795a1fad999, type: 2}
+  - enemyPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

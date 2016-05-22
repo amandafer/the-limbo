@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 9d0d887ccd107423fa54af0fa7453f70
+timeCreated: 1463455662
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: _spriteSamael_leftRight_0
+    21300002: _spriteSamael_leftRight_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: _spriteSamael_leftRight_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 714
+        height: 500
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 487, y: 57}
+        - {x: 474, y: 103}
+        - {x: 501, y: 131}
+        - {x: 523, y: 160}
+        - {x: 526, y: 177}
+        - {x: 526, y: 193}
+        - {x: 523, y: 193}
+        - {x: 432, y: 184}
+        - {x: 416, y: 213}
+        - {x: 333, y: 191}
+        - {x: 277, y: 213}
+        - {x: 271, y: 213}
+        - {x: 268, y: 212}
+        - {x: 233, y: 99}
+        - {x: 233, y: 26}
+        - {x: 248, y: -8}
+        - {x: 300, y: -45}
+        - {x: 324, y: -52}
+        - {x: 380, y: -52}
+        - {x: 401, y: -50}
+        - {x: 425, y: -38}
+        - {x: 462, y: -7}
+        - {x: 476, y: 24}
+    - name: _spriteSamael_leftRight_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 714
+        height: 500
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 445, y: 209}
+        - {x: 444, y: 210}
+        - {x: 433, y: 210}
+        - {x: 408, y: 181}
+        - {x: 369, y: 192}
+        - {x: 296, y: 209}
+        - {x: 290, y: 208}
+        - {x: 302, y: 182}
+        - {x: 214, y: 185}
+        - {x: 185, y: 192}
+        - {x: 185, y: 164}
+        - {x: 204, y: 132}
+        - {x: 242, y: 97}
+        - {x: 223, y: 55}
+        - {x: 244, y: -6}
+        - {x: 285, y: -41}
+        - {x: 318, y: -55}
+        - {x: 383, y: -55}
+        - {x: 417, y: -48}
+        - {x: 461, y: -7}
+        - {x: 477, y: 29}
+        - {x: 477, y: 89}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

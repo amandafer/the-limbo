@@ -1,0 +1,13 @@
+/Temp
+/obj
+/library
+*.DS_Store
+*.csproj
+*.unityproj
+*.sln
+*.pdb
+*.suo
+*.user
+*.userprefs
+*ReSharper*
+Thumbs.db*

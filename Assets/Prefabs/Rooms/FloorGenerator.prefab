@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &152280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 470772}
+  - 114: {fileID: 11417552}
+  m_Layer: 0
+  m_Name: FloorGenerator
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470772
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11417552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a20c92bdaceee4db00a797f01898e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfRooms: 0
+  numberOfTreasureRooms: 0
+  _roomPrefabs:
+  - {fileID: 11480472, guid: 9e7b7af401af242cc99cde52cd8d0965, type: 2}
+  _firstRoom: {fileID: 11432992, guid: 744331fefa4074a4ba18b2b2609730dc, type: 2}
+  _bossRoom: {fileID: 11400000, guid: 250b1ec9be8354f4cb40cfe1e982e938, type: 2}
+  _playerPrefab: {fileID: 11488878, guid: f69db3808180445ec8875588b7a6d916, type: 2}
+  _branchingProbability: 0.6
+  _obstacleLayouts:
+  - {fileID: 100000, guid: 8df70993843e7884bac3b972b1bd61be, type: 2}
+  - {fileID: 100016, guid: e6be752160427a74ea331a668ccad08a, type: 2}
+  - {fileID: 100018, guid: 27044015ff05f104cb88df86f8804cfe, type: 2}
+  - {fileID: 100018, guid: 82b1faf2dcd6247759a943e8444b3153, type: 2}
+  - {fileID: 100008, guid: 2c200c4c98f9f8f498fac2c42c4bf0e3, type: 2}
+  - {fileID: 100012, guid: b8b39844a2a054c88bfe1186568ac7d1, type: 2}
+  - {fileID: 100028, guid: 2137ce23b8df8d94b8a68b078fdacdd5, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 152280}
+  m_IsPrefabParent: 1
