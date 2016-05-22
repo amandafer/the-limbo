@@ -207,45 +207,48 @@ public class FloorGenerator : MonoBehaviour {
 		return (RoomDirection)(((int)direction + 2) % 4);
 	}
 
+	// Creates the room with coordinates and instantiate the enemies
 	private Room CreateRoom(Room previousRoom, RoomDirection direction, RoomType roomType = RoomType.NormalRoom)
 	{
 		Room prefab;
-		switch (roomType)
-		{
-		case RoomType.StartRoom:
-			prefab = _firstRoom;
-			break;
-		case RoomType.NormalRoom:
-			prefab = _roomPrefabs.First();
-			break;
-		case RoomType.BossRoom:
-			prefab = _bossRoom;
-			break;
-		default:
-			throw new ArgumentOutOfRangeException("roomType");
+		// Type of the room
+		switch (roomType) {
+			case RoomType.StartRoom:
+				prefab = _firstRoom;
+				break;
+			case RoomType.NormalRoom:
+				prefab = _roomPrefabs.First();
+				break;
+			case RoomType.BossRoom:
+				prefab = _bossRoom;
+				break;
+			default:
+				throw new ArgumentOutOfRangeException("roomType");
 		}
+
 		var room = (Room)Instantiate(prefab);
-		if (previousRoom != null)
-		{
+		// Direction of the room
+		if (previousRoom != null) {
 			var position = previousRoom.transform.position;
-			switch (direction)
-			{
-			case RoomDirection.North:
-				position.y += VerticalDelta;
-				break;
-			case RoomDirection.East:
-				position.x += HorizontalDelta;
-				break;
-			case RoomDirection.South:
-				position.y -= VerticalDelta;
-				break;
-			case RoomDirection.West:
-				position.x -= HorizontalDelta;
-				break;
+
+			switch (direction) {
+				case RoomDirection.North:
+					position.y += VerticalDelta;
+					break;
+				case RoomDirection.East:
+					position.x += HorizontalDelta;
+					break;
+				case RoomDirection.South:
+					position.y -= VerticalDelta;
+					break;
+				case RoomDirection.West:
+					position.x -= HorizontalDelta;
+					break;
 			}
 			room.transform.position = position;
 		}
 
+		// Instantiate boss or normal enemies
 		if (roomType == RoomType.BossRoom) {
 			/*
 			var enemyLayouts = room.GetComponent<EnemyLayout>().EnemyLayouts;
@@ -255,24 +258,24 @@ public class FloorGenerator : MonoBehaviour {
 			var enemies = enemyLayout.GetComponentsInChildren<Enemy>().ToList();
 			enemies.ForEach(e => room.AddEnemy(e, e.transform.position));
 			*/
-		}
-
-		if (roomType == RoomType.NormalRoom ) {
+		} else if (roomType == RoomType.NormalRoom ) {
 			var obstacleLayout = (GameObject)Instantiate(_obstacleLayouts.ElementAt(Random.Range(0, _obstacleLayouts.Count)));
 			obstacleLayout.transform.parent = room.transform;
 			obstacleLayout.transform.localPosition = Vector3.zero;
 
-			// Add fixed enemies to the floors for rooms type normal
-			/*
+			// Add enemies for rooms type normal
 			var enemyLayouts = obstacleLayout.GetComponent<EnemyLayout>().EnemyLayouts;
-			var enemyLayout = (GameObject)Instantiate (enemyLayouts.ElementAt(Random.Range(0, enemyLayouts.Count)));
-			//enemyLayout.transform.localPosition = Vector3.zero;
-			enemyLayout.transform.parent = room.transform;
-			var enemies = enemyLayout.GetComponentsInChildren<Enemy>().ToList();
-			enemies.ForEach(e => room.AddEnemy(e, e.transform.position));
-			*/
-		}
 
+			if (enemyLayouts.Count == 0)
+				Debug.Log ("Empty list of enemies");
+			else {
+				var enemyLayout = (GameObject)Instantiate (enemyLayouts.ElementAt (Random.Range(0, enemyLayouts.Count)));
+				//enemyLayout.transform.localPosition = Vector3.zero;
+				enemyLayout.transform.parent = room.transform;
+				var enemies = enemyLayout.GetComponentsInChildren<Enemy> ().ToList ();
+				enemies.ForEach (e => room.AddEnemy (e, e.transform.position));
+			}
+		}
 		return room;
 	}
 }

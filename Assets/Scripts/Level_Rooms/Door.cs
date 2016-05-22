@@ -50,6 +50,7 @@ public class Door : MonoBehaviour {
 
     private const float PlayerMovement = 3.0f;
 
+	// Handles the camera when the player pass through the door
     public void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             var player = other.gameObject.GetComponent<Player>();
@@ -65,7 +66,7 @@ public class Door : MonoBehaviour {
                     playerMovement = new Vector3(0, PlayerMovement, 0);
                     break;
                 case RoomDirection.East:
-                    cameraMovement = new Vector2(15f, 0);
+                    cameraMovement = new Vector2(14.5f, 0);
                     playerMovement = new Vector3(PlayerMovement, 0, 0);
                     break;
                 case RoomDirection.South:
@@ -73,7 +74,7 @@ public class Door : MonoBehaviour {
                     playerMovement = new Vector3(0, -PlayerMovement, 0);
                     break;
                 case RoomDirection.West:
-                    cameraMovement = new Vector2(-15f, 0);
+                    cameraMovement = new Vector2(-14.5f, 0);
                     playerMovement = new Vector3(-PlayerMovement, 0, 0);
                     break;
             }

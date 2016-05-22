@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11481866}
   m_Layer: 0
   m_Name: EmptyLayout
   m_TagString: Untagged
@@ -57,27 +57,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8526b65c2f3d54a45af59e4d8be68dd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyLayouts:
-  - {fileID: 100000, guid: 8c8721990adc74cb48cea3137ff12ff5, type: 2}
-  - {fileID: 100008, guid: 7201be96813644e48b8f9a0b877dd471, type: 2}
-  - {fileID: 100000, guid: 839a1fff71ee2443d90928f83860c61e, type: 2}
-  - {fileID: 100032, guid: 8ad87e179a453b74a89149d5648b5715, type: 2}
-  - {fileID: 100016, guid: 2682a2d442b66f84d8e963f4f23c6680, type: 2}
-  - {fileID: 100008, guid: 7f60dc2da4dd72241a7a26178e4643e1, type: 2}
-  - {fileID: 100000, guid: 6f4303eb0c74fbb46a3f81573a369afb, type: 2}
-  - {fileID: 100022, guid: 2462c0c440b842b4d9b73e0979a0fb16, type: 2}
-  - {fileID: 100016, guid: 90c45904cfa86e34c8e29775a09a15fc, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,9 +69,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemPrefabs:
-  - {fileID: 11400000, guid: 9814222918d544448831838efc12ade8, type: 2}
-  - {fileID: 11400002, guid: faae7bb742624584795c417f81aaa358, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   _spawnOnAwake: 0
+--- !u!114 &11481866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8526b65c2f3d54a45af59e4d8be68dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyLayouts:
+  - {fileID: 114580, guid: 27b13034938eb401ca0fc29cd94f196e, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -104,4 +96,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

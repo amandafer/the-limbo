@@ -89,7 +89,7 @@ namespace Assets.Scripts
                 doorPrefab = _bossDoorPrefab;
             }
 
-			// Sets the doors prefabs of the room
+			// Sets the doors prefabs of the room and its position
             var door = (Door)Instantiate(doorPrefab);
             switch (direction) {
                 case RoomDirection.North:
@@ -190,6 +190,7 @@ namespace Assets.Scripts
         }
         */
 
+		// Handles the audio for doors
         public void OnPlayerEntersRoom(Player player) {
             var audioSources = GameObject.FindGameObjectWithTag("MainCamera").GetComponents<AudioSource>();
 

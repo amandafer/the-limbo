@@ -510,16 +510,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyLayouts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 144078, guid: d1855d5ee242f49d3ac3fb1b06a0501d, type: 2}
+  - {fileID: 114580, guid: 27b13034938eb401ca0fc29cd94f196e, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -547,8 +539,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyedSprites:
-  - {fileID: 21300000, guid: d074e47452287634e804ca8fcac9b447, type: 3}
-  - {fileID: 21300000, guid: 41da7babbab8f4648aca51bbd967099a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -561,8 +553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyedSprites:
-  - {fileID: 21300000, guid: d074e47452287634e804ca8fcac9b447, type: 3}
-  - {fileID: 21300000, guid: 41da7babbab8f4648aca51bbd967099a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -575,8 +567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyedSprites:
-  - {fileID: 21300000, guid: d074e47452287634e804ca8fcac9b447, type: 3}
-  - {fileID: 21300000, guid: 41da7babbab8f4648aca51bbd967099a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -589,8 +581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyedSprites:
-  - {fileID: 21300000, guid: d074e47452287634e804ca8fcac9b447, type: 3}
-  - {fileID: 21300000, guid: 41da7babbab8f4648aca51bbd967099a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -603,8 +595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyedSprites:
-  - {fileID: 21300000, guid: d074e47452287634e804ca8fcac9b447, type: 3}
-  - {fileID: 21300000, guid: 41da7babbab8f4648aca51bbd967099a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -617,8 +609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyedSprites:
-  - {fileID: 21300000, guid: d074e47452287634e804ca8fcac9b447, type: 3}
-  - {fileID: 21300000, guid: 41da7babbab8f4648aca51bbd967099a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -631,8 +623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyedSprites:
-  - {fileID: 21300000, guid: d074e47452287634e804ca8fcac9b447, type: 3}
-  - {fileID: 21300000, guid: 41da7babbab8f4648aca51bbd967099a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
