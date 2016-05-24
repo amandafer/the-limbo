@@ -325,14 +325,12 @@ public class Enemy : CharacterBase
         GetComponent<CircleCollider2D>().enabled = true;
 	}
 
-	private Vector3 Stationary()
-	{
+	private Vector3 Stationary() {
 		return new Vector3 ();
 	}
 }
 
-public enum MovementStyle
-{
+public enum MovementStyle {
     TowardsPlayer,
     AwayFromPlayer,
     RandomDirection,

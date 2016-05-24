@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11436078}
   - 114: {fileID: 11431050}
   - 58: {fileID: 5886250}
+  - 50: {fileID: 5002310}
   m_Layer: 10
   m_Name: Slime Green
   m_TagString: Enemy
@@ -32,6 +33,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5002310
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170066}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &5886250
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -97,8 +115,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 0.05
-  _bloodPrefab: []
-  _maxHealth: 4
+  _bloodPrefab:
+  - {fileID: 100000, guid: 129dbd4250084d34680284c24f5c4f3e, type: 2}
+  - {fileID: 100000, guid: 01635ee5e41f163429bd6ead0df6ce24, type: 2}
+  - {fileID: 100000, guid: fc26eeb75d2f5c9429045d1ab4d5456f, type: 2}
+  - {fileID: 100000, guid: f41595ecfc921574f93cf2efa29b2e53, type: 2}
+  _maxHealth: 0
   _range: 8
   _takeDamageClips: []
   MinDamagedPitch: 1.5

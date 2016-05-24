@@ -30,7 +30,7 @@ GameObject:
   - 114: {fileID: 11428854}
   - 114: {fileID: 11488878}
   - 58: {fileID: 5855464}
-  m_Layer: 9
+  m_Layer: 19
   m_Name: Samael
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4, y: -2.8, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
   - {fileID: 428506}
@@ -92,8 +92,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.04, z: 0}
-  m_LocalScale: {x: 0.9908014, y: 1.0947069, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 423636}
   m_RootOrder: 0
@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.56, y: -0.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 423636}
@@ -116,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.58, y: -2.18, z: 0}
+  m_LocalPosition: {x: 0, y: -2.18, z: 0}
   m_LocalScale: {x: 0.86672443, y: 0.67438245, z: 1}
   m_Children: []
   m_Father: {fileID: 423636}
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 3.6, y: -1.2}
+  m_Offset: {x: 0, y: -1}
   serializedVersion: 2
   m_Radius: 1
 --- !u!95 &9599724
@@ -229,7 +229,7 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  _health: 3
+  _health: 6
   _gunObject: {fileID: 21283810}
   _headObject: {fileID: 11455636}
 --- !u!212 &21207908

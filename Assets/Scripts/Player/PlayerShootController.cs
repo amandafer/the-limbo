@@ -55,11 +55,9 @@ namespace Assets.Scripts
         IEnumerator Shoot() {
             IsShooting = true;
             while (Input.GetKey(_shootKey)) {
-				var bullet = (Rigidbody2D)Instantiate(BulletPrefab, new Vector3(transform.position.x + 1.2f, transform.position.y, 0f), new Quaternion());
-				//var bullet = (Rigidbody2D)Instantiate(BulletPrefab);
-				//bullet.GetComponent<BulletScript>()._shooter = transform.gameObject;
-				//bullet.transform.position = transform.position;
+				var bullet = (Rigidbody2D)Instantiate(BulletPrefab, new Vector3(transform.position.x, transform.position.y, 0f), new Quaternion());
                 
+				// Rotation of the bullet sprite
 				if (_shootDirection.y > 0) {
                     bullet.transform.Rotate(0, 0, -90);
                 } else if (_shootDirection.y < 0) {
@@ -88,6 +86,7 @@ namespace Assets.Scripts
             }
         }
 
+		// Set the head to the direction of the shooting
         private void SetHeadDirection(KeyCode shootKey) {
             switch (shootKey) {
                 case KeyCode.UpArrow:

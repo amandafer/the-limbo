@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyLayouts:
-  - {fileID: 114580, guid: 27b13034938eb401ca0fc29cd94f196e, type: 2}
+  - {fileID: 195158, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

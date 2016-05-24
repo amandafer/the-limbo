@@ -13,9 +13,10 @@ GameObject:
   - 95: {fileID: 9546798}
   - 212: {fileID: 21247894}
   - 114: {fileID: 11409726}
-  m_Layer: 0
+  - 50: {fileID: 5088254}
+  m_Layer: 11
   m_Name: FlyEye
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +33,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5088254
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195158}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &5858074
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -55,7 +73,7 @@ Animator:
   m_GameObject: {fileID: 195158}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 6c9742416d18b41ea8666ce3844fee19, type: 2}
+  m_Controller: {fileID: 9100000, guid: b1b02166a551541fb935aa56f9607f77, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -75,7 +93,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 0
-  _bloodPrefab: []
+  _bloodPrefab:
+  - {fileID: 100000, guid: 129dbd4250084d34680284c24f5c4f3e, type: 2}
+  - {fileID: 100000, guid: 01635ee5e41f163429bd6ead0df6ce24, type: 2}
+  - {fileID: 100000, guid: fc26eeb75d2f5c9429045d1ab4d5456f, type: 2}
+  - {fileID: 100000, guid: f41595ecfc921574f93cf2efa29b2e53, type: 2}
   _maxHealth: 0
   _range: 8
   _takeDamageClips: []
@@ -86,7 +108,7 @@ MonoBehaviour:
   MaxDiePitch: 3
   _mirrorAnimation: 0
   _health: 8
-  _movementStyle: 0
+  _movementStyle: 3
   _wanderClipRepeatDelay: 0
   _wanderClip: {fileID: 0}
 --- !u!114 &11465060
@@ -102,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpeed: 0.5
   _shootSpeed: 0.3
-  _bulletPrefab: {fileID: 0}
+  _bulletPrefab: {fileID: 5000000, guid: d8e000ca28e948446917b8de7d824315, type: 2}
   _shootClips: []
   MinShootPitch: -3
   MaxShootPitch: 3
@@ -135,7 +157,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1735560919
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 584b48c6aed8d46e5895e8749a9f0423, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

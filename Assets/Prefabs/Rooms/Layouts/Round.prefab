@@ -1008,8 +1008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyLayouts:
-  - {fileID: 144078, guid: d1855d5ee242f49d3ac3fb1b06a0501d, type: 2}
-  - {fileID: 114580, guid: 27b13034938eb401ca0fc29cd94f196e, type: 2}
+  - {fileID: 195158, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
+  - {fileID: 170066, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

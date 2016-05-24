@@ -14,7 +14,7 @@ public class BulletScript : MonoBehaviour {
 		ShootControllerBase shootController = pc.GetComponent<PlayerShootController>();
 
 		if (o.CompareTag("Enemy") && _shooter.Equals(pc)) {
-            //o.GetComponentInParent<Enemy>().Health--;
+            o.GetComponentInParent<Enemy>().Health--;
         } else if (o.CompareTag("Player") && !_shooter.Equals(pc)) {
 			shootController = _shooter.GetComponent<EnemyShootController>();
 
