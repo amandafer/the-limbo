@@ -2,8 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Assets.Scripts
-{
+namespace Assets.Scripts {
     [RequireComponent(typeof(Player))]
     public class PlayerShootController : ShootControllerBase {
         public PlayerHeadController _headObject;

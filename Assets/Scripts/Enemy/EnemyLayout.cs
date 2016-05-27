@@ -1,9 +1,9 @@
-﻿using System;
+﻿//using System;
 using System.Collections.Generic;
-using System.Linq;
-using Assets.Scripts;
+//using System.Linq;
+//using Assets.Scripts;
 using UnityEngine;
-using Random = UnityEngine.Random;
+//using Random = UnityEngine.Random;
 
 public class EnemyLayout : MonoBehaviour {
 	[SerializeField]

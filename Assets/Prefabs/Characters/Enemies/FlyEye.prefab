@@ -8,11 +8,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443054}
+  - 212: {fileID: 21247894}
+  - 95: {fileID: 9546798}
+  - 114: {fileID: 11409726}
   - 114: {fileID: 11465060}
   - 58: {fileID: 5858074}
-  - 95: {fileID: 9546798}
-  - 212: {fileID: 21247894}
-  - 114: {fileID: 11409726}
   - 50: {fileID: 5088254}
   m_Layer: 11
   m_Name: FlyEye
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.66, y: 0.6, z: 0}
   m_LocalScale: {x: 0.55, y: 0.56, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb0a79857b11454abf33fcef1bce16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 0
+  _moveSpeed: 0.01
   _bloodPrefab:
   - {fileID: 100000, guid: 129dbd4250084d34680284c24f5c4f3e, type: 2}
   - {fileID: 100000, guid: 01635ee5e41f163429bd6ead0df6ce24, type: 2}
@@ -101,11 +101,11 @@ MonoBehaviour:
   _maxHealth: 0
   _range: 8
   _takeDamageClips: []
-  MinDamagedPitch: -3
-  MaxDamagedPitch: 3
+  MinDamagedPitch: 1.5
+  MaxDamagedPitch: 1.6
   _dieClip: {fileID: 0}
-  MinDiePitch: -3
-  MaxDiePitch: 3
+  MinDiePitch: 1
+  MaxDiePitch: 1
   _mirrorAnimation: 0
   _health: 8
   _movementStyle: 3
@@ -126,13 +126,13 @@ MonoBehaviour:
   _shootSpeed: 0.3
   _bulletPrefab: {fileID: 5000000, guid: d8e000ca28e948446917b8de7d824315, type: 2}
   _shootClips: []
-  MinShootPitch: -3
-  MaxShootPitch: 3
+  MinShootPitch: 1.5
+  MaxShootPitch: 1.6
   _bulletCollideClips: []
-  MinBulletCollidePitch: -3
-  MaxBulletCollidePitch: 3
+  MinBulletCollidePitch: 0.9
+  MaxBulletCollidePitch: 1.1
   _boss: 0
-  _canShoot: 1
+  _canShoot: 0
 --- !u!212 &21247894
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_SortingLayerID: 1735560919
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 584b48c6aed8d46e5895e8749a9f0423, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9924479, g: 0.9924479, b: 0.9924479, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000

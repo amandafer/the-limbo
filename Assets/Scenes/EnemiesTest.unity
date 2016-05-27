@@ -305,7 +305,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e67769b676bf1485da9077da8969966c, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1704086943
+--- !u!1001 &1679473363
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -314,11 +314,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443054, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 443054, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 443054, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
       propertyPath: m_LocalPosition.z
@@ -342,7 +342,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443054, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
@@ -356,11 +356,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 404222, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.43
       objectReference: {fileID: 0}
     - target: {fileID: 404222, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.349
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 404222, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -401,6 +401,10 @@ Prefab:
     - target: {fileID: 21219282, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431050, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}
+      propertyPath: _canShoot
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}

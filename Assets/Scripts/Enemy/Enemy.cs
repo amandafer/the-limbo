@@ -6,8 +6,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(EnemyShootController), typeof(CircleCollider2D))]
-public class Enemy : CharacterBase
-{
+public class Enemy : CharacterBase {
     private GameObject _player;
 	private Vector3 _randomDirection;
 	private bool _turning = false;
@@ -40,17 +39,16 @@ public class Enemy : CharacterBase
 
     public Room OwnerRoom { get; set; }
 
-    public void Start()
-    {
+    public void Start() {
         _player = GameObject.FindGameObjectWithTag("Player");
 
         if (_wanderClipRepeatDelay > 0.0f)
             StartCoroutine(PlayWanderingClip());
-        if (MovementStyle == MovementStyle.RandomStyle)
-        {
+		
+        if (MovementStyle == MovementStyle.RandomStyle) {
             var rnd = (int)(Random.value * 5);
-            switch (rnd)
-            {
+            
+			switch (rnd) {
                 case 0:
                     MovementStyle = MovementStyle.Stationary;
                     gameObject.GetComponent<EnemyShootController>()._canShoot = true;
@@ -81,29 +79,25 @@ public class Enemy : CharacterBase
 
     }
 
-    public override void FixedUpdate()
-	{
+    public override void FixedUpdate() {
 		base.FixedUpdate();
 		StartCoroutine (Turn());
 	}
 
-    public IEnumerator PlayWanderingClip()
-    {
+    public IEnumerator PlayWanderingClip() {
         WanderingClip.Play();
         yield return new WaitForSeconds(WanderingClipRepeatDelay);
     }
 
-    protected override void HandleMovement(Vector3 movement)
-    {
+    protected override void HandleMovement(Vector3 movement) {
         if (Health > 0)
             transform.Translate(movement);
     }
 
-    protected override Vector3 DetermineMovement()
-    {
+    protected override Vector3 DetermineMovement() {
         ShouldMove = true;
-        switch (MovementStyle)
-        {
+        
+		switch (MovementStyle) {
             case MovementStyle.JumpToPlayer:
                 return JumpToPlayer();
             case MovementStyle.TowardsPlayer:
@@ -121,45 +115,36 @@ public class Enemy : CharacterBase
         }
     }
 
-    protected override void HandleAnimation(Vector3 movement)
-    {
-        if ((MovementStyle != MovementStyle.JumpToPlayer && MovementStyle != MovementStyle.Stationary) && movement == Vector3.zero)
-        {
+    protected override void HandleAnimation(Vector3 movement) {
+        if ((MovementStyle != MovementStyle.JumpToPlayer && MovementStyle != MovementStyle.Stationary) && movement == Vector3.zero) {
             Animator.enabled = false;
             return;
         }
 
         Animator.enabled = true;
         
-		if (MovementStyle == MovementStyle.Stationary)
-		{
+		if (MovementStyle == MovementStyle.Stationary) {
 			Vector2 dir = _player.transform.position - transform.position;
-			if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
-			{
+
+			if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y)) {
 				Animator.SetInteger("Direction", dir.x > 0 ? 1 : 3);
-			}
-			else
-			{
+			} else {
 				Animator.SetInteger("Direction", dir.y > 0 ? 0 : 2);
 			}
 			return;
 		}
 
-		if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))
-        {
+		if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y)) {
             Animator.SetInteger("Direction", movement.x > 0 ? 1 : 3);
-        }
-        else
-        {
+        } else {
             Animator.SetInteger("Direction", movement.y > 0 ? 0 : 2);
         }
     }
 
-    protected override void TakeDamage()
-    {
+    protected override void TakeDamage() {
         base.TakeDamage();
-        if (gameObject.GetComponent<EnemyShootController>()._boss && OwnerRoom._bossBar != null)
-        {
+        
+		if (gameObject.GetComponent<EnemyShootController>()._boss && OwnerRoom._bossBar != null) {
             OwnerRoom._bossBar.transform.FindChild("BossHealth").transform.localScale = new Vector3((float)Health / _maxHealth,1,1);
         }
         var blood = (GameObject)Instantiate(_bloodPrefab.ElementAt(UnityEngine.Random.Range(0,_bloodPrefab.Count)));
@@ -167,41 +152,36 @@ public class Enemy : CharacterBase
         blood.transform.parent = OwnerRoom.transform;
     }
 
-    protected override void Die()
-    {
+    protected override void Die() {
         base.Die();
         OwnerRoom.OnEnemyDied(this);
         Disable();
         StartCoroutine(ReallyDie());
     }
 
-    IEnumerator ReallyDie()
-    {
+    IEnumerator ReallyDie() {
         Animator.Play("Die");
-        if (gameObject.GetComponent<EnemyShootController>()._boss)
+        
+		if (gameObject.GetComponent<EnemyShootController>()._boss)
             gameObject.GetComponent<EnemyShootController>().BossExplode();
-        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        
+		gameObject.GetComponent<CircleCollider2D>().enabled = false;
         float t = gameObject.GetComponent<EnemyShootController>()._boss ? 1.1f : 0.7f;
         gameObject.GetComponent<EnemyShootController>().enabled = false;
         yield return new WaitForSeconds(t);
         Destroy(gameObject);
     }
 
-	private void Flying()
-	{
+	private void Flying() {
 		transform.gameObject.layer = LayerMask.NameToLayer ("Flying enemy");
 	}
 
-    private Vector3 JumpToPlayer()
-    {
-        if (_jumping && !_inAir)
-        {
+    private Vector3 JumpToPlayer() {
+        if (_jumping && !_inAir) {
             _jumping = false;
             StartCoroutine(Jump());
             return Vector3.zero; // currentPosition - playerPosition;
-        }
-        else if (!_jumping && _inAir)
-        {
+        } else if (!_jumping && _inAir) {
             _inAir = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
             gameObject.GetComponent<CircleCollider2D>().enabled = true;
@@ -212,14 +192,12 @@ public class Enemy : CharacterBase
         return Vector3.zero;
     }
 
-    IEnumerator Jump()
-    {
+    IEnumerator Jump() {
         Animator.SetBool("Jumping", true);
         
 		var eSC = gameObject.GetComponent<EnemyShootController> ();
 		var ShootClips = eSC.ShootClips;
-		if (ShootClips.Any())
-		{
+		if (ShootClips.Any()) {
 			int bossHax = 0;
 			if (eSC._boss)
 				bossHax = 4;
@@ -239,8 +217,7 @@ public class Enemy : CharacterBase
 
     }
 
-    IEnumerator Wait()
-    {
+    IEnumerator Wait() {
         if (gameObject.GetComponent<EnemyShootController>()._boss)
             gameObject.GetComponent<EnemyShootController>().BossExplode();
 
@@ -251,14 +228,10 @@ public class Enemy : CharacterBase
             //_inAir = true;
             _jumping = true;
 
-        }
-        else if (gameObject.GetComponent<EnemyShootController>()._boss)
-        {
+        } else if (gameObject.GetComponent<EnemyShootController>()._boss) {
             yield return new WaitForSeconds(UnityEngine.Random.Range(1.0f, 2.0f));
             _jumping = true;
-        }
-        else
-        {
+        } else {
 
             yield return new WaitForSeconds(UnityEngine.Random.Range(2.0f, 4.0f));
             _jumping = true;
@@ -266,8 +239,7 @@ public class Enemy : CharacterBase
     }
 
 
-    private Vector3 MoveTowardsPlayer()
-    {
+    private Vector3 MoveTowardsPlayer() {
         // could use some pathing, boo no navigationmesh for 2D
         var currentPosition = transform.position;
         var moveDirection = _player.transform.position - currentPosition;
@@ -275,8 +247,7 @@ public class Enemy : CharacterBase
         return moveDirection*_moveSpeed;
     }
 
-    private Vector3 MoveAwayFromPlayer()
-    {
+    private Vector3 MoveAwayFromPlayer() {
 		// too simple
 		var currentPosition = transform.position;
 		var moveDirection = -(_player.transform.position - currentPosition);
@@ -284,15 +255,13 @@ public class Enemy : CharacterBase
 		return moveDirection*_moveSpeed;
     }
 
-    private Vector3 MoveRandomly()
-    {
+    private Vector3 MoveRandomly() {
 		var moveDirection = _randomDirection;
 		moveDirection.Normalize();
 		return moveDirection * _moveSpeed;
     }
 
-	private Vector3 WanderTowardsPlayer()
-	{
+	private Vector3 WanderTowardsPlayer() {
 		var currentPosition = transform.position;
 		var moveDirection = _player.transform.position - currentPosition;
 		moveDirection += _randomDirection;
@@ -300,10 +269,8 @@ public class Enemy : CharacterBase
 		return moveDirection*_moveSpeed;
 	}
 
-	IEnumerator Turn()
-	{
-		if (!_turning) 
-		{
+	IEnumerator Turn() {
+		if (!_turning) {
 			_turning = true;
 			Vector2 direction = UnityEngine.Random.insideUnitCircle * 4f;
 			_randomDirection = new Vector3 (direction.x, direction.y, 0);
@@ -312,13 +279,11 @@ public class Enemy : CharacterBase
         }
 	}
 
-	public void Enable()
-	{
+	public void Enable() {
 		GetComponents<MonoBehaviour>().ToList().ForEach(e => e.enabled = true);
 	}
 
-	public void Disable(Room room = null)
-	{
+	public void Disable(Room room = null) {
 		if (room != null)
 			OwnerRoom =room;
 		GetComponents<MonoBehaviour>().ToList().ForEach(e => e.enabled = false);

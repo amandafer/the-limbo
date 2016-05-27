@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 470772}
   - 114: {fileID: 11417552}
+  - 114: {fileID: 11412802}
   m_Layer: 0
   m_Name: FloorGenerator
   m_TagString: GameController
@@ -28,6 +29,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11412802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152280}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967e9a84d296f745bad1cb86013647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthTexture: {fileID: 2800000, guid: a18b0b8e5bbc642e9b84d50364e818cf, type: 3}
+  _halfHealthTexture: {fileID: 2800000, guid: c86e204c5d69446d9952faa932422188, type: 3}
+  _emptyHealthTexture: {fileID: 2800000, guid: aa960bc39829a4f42989a9e27f593ce0, type: 3}
 --- !u!114 &11417552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -44,7 +59,7 @@ MonoBehaviour:
   - {fileID: 11480472, guid: 9e7b7af401af242cc99cde52cd8d0965, type: 2}
   _firstRoom: {fileID: 11432992, guid: 744331fefa4074a4ba18b2b2609730dc, type: 2}
   _bossRoom: {fileID: 11400000, guid: 250b1ec9be8354f4cb40cfe1e982e938, type: 2}
-  _playerPrefab: {fileID: 11488878, guid: f69db3808180445ec8875588b7a6d916, type: 2}
+  _playerPrefab: {fileID: 11435930, guid: e67769b676bf1485da9077da8969966c, type: 2}
   _branchingProbability: 0.6
   _enemyPrefab: {fileID: 0}
   _obstacleLayouts:
