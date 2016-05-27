@@ -21,8 +21,8 @@ public class ShowMap : MonoBehaviour  {
 		var leftPadding = Screen.width - Screen.width/4;
         var topPadding = Screen.height-70;
 
-        var iconWidth = Screen.width/30;
-        var iconHeight = Screen.height/30;
+        var iconWidth = Screen.width/20;
+        var iconHeight = Screen.height/20;
 
         foreach (var room in _floorGenerator._floorGrid.Rooms.Where(r => r.IsVisibleOnMap)) {
             var roomTexture = room.PlayerHasVisited ? _roomTexture : _unvisitedRoomTexture;

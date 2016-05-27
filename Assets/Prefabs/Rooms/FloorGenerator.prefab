@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a20c92bdaceee4db00a797f01898e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfRooms: 0
+  numberOfRooms: 4
   _roomPrefabs:
   - {fileID: 11480472, guid: 9e7b7af401af242cc99cde52cd8d0965, type: 2}
   _firstRoom: {fileID: 11432992, guid: 744331fefa4074a4ba18b2b2609730dc, type: 2}

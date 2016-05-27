@@ -172,9 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b967e9a84d296f745bad1cb86013647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthTexture: {fileID: 2800000, guid: 2a21e7095434543dba9829514384ef08, type: 3}
-  _halfHealthTexture: {fileID: 2800000, guid: 17887de0fe034474abebdf03f00189a5, type: 3}
-  _emptyHealthTexture: {fileID: 2800000, guid: e7645f6ae5a05456a978544e43ae97bc, type: 3}
+  _healthTexture: {fileID: 2800000, guid: 406ad30b4e92b4e25ac308e6f44b2119, type: 3}
+  _halfHealthTexture: {fileID: 2800000, guid: f0b25b56c788d43c986bb6e2ad822502, type: 3}
+  _emptyHealthTexture: {fileID: 2800000, guid: 0d5b72eb3fef74ee48d3dcb9124c5bc7, type: 3}
 --- !u!131 &117175855
 GUITexture:
   m_ObjectHideFlags: 0
@@ -338,6 +338,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 176524, guid: e67769b676bf1485da9077da8969966c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e67769b676bf1485da9077da8969966c, type: 2}
   m_IsPrefabParent: 0
@@ -382,7 +386,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 179178, guid: 9e7b7af401af242cc99cde52cd8d0965, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e7b7af401af242cc99cde52cd8d0965, type: 2}

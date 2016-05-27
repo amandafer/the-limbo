@@ -7,12 +7,12 @@ using Random = UnityEngine.Random;
 
 public class FloorGenerator : MonoBehaviour {
 
-	public int numberOfRooms;
-	public List<Room> _roomPrefabs = new List<Room>();
+	public int numberOfRooms = 4;
+	public float _branchingProbability = 0.6f;
 	public Room _firstRoom, _bossRoom;
 	public Player _playerPrefab;
-	public float _branchingProbability = 0.6f;
 	public Enemy _enemyPrefab;
+	public List<Room> _roomPrefabs = new List<Room>();
 	public List<GameObject> _obstacleLayouts = new List<GameObject>();
 	public FloorGrid _floorGrid = new FloorGrid(6, 6);
 
@@ -53,7 +53,6 @@ public class FloorGenerator : MonoBehaviour {
 		int numberOfRoomsCreated = CreateBranch(firstRoom, coordinates, 0);
 
 		if (Random.Range(0.0f, 1.0f) <= _branchingProbability) {
-			//Debug.Log("Branching!");
 			numberOfRoomsCreated = CreateBranch(firstRoom, coordinates, numberOfRoomsCreated);
 		}
 
@@ -75,19 +74,17 @@ public class FloorGenerator : MonoBehaviour {
 
 			coordinates = DetermineNewCoordinates(direction, coordinates);
 
-			if (!_floorGrid.IsDeadEnd(coordinates.X, coordinates.Y))
-			{
+			if (!_floorGrid.IsDeadEnd(coordinates.X, coordinates.Y)) {
 				previousRoom = AddNewRoom(previousRoom, direction, coordinates);
 				numberOfRoomsCreated++;
 			}
-			if (numberOfRoomsCreated < numberOfRooms-1 &&  Random.Range(0.0f, 1.0f) <= _branchingProbability)
-			{
-				Debug.Log("Branching!");
+
+			if (numberOfRoomsCreated < numberOfRooms-1 &&  Random.Range(0.0f, 1.0f) <= _branchingProbability) {
 				numberOfRoomsCreated = CreateBranch(previousRoom, coordinates, numberOfRoomsCreated);
 			}
 		}
-		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any())
-		{
+
+		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any()) {
 			var validRooms = _floorGrid.Rooms.Where(
 				r => r != firstRoom && _floorGrid.GetValidDirectionsFromRoom(r).Any()).ToList();
 			previousRoom = validRooms.ElementAt(Random.Range(0, validRooms.Count));
@@ -97,8 +94,7 @@ public class FloorGenerator : MonoBehaviour {
 
 		CreateBossRoom(previousRoom, coordinates);
 
-		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any())
-		{
+		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any()) {
 			var validRooms = _floorGrid.Rooms.Where(
 				r => r._roomType == RoomType.NormalRoom && _floorGrid.GetValidDirectionsFromRoom(r).Any()).ToList();
 			previousRoom = validRooms.ElementAt(Random.Range(0, validRooms.Count));
