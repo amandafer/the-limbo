@@ -53,28 +53,28 @@ public class Enemy : CharacterBase
             {
                 case 0:
                     MovementStyle = MovementStyle.Stationary;
-                    gameObject.GetComponent<EnemyShootController>().CanShoot = true;
+                    gameObject.GetComponent<EnemyShootController>()._canShoot = true;
                     break;
                 case 1:
                     MovementStyle = MovementStyle.RandomDirection;
-                    gameObject.GetComponent<EnemyShootController>().CanShoot = false;
+                    gameObject.GetComponent<EnemyShootController>()._canShoot = false;
                     Flying();
                     break;
                 case 2:
                     MovementStyle = MovementStyle.TowardsPlayer;
-                    gameObject.GetComponent<EnemyShootController>().CanShoot = false;
+                    gameObject.GetComponent<EnemyShootController>()._canShoot = false;
                     break;
                 case 3:
                     MovementStyle = MovementStyle.RandomTowardsPlayer;
-                    gameObject.GetComponent<EnemyShootController>().CanShoot = true;
+                    gameObject.GetComponent<EnemyShootController>()._canShoot = true;
                     break;
                 case 4:
                     MovementStyle = MovementStyle.RandomTowardsPlayer;
-                    gameObject.GetComponent<EnemyShootController>().CanShoot = false;
+                    gameObject.GetComponent<EnemyShootController>()._canShoot = false;
                     break;
                 case 5:
                     MovementStyle = MovementStyle.AwayFromPlayer;
-                    gameObject.GetComponent<EnemyShootController>().CanShoot = false;
+                    gameObject.GetComponent<EnemyShootController>()._canShoot = false;
                     break;
             }
         }
@@ -158,7 +158,7 @@ public class Enemy : CharacterBase
     protected override void TakeDamage()
     {
         base.TakeDamage();
-        if (gameObject.GetComponent<EnemyShootController>().Boss && OwnerRoom._bossBar != null)
+        if (gameObject.GetComponent<EnemyShootController>()._boss && OwnerRoom._bossBar != null)
         {
             OwnerRoom._bossBar.transform.FindChild("BossHealth").transform.localScale = new Vector3((float)Health / _maxHealth,1,1);
         }
@@ -170,7 +170,7 @@ public class Enemy : CharacterBase
     protected override void Die()
     {
         base.Die();
-        //OwnerRoom.OnEnemyDied(this);
+        OwnerRoom.OnEnemyDied(this);
         Disable();
         StartCoroutine(ReallyDie());
     }
@@ -178,10 +178,10 @@ public class Enemy : CharacterBase
     IEnumerator ReallyDie()
     {
         Animator.Play("Die");
-        if (gameObject.GetComponent<EnemyShootController>().Boss)
+        if (gameObject.GetComponent<EnemyShootController>()._boss)
             gameObject.GetComponent<EnemyShootController>().BossExplode();
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
-        float t = gameObject.GetComponent<EnemyShootController>().Boss ? 1.1f : 0.7f;
+        float t = gameObject.GetComponent<EnemyShootController>()._boss ? 1.1f : 0.7f;
         gameObject.GetComponent<EnemyShootController>().enabled = false;
         yield return new WaitForSeconds(t);
         Destroy(gameObject);
@@ -221,7 +221,7 @@ public class Enemy : CharacterBase
 		if (ShootClips.Any())
 		{
 			int bossHax = 0;
-			if (eSC.Boss)
+			if (eSC._boss)
 				bossHax = 4;
 			var clipToPlay = ShootClips[Random.Range(0, ShootClips.Count - bossHax)];
 			clipToPlay.pitch = Random.Range(eSC.MinShootPitch, eSC.MaxShootPitch);
@@ -241,10 +241,10 @@ public class Enemy : CharacterBase
 
     IEnumerator Wait()
     {
-        if (gameObject.GetComponent<EnemyShootController>().Boss)
+        if (gameObject.GetComponent<EnemyShootController>()._boss)
             gameObject.GetComponent<EnemyShootController>().BossExplode();
 
-        if (gameObject.GetComponent<EnemyShootController>().Boss && UnityEngine.Random.Range(0, 2) < 1 && (_player.transform.position - transform.position).magnitude < 7)
+        if (gameObject.GetComponent<EnemyShootController>()._boss && UnityEngine.Random.Range(0, 2) < 1 && (_player.transform.position - transform.position).magnitude < 7)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(2.0f, 3.0f));
             gameObject.GetComponent<EnemyShootController>().BossShoot();
@@ -252,7 +252,7 @@ public class Enemy : CharacterBase
             _jumping = true;
 
         }
-        else if (gameObject.GetComponent<EnemyShootController>().Boss)
+        else if (gameObject.GetComponent<EnemyShootController>()._boss)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(1.0f, 2.0f));
             _jumping = true;

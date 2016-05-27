@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6181822}
   - 50: {fileID: 5068766}
   - 114: {fileID: 11465872}
+  - 95: {fileID: 9594132}
   m_Layer: 14
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -62,6 +63,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6}
+--- !u!95 &9594132
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137848}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1172f27548e5e404d8e723ae9d87cd16, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11465872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +117,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1735560919
+  m_SortingLayerID: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 817c252781cf43046ba8d1c7535bdf79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

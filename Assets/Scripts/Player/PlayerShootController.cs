@@ -55,8 +55,10 @@ namespace Assets.Scripts
         IEnumerator Shoot() {
             IsShooting = true;
             while (Input.GetKey(_shootKey)) {
+				// Instantiate the bullet prefab and set the shooter as the player
 				var bullet = (Rigidbody2D)Instantiate(BulletPrefab, new Vector3(transform.position.x, transform.position.y, 0f), new Quaternion());
-                
+				bullet.GetComponent<BulletScript>().Shooter = transform.gameObject;
+
 				// Rotation of the bullet sprite
 				if (_shootDirection.y > 0) {
                     bullet.transform.Rotate(0, 0, -90);
@@ -80,8 +82,7 @@ namespace Assets.Scripts
             IsShooting = false;
 
             //Reset head flipping
-            if (_headObject.transform.localScale.x < 0)
-            {
+            if (_headObject.transform.localScale.x < 0) {
                 TransformHelpers.FlipX(_headObject.gameObject);
             }
         }

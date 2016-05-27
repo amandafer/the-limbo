@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb0a79857b11454abf33fcef1bce16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 0.05
+  _moveSpeed: 0.01
   _bloodPrefab:
   - {fileID: 100000, guid: 129dbd4250084d34680284c24f5c4f3e, type: 2}
   - {fileID: 100000, guid: 01635ee5e41f163429bd6ead0df6ce24, type: 2}
