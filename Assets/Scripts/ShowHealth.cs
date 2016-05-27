@@ -39,7 +39,7 @@ public class ShowHealth : MonoBehaviour {
             i++;
         }
 
-		/* 
+
         for (; i <= _playerCharacter._maxHealth / 2; i++) {
             GUI.DrawTexture(new Rect(left, top, heartWidth, heartHeight), _emptyHealthTexture, ScaleMode.ScaleToFit);
             left += heartWidth;
@@ -49,6 +49,6 @@ public class ShowHealth : MonoBehaviour {
                 top += heartHeight;
             }
         }
-        */
+        
     }
 }

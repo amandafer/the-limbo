@@ -43,8 +43,7 @@ public class Player : CharacterBase
         }
     }
 
-    public void OnPickUp(ItemBase item) {
-        
+    public void OnPickUp(ItemBase item) {      
         if (!item.IsInstantEffect) {
             if (CurrentItem != null) {
                 CurrentItem.transform.parent = transform.parent;
@@ -127,14 +126,12 @@ public class Player : CharacterBase
         return movement;
     }
 
-    protected override void HandleMovement(Vector3 movement)
-    {
+    protected override void HandleMovement(Vector3 movement) {
         Momentum = movement * _moveSpeed;
         gameObject.GetComponent<Rigidbody2D>().AddForce(Momentum);
     }
 
-    protected override void Die()
-    {
+    protected override void Die() {
         base.Die();
         Animator.Play("Die");
         DisableCharacter();
@@ -148,8 +145,7 @@ public class Player : CharacterBase
 		}
 	}
 
-	IEnumerator BeInvulnerable()
-	{
+	IEnumerator BeInvulnerable() {
 		_invulnerable = true;
 		yield return new WaitForSeconds (0.5f);
 		_invulnerable = false;
@@ -160,15 +156,13 @@ public class Player : CharacterBase
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex) ;
 	}
 
-    private void DisableCharacter()
-    {
+    private void DisableCharacter() {
         _gunObject.enabled = false;
         _headObject.GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Rigidbody2D>().isKinematic = true;
     }
 
-    private void EnableCharacter()
-    {
+    private void EnableCharacter() {
         _gunObject.enabled = true;
         _headObject.GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Rigidbody2D>().isKinematic = false;
