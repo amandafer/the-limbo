@@ -16,7 +16,7 @@ public class LevelSwitchDoor : MonoBehaviour
             floorGenerator.ClearFloor();
             floorGenerator.TryGenerateFloor();
             other.transform.position = Vector3.zero;
-            floorGenerator._floorGrid.FirstRoom.OnPlayerEntersRoom(other.GetComponent<Player>());
+            floorGenerator.Grid.FirstRoom.OnPlayerEntersRoom(other.GetComponent<Player>());
             GameObject.FindGameObjectWithTag("MainCamera").transform.position = new Vector3(0,0, -10);
         }
     }

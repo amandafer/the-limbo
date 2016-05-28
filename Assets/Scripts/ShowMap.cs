@@ -24,7 +24,7 @@ public class ShowMap : MonoBehaviour  {
         var iconWidth = Screen.width/20;
         var iconHeight = Screen.height/20;
 
-        foreach (var room in _floorGenerator._floorGrid.Rooms.Where(r => r.IsVisibleOnMap)) {
+        foreach (var room in _floorGenerator.Grid.Rooms.Where(r => r.IsVisibleOnMap)) {
             var roomTexture = room.PlayerHasVisited ? _roomTexture : _unvisitedRoomTexture;
             GUI.DrawTexture(
                 new Rect(leftPadding + room.X*roomWidth, topPadding + -room.Y*roomHeight, roomWidth*2, roomHeight*2),

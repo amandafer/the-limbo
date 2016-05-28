@@ -48,7 +48,7 @@ public class Door : MonoBehaviour {
         _mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 	}
 
-    private const float PlayerMovement = 3.0f;
+    private const float PlayerMovement = 4.0f;
 
 	// Handles the camera when the player pass through the door
     public void OnTriggerEnter2D(Collider2D other) {
@@ -59,22 +59,22 @@ public class Door : MonoBehaviour {
             var cameraMovement = new Vector2();
             var playerMovement = new Vector3();
 
-			// Camera direction
+			// Camera direction. The direction is the same as the Horizontal and Vertical deltas from Floor Generator.
             switch (Direction) {
                 case RoomDirection.North:
-                    cameraMovement = new Vector2(0, 10);
+					cameraMovement = new Vector2(0, 10);
                     playerMovement = new Vector3(0, PlayerMovement, 0);
                     break;
                 case RoomDirection.East:
-                    cameraMovement = new Vector2(14.5f, 0);
+					cameraMovement = new Vector2(14.5f, 0);
                     playerMovement = new Vector3(PlayerMovement, 0, 0);
                     break;
                 case RoomDirection.South:
-                    cameraMovement = new Vector2(0, -10);
+					cameraMovement = new Vector2(0, -10);
                     playerMovement = new Vector3(0, -PlayerMovement, 0);
                     break;
                 case RoomDirection.West:
-                    cameraMovement = new Vector2(-14.5f, 0);
+					cameraMovement = new Vector2(-14.5f, 0);
                     playerMovement = new Vector3(-PlayerMovement, 0, 0);
                     break;
             }

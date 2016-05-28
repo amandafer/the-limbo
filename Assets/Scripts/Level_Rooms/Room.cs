@@ -93,24 +93,24 @@ namespace Assets.Scripts
             var door = (Door)Instantiate(doorPrefab);
             switch (direction) {
                 case RoomDirection.North:
-                    position += new Vector3(-1.15f, 4f);
+                    position += new Vector3(0, 3.5f);
                     NorthDoor = door;
                     door.Wall = _northDoorWall;
                     break;
                 case RoomDirection.East:
-                    position += new Vector3(6.2f, 1.1f);
+                    position += new Vector3(5.7f, 0);
                     rotation = Quaternion.Euler(0, 0, 270);
                     EastDoor = door;
                     door.Wall = _eastDoorWall;
                     break;
                 case RoomDirection.South:
-                    position += new Vector3(1, -4f);
+                    position += new Vector3(0, -3.5f);
                     rotation = Quaternion.Euler(0, 0, 180);
                     SouthDoor = door;
                     door.Wall = _southDoorWall;
                     break;
                 case RoomDirection.West:
-                    position += new Vector3(-6.25f, -0.9f);
+                    position += new Vector3(-5.7f, 0);
                     rotation = Quaternion.Euler(0, 0, 90);
                     WestDoor = door;
                     door.Wall = _westDoorWall;

@@ -14,10 +14,12 @@ public class FloorGenerator : MonoBehaviour {
 	public Enemy _enemyPrefab;
 	public List<Room> _roomPrefabs = new List<Room>();
 	public List<GameObject> _obstacleLayouts = new List<GameObject>();
-	public FloorGrid _floorGrid = new FloorGrid(6, 6);
 
-	private const float HorizontalDelta = 14.5f;
-	private const float VerticalDelta = 10f;
+	private FloorGrid _floorGrid = new FloorGrid(6, 6);
+	public FloorGrid Grid {get {return _floorGrid;}}
+
+	public const float HorizontalDelta = 14.5f;//13.4f;
+	public const float VerticalDelta = 10;//9f;
 
 	// Generates the floor and the player
 	public void Awake() {
