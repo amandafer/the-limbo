@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 9b928bd590f244a3fb80f512f2d80f8f
+timeCreated: 1464485526
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bloodstains_0
+    21300002: bloodstains_1
+    21300004: bloodstains_2
+    21300006: bloodstains_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bloodstains_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171.5
+        width: 221.5
+        height: 171.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 65, y: -21.5}
+        - {x: 59, y: -23.5}
+        - {x: 59, y: -36.5}
+        - {x: 62, y: -41.5}
+        - {x: 81, y: -41.5}
+        - {x: 92, y: -38.5}
+        - {x: 92, y: -25.5}
+        - {x: 89, y: -21.5}
+      - - {x: -54, y: 40.5}
+        - {x: -92, y: 4.5}
+        - {x: -92, y: -6.5}
+        - {x: -72, y: -35.5}
+        - {x: 99, y: -35.5}
+        - {x: 99, y: 31.5}
+        - {x: 71, y: 40.5}
+      - - {x: -79, y: -16.5}
+        - {x: -92, y: -16.5}
+        - {x: -98, y: -17.5}
+        - {x: -98, y: -33.5}
+        - {x: -93, y: -34.5}
+        - {x: -80, y: -34.5}
+        - {x: -76, y: -30.5}
+        - {x: -76, y: -21.5}
+    - name: bloodstains_1
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 171.5
+        width: 221.5
+        height: 171.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 103, y: 39.5}
+        - {x: 111, y: 56.5}
+        - {x: 111, y: 62.5}
+        - {x: 102, y: 86.5}
+        - {x: -87, y: 86.5}
+        - {x: -91, y: 71.5}
+        - {x: -91, y: 9.5}
+        - {x: -18, y: -19.5}
+        - {x: 20, y: -19.5}
+        - {x: 56, y: -5.5}
+        - {x: 111, y: 20.5}
+        - {x: 111, y: 34.5}
+    - name: bloodstains_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 221.5
+        height: 171.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -97, y: 86.5}
+        - {x: -97, y: 8.5}
+        - {x: -60, y: -34.5}
+        - {x: 63, y: -34.5}
+        - {x: 101, y: 2.5}
+        - {x: 101, y: 85.5}
+        - {x: 99, y: 86.5}
+      - - {x: -110, y: -0.5}
+        - {x: -111, y: -2.5}
+        - {x: -111, y: -15.5}
+        - {x: -109, y: -18.5}
+        - {x: -95, y: -18.5}
+        - {x: -89, y: -17.5}
+        - {x: -89, y: -3.5}
+        - {x: -95, y: -0.5}
+    - name: bloodstains_3
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 0.5
+        width: 221.5
+        height: 171.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -95, y: 17.5}
+        - {x: -108, y: 14.5}
+        - {x: -108, y: -85.5}
+        - {x: 54, y: -85.5}
+        - {x: 86, y: -60.5}
+        - {x: 86, y: 8.5}
+        - {x: 73, y: 17.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -151,7 +151,7 @@ namespace Assets.Scripts
             if (!ContainsEnemies)
             {
                 _doors.ForEach(d => d.IsOpen = true);
-				/*
+
                 Destroy(_bossBar);
                 if (_roomType == RoomType.BossRoom) {
                     var audioSources = GameObject.FindGameObjectWithTag("MainCamera").GetComponents<AudioSource>();
@@ -162,7 +162,7 @@ namespace Assets.Scripts
                     d.transform.parent = transform;
                     d.transform.localPosition = Vector3.zero;
                 }
-                */
+                
                 //SpawnItem();
             }
         }

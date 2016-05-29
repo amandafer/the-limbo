@@ -5,7 +5,7 @@ AnimatorOverrideController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: fly_eye
+  m_Name: FlyEyeController
   m_Controller: {fileID: 9100000, guid: 7498f2b6dce8d4022bc1af87cf7fb90d, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 14be381849dd0475ead0337a4a53d75f, type: 2}

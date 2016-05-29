@@ -10,14 +10,18 @@ public class LevelSwitchDoor : MonoBehaviour
         {
             var floorGenerator = GameObject.FindGameObjectWithTag("GameController").GetComponent<FloorGenerator>();
             floorGenerator.numberOfRooms += 2;
-            var r = floorGenerator._roomPrefabs.First();
+            
+			var r = floorGenerator._roomPrefabs.First();
             r.transform.position = new Vector3(0, -1.1f, 0);
-            floorGenerator._firstRoom = r;
+            
+			floorGenerator._firstRoom = r;
             floorGenerator.ClearFloor();
             floorGenerator.TryGenerateFloor();
-            other.transform.position = Vector3.zero;
+            
+			other.transform.position = Vector3.zero;
             floorGenerator.Grid.FirstRoom.OnPlayerEntersRoom(other.GetComponent<Player>());
-            GameObject.FindGameObjectWithTag("MainCamera").transform.position = new Vector3(0,0, -10);
+            
+			GameObject.FindGameObjectWithTag("MainCamera").transform.position = new Vector3(0,-1, -10);
         }
     }
 }

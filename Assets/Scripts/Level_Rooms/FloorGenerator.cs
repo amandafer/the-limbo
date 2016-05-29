@@ -248,14 +248,13 @@ public class FloorGenerator : MonoBehaviour {
 
 		// Instantiate boss or normal enemies
 		if (roomType == RoomType.BossRoom) {
-			/*
 			var enemyLayouts = room.GetComponent<EnemyLayout>().EnemyLayouts;
 			var enemyLayout = (GameObject)Instantiate(enemyLayouts.ElementAt(Random.Range(0, enemyLayouts.Count)));
 			//enemyLayout.transform.localPosition = Vector3.zero;
 			enemyLayout.transform.parent = room.transform;
+
 			var enemies = enemyLayout.GetComponentsInChildren<Enemy>().ToList();
 			enemies.ForEach(e => room.AddEnemy(e, e.transform.position));
-			*/
 		} else if (roomType == RoomType.NormalRoom ) {
 			var obstacleLayout = (GameObject)Instantiate(_obstacleLayouts.ElementAt(Random.Range(0, _obstacleLayouts.Count)));
 			obstacleLayout.transform.parent = room.transform;
