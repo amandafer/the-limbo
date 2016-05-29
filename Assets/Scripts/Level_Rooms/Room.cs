@@ -98,19 +98,19 @@ namespace Assets.Scripts
                     door.Wall = _northDoorWall;
                     break;
                 case RoomDirection.East:
-                    position += new Vector3(5.7f, 0);
+                    position += new Vector3(5.75f, 0);
                     rotation = Quaternion.Euler(0, 0, 270);
                     EastDoor = door;
                     door.Wall = _eastDoorWall;
                     break;
                 case RoomDirection.South:
-                    position += new Vector3(0, -3.5f);
+                    position += new Vector3(0, -3.55f);
                     rotation = Quaternion.Euler(0, 0, 180);
                     SouthDoor = door;
                     door.Wall = _southDoorWall;
                     break;
                 case RoomDirection.West:
-                    position += new Vector3(-5.7f, 0);
+                    position += new Vector3(-5.79f, 0);
                     rotation = Quaternion.Euler(0, 0, 90);
                     WestDoor = door;
                     door.Wall = _westDoorWall;
@@ -128,8 +128,7 @@ namespace Assets.Scripts
         }
 
 
-        public void InstantiateEnemy(Enemy enemyPrefab, Vector2 positionInRoom)
-        {   
+        public void InstantiateEnemy(Enemy enemyPrefab, Vector2 positionInRoom) {   
             var enemy = (Enemy) Instantiate(enemyPrefab);
             enemy.transform.parent = transform;
             enemy.transform.localPosition = Vector3.zero + new Vector3(positionInRoom.x, positionInRoom.y, 0);
@@ -139,8 +138,7 @@ namespace Assets.Scripts
         }
 
 
-		public void AddEnemy(Enemy enemy, Vector2 positionInRoom)
-		{   
+		public void AddEnemy(Enemy enemy, Vector2 positionInRoom) {   
 			enemy.transform.parent = transform;
 			enemy.transform.localPosition = Vector3.zero + new Vector3(positionInRoom.x, positionInRoom.y, 0);
 			enemy.OwnerRoom = this;
@@ -148,8 +146,7 @@ namespace Assets.Scripts
 			enemy.Disable();
 		}
 
-		public void OnEnemyDied(Enemy enemy)
-		{
+		public void OnEnemyDied(Enemy enemy) {
 			_enemies.Remove(enemy);
             if (!ContainsEnemies)
             {

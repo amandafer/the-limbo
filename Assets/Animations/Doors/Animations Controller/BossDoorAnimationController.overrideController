@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BossDoorAnimationController
+  m_Controller: {fileID: 9100000, guid: a890138566f2e84499fa2fdebaddedeb, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 870db63420b3ee74daaedaf6fc770857, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a9e142683c8334b80a50724fa0b468e1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4c220a13ccbe9466e8b5a14140f48ecc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fcfef18a7a39b4c2d89db2031f3f54b3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 449af1256ede7412fb22150968f90a28, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 035803237322c47738b19ed6e8210347, type: 2}

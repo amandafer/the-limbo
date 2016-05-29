@@ -48,7 +48,7 @@ public class Door : MonoBehaviour {
         _mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 	}
 
-    private const float PlayerMovement = 4.0f;
+    private const float PlayerMovement = 4.5f;
 
 	// Handles the camera when the player pass through the door
     public void OnTriggerEnter2D(Collider2D other) {

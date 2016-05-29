@@ -202,7 +202,6 @@ GameObject:
   - 4: {fileID: 400022}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: BossRoom
   m_TagString: Untagged
@@ -576,19 +575,6 @@ MonoBehaviour:
   _bossBar: {fileID: 0}
   bossBarPrefab: {fileID: 100002, guid: cd78254e37591f543821ffe04bba5d9a, type: 2}
   _playerIsInRoom: 0
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8526b65c2f3d54a45af59e4d8be68dd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyLayouts:
-  - {fileID: 170066, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
