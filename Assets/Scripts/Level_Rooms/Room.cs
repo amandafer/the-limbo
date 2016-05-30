@@ -71,7 +71,7 @@ namespace Assets.Scripts
             var rotation = new Quaternion();
             Door doorPrefab = _doorPrefab;
 
-            if (_roomType == RoomType.NormalRoom || _roomType == RoomType.StartRoom) {
+			if (_roomType == RoomType.NormalRoom || _roomType == RoomType.StartRoom) {
                 switch (room._roomType) {
                     case RoomType.StartRoom:
                         doorPrefab = _doorPrefab;
@@ -85,8 +85,8 @@ namespace Assets.Scripts
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
-            } else if (_roomType == RoomType.BossRoom) {
-                doorPrefab = _bossDoorPrefab;
+			} else if (_roomType == RoomType.BossRoom) {
+                //doorPrefab = _bossDoorPrefab;
             }
 
 			// Sets the doors prefabs of the room and its position
@@ -148,8 +148,8 @@ namespace Assets.Scripts
 
 		public void OnEnemyDied(Enemy enemy) {
 			_enemies.Remove(enemy);
-            if (!ContainsEnemies)
-            {
+
+            if (!ContainsEnemies) {
                 _doors.ForEach(d => d.IsOpen = true);
 
                 Destroy(_bossBar);
@@ -158,34 +158,31 @@ namespace Assets.Scripts
                     audioSources.ElementAt(1).Stop();
                     audioSources.ElementAt(2).Play();
                     audioSources.ElementAt(0).PlayDelayed(9.629f);
-                    var d = (LevelSwitchDoor) Instantiate(_levelSwitchDoorPrefab);
+                    
+					var d = (LevelSwitchDoor) Instantiate(_levelSwitchDoorPrefab);
                     d.transform.parent = transform;
                     d.transform.localPosition = Vector3.zero;
                 }
                 
-                //SpawnItem();
+                SpawnItem();
             }
         }
 
-		/*
-        private void SpawnItem()
-        {
-            if (_roomType != RoomType.NormalRoom)
-            {
+		// Spawn items after enemies die
+        private void SpawnItem() {
+            if (_roomType != RoomType.NormalRoom) {
                 return;
             }
-            var spawner = GetComponentInChildren<ItemSpawner>();
-            if (spawner != null)
-            {
+            
+			var spawner = GetComponentInChildren<ItemSpawner>();
+            
+			if (spawner != null) {
                 spawner.Spawn();
-            }
-            else
-            {
+            } else {
                 Debug.LogError("Item Spawner missing");
             }
 
         }
-        */
 
 		// Handles the audio for doors
         public void OnPlayerEntersRoom(Player player) {
@@ -206,7 +203,7 @@ namespace Assets.Scripts
 				if (doorOpenClip != null)
                     doorOpenClip.Play();
             } else {
-                _doors.ForEach(d => d.IsOpen = true);
+				_doors.ForEach(d => d.IsOpen = true);
                 /*var doorCloseClip = _doors.First()._doorCloseClip;
 
                 if (doorCloseClip != null) {

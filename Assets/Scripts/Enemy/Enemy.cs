@@ -15,24 +15,21 @@ public class Enemy : CharacterBase {
 
 	[SerializeField] 
     private MovementStyle _movementStyle = MovementStyle.TowardsPlayer;
-    public MovementStyle MovementStyle
-    {
+    public MovementStyle MovementStyle {
         get { return _movementStyle; }
         set { _movementStyle = value; }
     }
 
     [SerializeField]
     private float _wanderClipRepeatDelay;
-    public float WanderingClipRepeatDelay
-    {
+    public float WanderingClipRepeatDelay {
         get { return _wanderClipRepeatDelay; }
         set { _wanderClipRepeatDelay = value; }
     }
 
     [SerializeField]
     private AudioSource _wanderClip;
-    public AudioSource WanderingClip
-    {
+    public AudioSource WanderingClip {
         get { return _wanderClip; }
         set { _wanderClip = value; }
     }

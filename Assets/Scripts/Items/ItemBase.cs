@@ -53,26 +53,23 @@ namespace Assets.Scripts
             }
         }
 
-        public void Enable()
-        {
+        public void Enable() {
             enabled = true;
             GetComponent<SpriteRenderer>().enabled = true;
             GetComponent<BoxCollider2D>().enabled = true;
         }
 
-        public void Disable()
-        {
+        public void Disable() {
             enabled = false;
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
         }
 
 
-        private void OnPickUp(Player player)
-        {
+        private void OnPickUp(Player player) {
             if (_pickUpClip != null)
                 _pickUpClip.Play();
-            player.OnPickUp(this);
+            //player.OnPickUp(this);
         }
 
         public abstract void UseItem(Player player);

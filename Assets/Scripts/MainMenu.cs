@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 public class MainMenu : MonoBehaviour {
-
+	/*
 	public Texture backGroundTexture;
 
 	public Texture StartButtonTexture;
@@ -51,4 +52,5 @@ public class MainMenu : MonoBehaviour {
 		}
         _hover = GUI.tooltip;
 	}
+	*/
 }

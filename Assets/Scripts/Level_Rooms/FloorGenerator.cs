@@ -94,8 +94,6 @@ public class FloorGenerator : MonoBehaviour {
 			coordinates = _floorGrid.GetCoordinatesForRoom(previousRoom);
 		}
 
-		CreateBossRoom(previousRoom, coordinates);
-
 		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any()) {
 			var validRooms = _floorGrid.Rooms.Where(
 				r => r._roomType == RoomType.NormalRoom && _floorGrid.GetValidDirectionsFromRoom(r).Any()).ToList();
@@ -103,6 +101,15 @@ public class FloorGenerator : MonoBehaviour {
 
 			coordinates = _floorGrid.GetCoordinatesForRoom(previousRoom);
 		}
+
+		// Boss room should not appear at the start room
+		while (previousRoom._roomType == RoomType.StartRoom) {
+			var validRooms = _floorGrid.Rooms.Where (
+				                 r => r._roomType == RoomType.NormalRoom && _floorGrid.GetValidDirectionsFromRoom (r).Any ()).ToList ();
+			previousRoom = validRooms.ElementAt (Random.Range (0, validRooms.Count));
+		}
+		CreateBossRoom(previousRoom, coordinates);
+			
 		//var dir = _floorGrid.GetValidDirectionsFromRoom(coordinates).First();
 		//AddNewRoom(previousRoom, dir, DetermineNewCoordinates(dir, coordinates), RoomType.TreasureRoom);
 	}
@@ -189,10 +196,9 @@ public class FloorGenerator : MonoBehaviour {
 
 	private void CreateBossRoom(Room previousRoom, RoomCoordinates coordinates)
 	{
-		Debug.Log("Room before boss: "+ previousRoom.name);
+		//Debug.Log("Room before boss: "+ previousRoom.name);
 		var validDirections = _floorGrid.GetValidDirectionsFromRoom(coordinates.X, coordinates.Y).ToList();
-		if (!validDirections.Any())
-		{
+		if (!validDirections.Any()) {
 			throw new Exception("Failed to create boss room.");
 		}
 
@@ -288,52 +294,43 @@ public class FloorGrid {
 
 	public Room FirstRoom { get; private set; }
 
-	public FloorGrid(int height, int width)
-	{
+	public FloorGrid(int height, int width) {
 		Height = height;
 		Width = width;
 		_rooms = new Room[height, width];
 	}
 
-	public bool ContainsRoom(int x, int y)
-	{
+	public bool ContainsRoom(int x, int y) {
 		return _rooms[x, y] != null;
 	}
 
-	public bool ContainsRoom(RoomCoordinates coordinates)
-	{
+	public bool ContainsRoom(RoomCoordinates coordinates) {
 		return ContainsRoom(coordinates.X, coordinates.Y);
 	}
 
-	public bool CanRoomBeAdded(int x, int y)
-	{
+	public bool CanRoomBeAdded(int x, int y) {
 		return x >= 0 && x < Width && y >= 0 && y < Height && !ContainsRoom(x, y);
 	}
 
-	public bool CanRoomBeAdded(RoomCoordinates coordinates)
-	{
+	public bool CanRoomBeAdded(RoomCoordinates coordinates) {
 		return CanRoomBeAdded(coordinates.X, coordinates.Y);
 	}
 
-	public bool IsDeadEnd(int x, int y)
-	{
+	public bool IsDeadEnd(int x, int y) {
 		return !CanRoomBeAdded(x + 1, y) && !CanRoomBeAdded(x - 1, y) && !CanRoomBeAdded(x, y + 1) &&
 			!CanRoomBeAdded(x, y - 1);
 	}
 
-	public bool IsDeadEnd(RoomCoordinates coordinates)
-	{
+	public bool IsDeadEnd(RoomCoordinates coordinates) {
 		return IsDeadEnd(coordinates.X, coordinates.Y);
 	}
 
-	public void AddRoom(int x, int y, Room room)
-	{
-		if (ContainsRoom(x, y))
-		{
+	public void AddRoom(int x, int y, Room room) {
+		if (ContainsRoom(x, y)) {
 			throw new Exception("The cell already contains a room");
 		}
-		if (FirstRoom == null)
-		{
+
+		if (FirstRoom == null) {
 			FirstRoom = room;
 		}
 		_rooms[x, y] = room;
@@ -348,46 +345,36 @@ public class FloorGrid {
 		AddRoom(coordinates.X, coordinates.Y, room);
 	}
 
-	public IEnumerable<RoomDirection> GetValidDirectionsFromRoom(int x, int y)
-	{
+	public IEnumerable<RoomDirection> GetValidDirectionsFromRoom(int x, int y) {
 		var validDirections = new List<RoomDirection>();
-		if (CanRoomBeAdded(x + 1, y))
-		{
+
+		if (CanRoomBeAdded(x + 1, y)) {
 			validDirections.Add(RoomDirection.East);
-		}
-		if (CanRoomBeAdded(x - 1, y))
-		{
+		} 
+		if (CanRoomBeAdded(x - 1, y)) {
 			validDirections.Add(RoomDirection.West);
-		}
-		if (CanRoomBeAdded(x, y + 1))
-		{
+		} 
+		if (CanRoomBeAdded(x, y + 1)) {
 			validDirections.Add(RoomDirection.North);
-		}
-		if (CanRoomBeAdded(x, y - 1))
-		{
+		} 
+		if (CanRoomBeAdded(x, y - 1)) {
 			validDirections.Add(RoomDirection.South);
 		}
 		return validDirections;
 	}
 
-	public IEnumerable<RoomDirection> GetValidDirectionsFromRoom(RoomCoordinates coordinates)
-	{
+	public IEnumerable<RoomDirection> GetValidDirectionsFromRoom(RoomCoordinates coordinates) {
 		return GetValidDirectionsFromRoom(coordinates.X, coordinates.Y);
 	}
 
-	public IEnumerable<RoomDirection> GetValidDirectionsFromRoom(Room room)
-	{
+	public IEnumerable<RoomDirection> GetValidDirectionsFromRoom(Room room) {
 		return GetValidDirectionsFromRoom(GetCoordinatesForRoom(room));
 	}
 
-	public RoomCoordinates GetCoordinatesForRoom(Room room)
-	{
-		for (int i = 0; i < Width; i++)
-		{
-			for (int j = 0; j < Height; j++)
-			{
-				if (_rooms[i, j] == room)
-				{
+	public RoomCoordinates GetCoordinatesForRoom(Room room) {
+		for (int i = 0; i < Width; i++) {
+			for (int j = 0; j < Height; j++) {
+				if (_rooms[i, j] == room) {
 					return new RoomCoordinates(i, j);
 				}
 			}
@@ -396,14 +383,10 @@ public class FloorGrid {
 	}
 
 	//TODO: Do not instantiate rooms until the room is ready
-	public void InstantiateRooms()
-	{
-		for (int i = 0; i < Width; i++)
-		{
-			for (int j = 0; j < Height; j++)
-			{
-				if (_rooms[i, j] != null)
-				{
+	public void InstantiateRooms() {
+		for (int i = 0; i < Width; i++) {
+			for (int j = 0; j < Height; j++) {
+				if (_rooms[i, j] != null) {
 
 				}
 			}
@@ -411,20 +394,17 @@ public class FloorGrid {
 	}
 }
 
-public struct RoomCoordinates
-{
+public struct RoomCoordinates {
 	public int X { get; private set; }
 	public int Y { get; private set; }
 
-	public RoomCoordinates(int x, int y) : this()
-	{
+	public RoomCoordinates(int x, int y) : this() {
 		X = x;
 		Y = y;
 	}
 }
 
-public enum RoomDirection
-{
+public enum RoomDirection {
 	North = 0,
 	East = 1,
 	South = 2,

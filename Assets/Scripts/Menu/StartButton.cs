@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 namespace Assets.Scripts.Menu
 {
@@ -8,7 +10,7 @@ namespace Assets.Scripts.Menu
     {
         protected override void OnButtonClicked()
         {
-			EditorSceneManager.LoadScene("ProceduralGenerationTest");
+			//EditorSceneManager.LoadScene("ProceduralGenerationTest");
         }
     }
 }
