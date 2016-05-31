@@ -12,9 +12,9 @@ namespace Assets.Scripts.Items
             set { _bulletSpeedAddition = value; }
         }
 
-        public override void UseItem(Player player)
-        {
-            player.GetComponent<PlayerShootController>().BulletSpeed += BulletSpeedAddition;
+        public override bool UseItem(Player player) {
+            //player.GetComponent<PlayerShootController>().BulletSpeed += BulletSpeedAddition;
+			return true;
         }
     }
 }

@@ -5,8 +5,7 @@ using UnityEngine;
 public class ItemSpawner : MonoBehaviour {
     [SerializeField]
     private List<ItemBase> _itemPrefabs = new List<ItemBase>();
-    public List<ItemBase> ItemPrefabs
-    {
+    public List<ItemBase> ItemPrefabs {
         get { return _itemPrefabs; }
     }
 
@@ -25,8 +24,12 @@ public class ItemSpawner : MonoBehaviour {
 	}
 
     public void Spawn() {
-        var item = (ItemBase)Instantiate(_itemPrefabs[Random.Range(0, _itemPrefabs.Count)]);
+		var item = (ItemBase)Instantiate (_itemPrefabs[0]);//[Random.Range(0, _itemPrefabs.Count)]);
         item.transform.parent = transform;
-        item.transform.localPosition = Vector3.zero;
+
+		// The item will spawn in random positions
+		var positionX = Random.Range(-4.5f, 4.5f);
+		var positionY = Random.Range(-2.5f, 1.5f);
+		item.transform.localPosition = new Vector3(positionX, positionY);
     }
 }

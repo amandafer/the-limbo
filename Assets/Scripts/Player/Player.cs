@@ -44,7 +44,7 @@ public class Player : CharacterBase
     }
 
     public void OnPickUp(ItemBase item) {      
-        if (!item.IsInstantEffect) {
+        if (!item._isInstantEffect) {
             if (CurrentItem != null) {
                 CurrentItem.transform.parent = transform.parent;
                 CurrentItem.transform.position = transform.position + new Vector3(1.0f, 0, 0);
@@ -53,9 +53,12 @@ public class Player : CharacterBase
             StartCoroutine(PlayPickUpAnimation(item));
             CurrentItem = item;
         } else {
-            item.UseItem(this);
-            item.Disable();
-            StartCoroutine(DestroyItem(item));
+			var usedItem = item.UseItem(this);
+
+			if (usedItem) {
+				item.Disable ();
+				StartCoroutine (DestroyItem (item));
+			}
         }
     }
 

@@ -94,6 +94,10 @@ public class FloorGenerator : MonoBehaviour {
 			coordinates = _floorGrid.GetCoordinatesForRoom(previousRoom);
 		}
 
+		// Boss room should not appear at the start room
+		//if (previousRoom._roomType != RoomType.StartRoom)
+			CreateBossRoom(previousRoom, coordinates);
+
 		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any()) {
 			var validRooms = _floorGrid.Rooms.Where(
 				r => r._roomType == RoomType.NormalRoom && _floorGrid.GetValidDirectionsFromRoom(r).Any()).ToList();
@@ -101,15 +105,6 @@ public class FloorGenerator : MonoBehaviour {
 
 			coordinates = _floorGrid.GetCoordinatesForRoom(previousRoom);
 		}
-
-		// Boss room should not appear at the start room
-		while (previousRoom._roomType == RoomType.StartRoom) {
-			var validRooms = _floorGrid.Rooms.Where (
-				                 r => r._roomType == RoomType.NormalRoom && _floorGrid.GetValidDirectionsFromRoom (r).Any ()).ToList ();
-			previousRoom = validRooms.ElementAt (Random.Range (0, validRooms.Count));
-		}
-		CreateBossRoom(previousRoom, coordinates);
-			
 		//var dir = _floorGrid.GetValidDirectionsFromRoom(coordinates).First();
 		//AddNewRoom(previousRoom, dir, DetermineNewCoordinates(dir, coordinates), RoomType.TreasureRoom);
 	}

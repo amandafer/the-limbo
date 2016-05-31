@@ -1,53 +1,27 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts
-{
-    public abstract class ItemBase : MonoBehaviour
-    {
+namespace Assets.Scripts {
+    public abstract class ItemBase : MonoBehaviour {
         [SerializeField]
-        private AudioSource _spawnClip;
-        public AudioSource SpawnClip
-        {
-            get { return _spawnClip; }
-            set { _spawnClip = value; }
-        }
-
-        [SerializeField]
-        private AudioSource _pickUpClip;
-        public AudioSource PickUpClip
-        {
-            get { return _pickUpClip; }
-            set { _pickUpClip = value; }
-        }
-
-        public float MinSpawnPitch = -3.0f;
-        public float MaxSpawnPitch = 3.0f;
-
-        [SerializeField]
-        private bool _isInstantEffect;
-        public bool IsInstantEffect
-        {
-            get { return _isInstantEffect; }
-            set { _isInstantEffect = value; }
-        }
+        public AudioSource _spawnClip;
+        public AudioSource _pickUpClip;
+        public float MinSpawnPitch = -3.0f, MaxSpawnPitch = 3.0f;
+        public bool _isInstantEffect;
 
         public virtual bool IsInstantlyDestroyedAfterUse { get { return true; } }
 
-        public void Start()
-        {
-            if (SpawnClip != null)
-            {
-                SpawnClip.pitch = Random.Range(MinSpawnPitch, MaxSpawnPitch);
-                SpawnClip.Play();
+        public void Start() {
+            if (_spawnClip != null) {
+                _spawnClip.pitch = Random.Range(MinSpawnPitch, MaxSpawnPitch);
+                _spawnClip.Play();
             }
         }
 
 
-        public void OnCollisionEnter2D(Collision2D collision)
-        {
+        public void OnCollisionEnter2D(Collision2D collision) {
             GameObject o = collision.gameObject;
-            if (o.CompareTag("Player"))
-            {
+
+            if (o.CompareTag("Player")) {
                 OnPickUp(o.GetComponent<Player>());
                 //Destroy(gameObject);
             }
@@ -69,9 +43,9 @@ namespace Assets.Scripts
         private void OnPickUp(Player player) {
             if (_pickUpClip != null)
                 _pickUpClip.Play();
-            //player.OnPickUp(this);
+            player.OnPickUp(this);
         }
 
-        public abstract void UseItem(Player player);
+        public abstract bool UseItem(Player player);
     }
 }

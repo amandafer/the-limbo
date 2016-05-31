@@ -86,7 +86,7 @@ namespace Assets.Scripts
                         throw new ArgumentOutOfRangeException();
                 }
 			} else if (_roomType == RoomType.BossRoom) {
-                //doorPrefab = _bossDoorPrefab;
+                doorPrefab = _bossDoorPrefab;
             }
 
 			// Sets the doors prefabs of the room and its position

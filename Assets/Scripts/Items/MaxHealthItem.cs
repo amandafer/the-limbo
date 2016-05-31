@@ -2,6 +2,7 @@
 
 namespace Assets.Scripts.Items
 {
+	/*
     public class MaxHealthItem : ItemBase
     {
         [SerializeField]
@@ -12,10 +13,11 @@ namespace Assets.Scripts.Items
             set { _maxHealthAddition = value; }
         }
 
-
+		/*
         public override void UseItem(Player player)
         {
             player._maxHealth += MaxHealthAddition;
         }
-    }
+        */
+    //}
 }

@@ -10,9 +10,16 @@ public class HealthItem : ItemBase {
         set { _healthAddition = value; }
     }
 
-    public override void UseItem(Player player) {
-        player.Health += HealthAddition;
-        if (player.Health > player._maxHealth)
-            player.Health = player._maxHealth;
+    public override bool UseItem(Player player) {
+		if (player.Health != player._maxHealth) {
+			player.Health += HealthAddition;
+
+			if (player.Health > player._maxHealth)
+				player.Health = player._maxHealth;
+
+			return true;
+		} else {
+			return false;
+		}
     }
 }

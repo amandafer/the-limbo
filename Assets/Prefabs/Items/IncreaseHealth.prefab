@@ -9,8 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 439532}
   - 212: {fileID: 21207118}
+  - 95: {fileID: 9599448}
   - 114: {fileID: 11447226}
   - 61: {fileID: 6194722}
+  - 50: {fileID: 5053396}
+  - 256: {fileID: 25696278}
   m_Layer: 13
   m_Name: IncreaseHealth
   m_TagString: Untagged
@@ -30,6 +33,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5053396
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159682}
+  m_UseAutoMass: 1
+  m_Mass: 1
+  m_LinearDrag: 0.1
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &6194722
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -41,9 +61,26 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.1}
+  m_Offset: {x: 0, y: -0.05}
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.4}
+  m_Size: {x: 0.3, y: 0.45}
+--- !u!95 &9599448
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159682}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 114db14043c574c76876885bd2ff8764, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11447226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -59,7 +96,7 @@ MonoBehaviour:
   _pickUpClip: {fileID: 0}
   MinSpawnPitch: 1
   MaxSpawnPitch: 1
-  _isInstantEffect: 0
+  _isInstantEffect: 1
   _healthAddition: 2
 --- !u!212 &21207118
 SpriteRenderer:
@@ -86,11 +123,28 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 10db79b70d0d4435b82aa8c0cb45efbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!256 &25696278
+FrictionJoint2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159682}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_MaxForce: 1
+  m_MaxTorque: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

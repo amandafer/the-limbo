@@ -2,6 +2,7 @@
 
 namespace Assets.Scripts.Items
 {
+	/*
     public class HitAllEnemiesItem : ItemBase
     {
         [SerializeField]
@@ -12,14 +13,12 @@ namespace Assets.Scripts.Items
             set { _damage = value; }
         }
 
-        public override void UseItem(Player player)
-        {
-			/*
-            foreach (var enemy in player.CurrentRoom._enemies)
-            {
+		/*
+        public override void UseItem(Player player) {
+            foreach (var enemy in player.CurrentRoom._enemies) {
                 enemy.Health -= Damage;
             }
-         	*/
         }
-    }
+		*/
+    //}
 }

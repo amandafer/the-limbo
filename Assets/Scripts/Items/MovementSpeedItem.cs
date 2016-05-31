@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Items
 {
+	/*
 	public class MovementSpeedItem : ItemBase
 	{
 		[SerializeField]
@@ -11,11 +12,13 @@ namespace Assets.Scripts.Items
 			get { return _movementSpeedAddition; }
 			set { _movementSpeedAddition = value; }
 		}
-		
+
+		/*
 		public override void UseItem(Player player)
 		{
 			player.GetComponent<Player>()._moveSpeed += MovementSpeedAddition;
 		}
-	}
+		*/
+	//}
 }
 

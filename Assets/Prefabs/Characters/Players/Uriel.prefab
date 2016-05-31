@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _bloodPrefab: []
-  _maxHealth: 20
+  _maxHealth: 8
   _range: 8
   _takeDamageClips: []
   MinDamagedPitch: 0.98
@@ -191,7 +191,7 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  _health: 8
+  _health: 6
   _gunObject: {fileID: 21219996}
   _headObject: {fileID: 11481564}
 --- !u!114 &11481564

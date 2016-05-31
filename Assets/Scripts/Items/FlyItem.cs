@@ -10,8 +10,9 @@ namespace Assets.Scripts.Items
             get { return false; }
         }
 
-        public override void UseItem(Player player)
-        {
+        public override bool UseItem(Player player)
+		{
+			/*
             var spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sortingLayerName = "Player";
             spriteRenderer.sortingOrder = -1;
@@ -19,6 +20,8 @@ namespace Assets.Scripts.Items
             spriteRenderer.enabled = true;
 
             StartCoroutine(Fly(player));
+        	*/
+			return true;
         }
 
         private IEnumerator Fly(Player player)
