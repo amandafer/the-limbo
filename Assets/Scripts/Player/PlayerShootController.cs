@@ -20,30 +20,22 @@ namespace Assets.Scripts {
         public override void Update() {
             base.Update();
 
-            if (IsShooting) {
-                SetHeadDirection(_shootKey);
-                return;
-            }
+			if (IsShooting) {
+				SetHeadDirection (_shootKey);
+				return;
+			}
 
-            if (InputHelpers.IsAnyKey(KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow))
-            {
-                if (Input.GetKey(KeyCode.UpArrow))
-                {
+            if (InputHelpers.IsAnyKey(KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow)) {
+                if (Input.GetKey(KeyCode.UpArrow)) {
                     _shootDirection = new Vector2(0, BulletSpeed);
                     _shootKey = KeyCode.UpArrow;
-                }
-                else if (Input.GetKey(KeyCode.DownArrow))
-                {
+                } else if (Input.GetKey(KeyCode.DownArrow)) {
                     _shootDirection = new Vector2(0, -BulletSpeed);
                     _shootKey = KeyCode.DownArrow;
-                }
-                else if (Input.GetKey(KeyCode.LeftArrow))
-                {
+                } else if (Input.GetKey(KeyCode.LeftArrow)) {
                     _shootDirection = new Vector2(-BulletSpeed, 0);
                     _shootKey = KeyCode.LeftArrow;
-                }
-                else if (Input.GetKey(KeyCode.RightArrow))
-                {
+                } else if (Input.GetKey(KeyCode.RightArrow)) {
                     _shootDirection = new Vector2(BulletSpeed, 0);
                     _shootKey = KeyCode.RightArrow;
                 }
@@ -79,6 +71,7 @@ namespace Assets.Scripts {
                 yield return new WaitForSeconds(ShootingSpeed);
             }
             IsShooting = false;
+			_headObject.SetHeadDirection(PlayerHeadController.HeadDirection.Down);
 
             //Reset head flipping
             if (_headObject.transform.localScale.x < 0) {

@@ -44,8 +44,7 @@ namespace Assets.Scripts
             Animator.enabled = true;
         }
 
-        public virtual void FixedUpdate()
-        {
+        public virtual void FixedUpdate() {
             var movement = DetermineMovement();
             HandleAnimation(movement);
             HandleMovement(movement);
@@ -116,33 +115,26 @@ namespace Assets.Scripts
 				
         }
 
-        private void SetAnimationDirection(Vector3 movement, Vector3 target, Vector3 currentPosition)
-        {
+        private void SetAnimationDirection(Vector3 movement, Vector3 target, Vector3 currentPosition) {
             int animationDirection = Animator.GetInteger("Direction");
             int newDirection = -1;
-            if (movement.x != 0.0f && movement.y != 0.0f)
-            {
-                newDirection = target.y > currentPosition.y ? 0 : 2;
-            }
-            else if (movement.x != 0.0f && movement.y == 0.0f)
-            {
-                newDirection = target.x > currentPosition.x ? 1 : 3;
-            }
-            else if (movement.x == 0.0f && movement.y != 0.0f)
-            {
-                newDirection = target.y > currentPosition.y ? 0 : 2;
-            }
 
-            if (animationDirection != newDirection)
-            {
+			if (movement.x != 0.0f && movement.y != 0.0f) {
+				newDirection = target.y > currentPosition.y ? 0 : 2;
+			} else if (movement.x != 0.0f && movement.y == 0.0f) {
+				newDirection = target.x > currentPosition.x ? 1 : 3;
+			} else if (movement.x == 0.0f && movement.y != 0.0f) {
+				newDirection = target.y > currentPosition.y ? 0 : 2;
+			}
+
+            if (animationDirection != newDirection) {
                 Animator.SetInteger("Direction", newDirection);
-                if (_mirrorAnimation)
-                {
+                
+				if (_mirrorAnimation) {
                     if ((transform.localScale.x < 0 && newDirection == 3) ||
                         (transform.localScale.x > 0 && newDirection == 1) ||
                         (transform.localScale.y < 0 && newDirection == 0) ||
-                        (transform.localScale.y > 0 && newDirection == 2))
-                    {
+                        (transform.localScale.y > 0 && newDirection == 2)) {
                         TransformHelpers.FlipX(gameObject);
                     }
                 }

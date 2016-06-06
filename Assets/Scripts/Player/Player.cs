@@ -85,47 +85,49 @@ public class Player : CharacterBase
     protected override Vector3 DetermineMovement() {
         var movement = new Vector3();
 
-        if (!IsDead && InputHelpers.IsAnyKey("w", "s", "a", "d")) {
-            ShouldMove = true;
-            _gunObject.enabled = false;
+		if (!IsDead && InputHelpers.IsAnyKey ("w", "s", "a", "d")) {
+			ShouldMove = true;
+			_gunObject.enabled = false;
 
-            var headDirection = PlayerHeadController.HeadDirection.Down;
+			var headDirection = PlayerHeadController.HeadDirection.Down;
 
-			if (Input.GetKey("w") && Input.GetKey("a")) {
-				movement += new Vector3(-1, 1, 0);
+			if (Input.GetKey ("w") && Input.GetKey ("a")) {
+				movement += new Vector3 (-1, 1, 0);
 				headDirection = PlayerHeadController.HeadDirection.Left;
-			} else if (Input.GetKey("w") && Input.GetKey("d")) {
-				movement += new Vector3(1, 1, 0);
+			} else if (Input.GetKey ("w") && Input.GetKey ("d")) {
+				movement += new Vector3 (1, 1, 0);
 				headDirection = PlayerHeadController.HeadDirection.Right;
-			} else if (Input.GetKey("s") && Input.GetKey("a")) {
-				movement += new Vector3(-1, -1, 0);
+			} else if (Input.GetKey ("s") && Input.GetKey ("a")) {
+				movement += new Vector3 (-1, -1, 0);
 				headDirection = PlayerHeadController.HeadDirection.Left;
-			} else if (Input.GetKey("s") && Input.GetKey("d")) {
-				movement += new Vector3(1, -1, 0);
+			} else if (Input.GetKey ("s") && Input.GetKey ("d")) {
+				movement += new Vector3 (1, -1, 0);
 				headDirection = PlayerHeadController.HeadDirection.Right;
-			} else if (Input.GetKey("w")) {
-                movement += new Vector3(0, 1, 0);
-                headDirection = PlayerHeadController.HeadDirection.Up;
-            } else if (Input.GetKey("s")) {
-                movement += new Vector3(0, -1, 0);
-                _gunObject.enabled = true;
-                headDirection = PlayerHeadController.HeadDirection.Down;
-            } else if (Input.GetKey("a")) {
-                movement += new Vector3(-1, 0, 0);
-                headDirection = PlayerHeadController.HeadDirection.Left;
-            } else if (Input.GetKey("d")) {
-                movement += new Vector3(1, 0, 0);
+			} else if (Input.GetKey ("w")) {
+				movement += new Vector3 (0, 1, 0);
+				headDirection = PlayerHeadController.HeadDirection.Up;
+			} else if (Input.GetKey ("s")) {
+				movement += new Vector3 (0, -1, 0);
+				_gunObject.enabled = true;
+				headDirection = PlayerHeadController.HeadDirection.Down;
+			} else if (Input.GetKey ("a")) {
+				movement += new Vector3 (-1, 0, 0);
+				headDirection = PlayerHeadController.HeadDirection.Left;
+			} else if (Input.GetKey ("d")) {
+				movement += new Vector3 (1, 0, 0);
 				headDirection = PlayerHeadController.HeadDirection.Right;
-			} 
+			}
 
-			movement.Normalize();
+			movement.Normalize ();
 
-            if (!_shootController.IsShooting) {
-                _headObject.SetHeadDirection(headDirection);
-            }       
-        } else if(!IsDead) {
-            ShouldMove = false;
-        }
+			if (!_shootController.IsShooting) {
+				_headObject.SetHeadDirection (headDirection);
+			}       
+		} else if (IsDead) {
+			ShouldMove = false;
+		} else {
+			_headObject.SetHeadDirection(PlayerHeadController.HeadDirection.Down);	
+		}
         return movement;
     }
 

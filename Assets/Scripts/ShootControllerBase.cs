@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts
-{
-    public abstract class ShootControllerBase : MonoBehaviour
-    {
+namespace Assets.Scripts {
+    public abstract class ShootControllerBase : MonoBehaviour {
         [SerializeField]
         private float _bulletSpeed = 0.5f;
         public float BulletSpeed
