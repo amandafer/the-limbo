@@ -16,12 +16,16 @@ public class ShowHealth : MonoBehaviour {
 
         var heartWidth = Screen.width / 20;
         var heartHeight = Screen.height / 20;
-
-        var origLeft = Screen.width + Screen.width / 1.1f;
+		var origLeft = Screen.width - Screen.width / 1.1f;
 		var left = Screen.width - Screen.width/1.1f;
         var top = Screen.height/30.0f;
 
 		int i;
+
+		// the player can only have 10 hearts
+		if (_playerCharacter.Health > _playerCharacter._maxHealth)
+			_playerCharacter.Health = _playerCharacter._maxHealth;
+
         for (i = 1; i <= _playerCharacter.Health / 2; i++) {
             GUI.DrawTexture(new Rect(left, top, heartWidth, heartHeight), _healthTexture, ScaleMode.ScaleToFit);
             left += heartWidth;
@@ -36,10 +40,14 @@ public class ShowHealth : MonoBehaviour {
         if (_playerCharacter.Health % 2 == 1) {
             GUI.DrawTexture(new Rect(left, top, heartWidth, heartHeight), _halfHealthTexture, ScaleMode.ScaleToFit);
             left += heartWidth;
+
+			if (i % 5 == 0) {
+				left = origLeft;
+				top += heartHeight;
+			}
             i++;
         }
-
-
+			
         for (; i <= _playerCharacter._maxHealth / 2; i++) {
             GUI.DrawTexture(new Rect(left, top, heartWidth, heartHeight), _emptyHealthTexture, ScaleMode.ScaleToFit);
             left += heartWidth;

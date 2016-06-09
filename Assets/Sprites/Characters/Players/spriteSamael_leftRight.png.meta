@@ -1,0 +1,477 @@
+fileFormatVersion: 2
+guid: 4b102618021d84d1283c77f5cdbaa6a9
+timeCreated: 1465347238
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spriteSamael_leftRight_0
+    21300002: spriteSamael_leftRight_1
+    21300004: spriteSamael_leftRight_2
+    21300006: spriteSamael_leftRight_3
+    21300008: spriteSamael_leftRight_4
+    21300010: spriteSamael_leftRight_5
+    21300012: spriteSamael_leftRight_6
+    21300014: spriteSamael_leftRight_7
+    21300016: spriteSamael_leftRight_8
+    21300018: spriteSamael_leftRight_9
+    21300020: spriteSamael_leftRight_10
+    21300022: spriteSamael_leftRight_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spriteSamael_leftRight_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76, y: -46}
+        - {x: 50, y: -28}
+        - {x: -30, y: -18}
+        - {x: -42, y: 53}
+        - {x: -57, y: 70}
+        - {x: -117, y: 70}
+        - {x: -159, y: 66}
+        - {x: -256, y: -1}
+        - {x: -289, y: -44}
+        - {x: -299, y: -84}
+        - {x: -299, y: -115}
+        - {x: -293, y: -122}
+        - {x: -230, y: -116}
+        - {x: -188, y: -76}
+        - {x: -169, y: -142}
+        - {x: -102, y: -123}
+        - {x: -113, y: -146}
+        - {x: -124, y: -179}
+        - {x: -82, y: -203}
+        - {x: 47, y: -203}
+        - {x: 61, y: -196}
+        - {x: 85, y: -131}
+        - {x: 85, y: -94}
+        - {x: 78, y: -52}
+    - name: spriteSamael_leftRight_1
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 500
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -28}
+        - {x: -3, y: -35}
+        - {x: -54, y: 90}
+        - {x: -76, y: 93}
+        - {x: -157, y: 93}
+        - {x: -168, y: 92}
+        - {x: -281, y: 19}
+        - {x: -300, y: -14}
+        - {x: -300, y: -45}
+        - {x: -295, y: -56}
+        - {x: -235, y: -56}
+        - {x: -183, y: -25}
+        - {x: -192, y: -99}
+        - {x: -126, y: -105}
+        - {x: -69, y: -97}
+        - {x: -116, y: -144}
+        - {x: -107, y: -167}
+        - {x: -71, y: -197}
+        - {x: -54, y: -203}
+        - {x: 29, y: -203}
+        - {x: 61, y: -196}
+        - {x: 85, y: -131}
+        - {x: 85, y: -99}
+        - {x: 75, y: -52}
+    - name: spriteSamael_leftRight_2
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 500
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: -30}
+        - {x: -3, y: -28}
+        - {x: -44, y: 109}
+        - {x: -65, y: 117}
+        - {x: -145, y: 117}
+        - {x: -199, y: 109}
+        - {x: -287, y: 44}
+        - {x: -287, y: 8}
+        - {x: -286, y: 4}
+        - {x: -238, y: -4}
+        - {x: -172, y: 15}
+        - {x: -189, y: -54}
+        - {x: -115, y: -75}
+        - {x: -69, y: -83}
+        - {x: -113, y: -148}
+        - {x: -106, y: -164}
+        - {x: -69, y: -194}
+        - {x: -54, y: -203}
+        - {x: 51, y: -203}
+        - {x: 66, y: -201}
+        - {x: 81, y: -136}
+        - {x: 81, y: -103}
+        - {x: 69, y: -49}
+    - name: spriteSamael_leftRight_3
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 500
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: -35}
+        - {x: -54, y: 89}
+        - {x: -77, y: 93}
+        - {x: -131, y: 93}
+        - {x: -166, y: 86}
+        - {x: -242, y: 48}
+        - {x: -300, y: -18}
+        - {x: -300, y: -49}
+        - {x: -296, y: -58}
+        - {x: -224, y: -52}
+        - {x: -187, y: -32}
+        - {x: -180, y: -100}
+        - {x: -116, y: -99}
+        - {x: -65, y: -135}
+        - {x: -110, y: -143}
+        - {x: -115, y: -149}
+        - {x: -93, y: -180}
+        - {x: -71, y: -196}
+        - {x: -59, y: -203}
+        - {x: 50, y: -203}
+        - {x: 66, y: -200}
+        - {x: 85, y: -155}
+        - {x: 85, y: -79}
+        - {x: 63, y: -19}
+    - name: spriteSamael_leftRight_4
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 500
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76, y: -46}
+        - {x: 50, y: -28}
+        - {x: -30, y: -18}
+        - {x: -42, y: 53}
+        - {x: -58, y: 70}
+        - {x: -121, y: 70}
+        - {x: -159, y: 67}
+        - {x: -258, y: -1}
+        - {x: -299, y: -82}
+        - {x: -299, y: -127}
+        - {x: -194, y: -91}
+        - {x: -168, y: -143}
+        - {x: -101, y: -126}
+        - {x: -116, y: -148}
+        - {x: -107, y: -165}
+        - {x: -72, y: -192}
+        - {x: -69, y: -186}
+        - {x: -50, y: -203}
+        - {x: 51, y: -203}
+        - {x: 66, y: -200}
+        - {x: 85, y: -135}
+        - {x: 85, y: -94}
+        - {x: 78, y: -52}
+    - name: spriteSamael_leftRight_5
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 500
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117, y: 103}
+        - {x: 144, y: 131}
+        - {x: 166, y: 160}
+        - {x: 169, y: 177}
+        - {x: 169, y: 193}
+        - {x: 166, y: 193}
+        - {x: 75, y: 184}
+        - {x: 59, y: 213}
+        - {x: -24, y: 191}
+        - {x: -60, y: 193}
+        - {x: -82, y: 213}
+        - {x: -90, y: 213}
+        - {x: -94, y: 189}
+        - {x: -124, y: 87}
+        - {x: -124, y: 32}
+        - {x: -108, y: -5}
+        - {x: -87, y: -29}
+        - {x: -37, y: -52}
+        - {x: 46, y: -52}
+        - {x: 91, y: -27}
+        - {x: 122, y: 23}
+        - {x: 130, y: 57}
+    - name: spriteSamael_leftRight_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 108, y: -126}
+        - {x: 123, y: -120}
+        - {x: 125, y: -113}
+        - {x: 167, y: -143}
+        - {x: 194, y: -91}
+        - {x: 299, y: -126}
+        - {x: 299, y: -74}
+        - {x: 260, y: 3}
+        - {x: 195, y: 56}
+        - {x: 128, y: 70}
+        - {x: 47, y: 70}
+        - {x: 12, y: -38}
+        - {x: -52, y: -30}
+        - {x: -77, y: -50}
+        - {x: -85, y: -118}
+        - {x: -84, y: -121}
+        - {x: -67, y: -195}
+        - {x: -35, y: -203}
+        - {x: 58, y: -203}
+        - {x: 90, y: -190}
+        - {x: 118, y: -144}
+        - {x: 67, y: -125}
+    - name: spriteSamael_leftRight_7
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 161, y: -94}
+        - {x: 181, y: -91}
+        - {x: 181, y: -73}
+        - {x: 249, y: -63}
+        - {x: 293, y: -51}
+        - {x: 300, y: -42}
+        - {x: 300, y: -24}
+        - {x: 259, y: 31}
+        - {x: 219, y: 69}
+        - {x: 147, y: 93}
+        - {x: 66, y: 93}
+        - {x: 59, y: 91}
+        - {x: 5, y: -39}
+        - {x: -53, y: -30}
+        - {x: -77, y: -50}
+        - {x: -85, y: -87}
+        - {x: -85, y: -133}
+        - {x: -53, y: -200}
+        - {x: -39, y: -203}
+        - {x: 45, y: -203}
+        - {x: 114, y: -172}
+        - {x: 116, y: -145}
+        - {x: 67, y: -139}
+    - name: spriteSamael_leftRight_8
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 82, y: -55}
+        - {x: 131, y: -87}
+        - {x: 190, y: -53}
+        - {x: 171, y: 16}
+        - {x: 230, y: -12}
+        - {x: 286, y: -1}
+        - {x: 286, y: 38}
+        - {x: 227, y: 92}
+        - {x: 162, y: 117}
+        - {x: 73, y: 117}
+        - {x: 34, y: 108}
+        - {x: 38, y: 36}
+        - {x: -8, y: -24}
+        - {x: -67, y: -33}
+        - {x: -81, y: -102}
+        - {x: -81, y: -130}
+        - {x: -63, y: -192}
+        - {x: -37, y: -203}
+        - {x: 81, y: -203}
+        - {x: 118, y: -144}
+        - {x: 71, y: -130}
+    - name: spriteSamael_leftRight_9
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67, y: -139}
+        - {x: 82, y: -83}
+        - {x: 129, y: -106}
+        - {x: 185, y: -94}
+        - {x: 225, y: -49}
+        - {x: 249, y: -66}
+        - {x: 300, y: -49}
+        - {x: 300, y: -14}
+        - {x: 248, y: 55}
+        - {x: 138, y: 93}
+        - {x: 56, y: 93}
+        - {x: 6, y: -40}
+        - {x: -53, y: -29}
+        - {x: -74, y: -51}
+        - {x: -85, y: -101}
+        - {x: -85, y: -126}
+        - {x: -59, y: -186}
+        - {x: -30, y: -203}
+        - {x: 31, y: -203}
+        - {x: 42, y: -202}
+        - {x: 73, y: -191}
+        - {x: 107, y: -166}
+        - {x: 116, y: -145}
+    - name: spriteSamael_leftRight_10
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 172, y: -126}
+        - {x: 185, y: -67}
+        - {x: 234, y: -104}
+        - {x: 293, y: -111}
+        - {x: 299, y: -104}
+        - {x: 299, y: -85}
+        - {x: 295, y: -69}
+        - {x: 253, y: -4}
+        - {x: 189, y: 46}
+        - {x: 146, y: 65}
+        - {x: 117, y: 70}
+        - {x: 46, y: 70}
+        - {x: 5, y: -30}
+        - {x: -58, y: -30}
+        - {x: -85, y: -42}
+        - {x: -85, y: -147}
+        - {x: -60, y: -186}
+        - {x: -33, y: -203}
+        - {x: 28, y: -203}
+        - {x: 41, y: -201}
+        - {x: 90, y: -190}
+        - {x: 118, y: -144}
+        - {x: 166, y: -137}
+    - name: spriteSamael_leftRight_11
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 120, y: 82}
+        - {x: 116, y: 113}
+        - {x: 85, y: 207}
+        - {x: 83, y: 210}
+        - {x: 76, y: 210}
+        - {x: 51, y: 181}
+        - {x: 12, y: 192}
+        - {x: -37, y: 210}
+        - {x: -65, y: 210}
+        - {x: -67, y: 188}
+        - {x: -145, y: 178}
+        - {x: -171, y: 192}
+        - {x: -173, y: 188}
+        - {x: -173, y: 177}
+        - {x: -170, y: 163}
+        - {x: -157, y: 139}
+        - {x: -134, y: 55}
+        - {x: -125, y: 21}
+        - {x: -104, y: -23}
+        - {x: -46, y: -55}
+        - {x: 34, y: -55}
+        - {x: 81, y: -32}
+        - {x: 104, y: -7}
+        - {x: 120, y: 22}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

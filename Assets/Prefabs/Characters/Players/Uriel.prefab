@@ -207,8 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _headFront: {fileID: 21300010, guid: 60f7f3c8c394e42b7af6e74e6a8a8973, type: 3}
   _headBack: {fileID: 21300022, guid: 60f7f3c8c394e42b7af6e74e6a8a8973, type: 3}
-  _headLeft: {fileID: 21300010, guid: 9a4faf64f9b474bb4af44eab813a6b9b, type: 3}
-  _headRight: {fileID: 21300022, guid: 9a4faf64f9b474bb4af44eab813a6b9b, type: 3}
+  _headLeft: {fileID: 21300010, guid: 4f35f859aa4334b118ed3f14c9d3d254, type: 3}
+  _headRight: {fileID: 21300022, guid: 4f35f859aa4334b118ed3f14c9d3d254, type: 3}
   _spriteRenderer: {fileID: 0}
 --- !u!114 &11494664
 MonoBehaviour:

@@ -4,15 +4,11 @@ using UnityEngine;
 public class HealthItem : ItemBase {
 
     [SerializeField]
-    private int _healthAddition = 2;
-    public int HealthAddition {
-        get { return _healthAddition; }
-        set { _healthAddition = value; }
-    }
+    public int _healthAddition = 1;
 
     public override bool UseItem(Player player) {
 		if (player.Health != player._maxHealth) {
-			player.Health += HealthAddition;
+			player.Health += _healthAddition;
 
 			if (player.Health > player._maxHealth)
 				player.Health = player._maxHealth;

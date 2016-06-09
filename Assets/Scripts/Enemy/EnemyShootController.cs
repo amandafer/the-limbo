@@ -13,13 +13,14 @@ namespace Assets.Scripts {
 
         public bool _boss = false;
 		public bool _canShoot = true;
+		public bool _explodes = false;
 
 		public override void Start() {
 			base.Start ();
 			_player = GameObject.FindGameObjectWithTag ("Player");
 			_shooting = false;
-            BulletSpeed = 0.3f;
-            ShootingSpeed = 1f;
+            //BulletSpeed = 0.5f;
+            //ShootingSpeed = 0.1f;
 		}
 
 		public override void Update() {
@@ -49,13 +50,15 @@ namespace Assets.Scripts {
 
 			    if (ShootClips.Any()) {
 					int bossHax = 0;
+
 					if (_boss)
 						bossHax = 4;
-			        var clipToPlay = ShootClips[Random.Range(bossHax, ShootClips.Count)];
+			        
+					var clipToPlay = ShootClips[Random.Range(bossHax, ShootClips.Count)];
 			        clipToPlay.pitch = Random.Range(MinShootPitch, MaxShootPitch);
                     clipToPlay.Play();
 			    }
-				yield return new WaitForSeconds (ShootingSpeed*3);
+				yield return new WaitForSeconds (_shootSpeed*3);
 				_shooting = false;
                 //GetComponent<Animator>().SetBool("Shooting", false);
 			}
@@ -86,7 +89,7 @@ namespace Assets.Scripts {
                 bullet.transform.position = transform.position + positions[i];
 
                 shootDirection.Normalize();
-                shootDirection.Scale(new Vector2(BulletSpeed, BulletSpeed));
+                shootDirection.Scale(new Vector2(_bulletSpeed, _bulletSpeed));
                 bullet.AddForce(shootDirection);
             }
 
@@ -98,40 +101,42 @@ namespace Assets.Scripts {
         }
 
         public void BossExplode() {
-            // GetComponent<Animator>().SetBool("Shooting", true);
-            var targets = new Vector3[9];
-            var positions = new Vector3[9];
-            positions[0] = new Vector3(-0.35f, 0.84f, 0);
-            positions[1] = new Vector3(0.40f, 0.84f, 0);
+			if (_explodes) {
+				// GetComponent<Animator>().SetBool("Shooting", true);
+				var targets = new Vector3[9];
+				var positions = new Vector3[9];
+				positions [0] = new Vector3 (-0.35f, 0.84f, 0);
+				positions [1] = new Vector3 (0.40f, 0.84f, 0);
 
-            positions[2] = new Vector3(-0.73f, 0.28f, 0);
-            positions[3] = new Vector3(0, 0.28f, 0);
-            positions[4] = new Vector3(0.74f, 0.28f, 0);
+				positions [2] = new Vector3 (-0.73f, 0.28f, 0);
+				positions [3] = new Vector3 (0, 0.28f, 0);
+				positions [4] = new Vector3 (0.74f, 0.28f, 0);
 
-            positions[5] = new Vector3(-1.03f, -0.29f, 0);
-            positions[6] = new Vector3(-0.32f, -0.29f, 0);
-            positions[7] = new Vector3(0.41f, -0.29f, 0);
-            positions[8] = new Vector3(1, -0.29f, 0);
+				positions [5] = new Vector3 (-1.03f, -0.29f, 0);
+				positions [6] = new Vector3 (-0.32f, -0.29f, 0);
+				positions [7] = new Vector3 (0.41f, -0.29f, 0);
+				positions [8] = new Vector3 (1, -0.29f, 0);
 
-            for (int i = 0; i < 9; i++) {
-                targets[i] = _player.transform.position + new Vector3(UnityEngine.Random.Range(-1.5f, 1.5f), UnityEngine.Random.Range(-1.5f, 1.5f), 0);
+				for (int i = 0; i < 9; i++) {
+					targets [i] = _player.transform.position + new Vector3 (UnityEngine.Random.Range (-1.5f, 1.5f), UnityEngine.Random.Range (-1.5f, 1.5f), 0);
 
-                var shootDirection = UnityEngine.Random.onUnitSphere - positions[i];
-                shootDirection.z = 0;
-                var bullet = (Rigidbody2D)Instantiate(BulletPrefab);
-                bullet.GetComponent<BulletScript>().Shooter = transform.gameObject;
-                bullet.transform.position = transform.position + positions[i];
+					var shootDirection = UnityEngine.Random.onUnitSphere - positions [i];
+					shootDirection.z = 0;
+					var bullet = (Rigidbody2D)Instantiate (BulletPrefab);
+					bullet.GetComponent<BulletScript> ().Shooter = transform.gameObject;
+					bullet.transform.position = transform.position + positions [i];
 
-                shootDirection.Normalize();
-                shootDirection.Scale(new Vector2(BulletSpeed, BulletSpeed));
-                bullet.AddForce(shootDirection);
-            }
+					shootDirection.Normalize ();
+					shootDirection.Scale (new Vector2 (_bulletSpeed, _bulletSpeed));
+					bullet.AddForce (shootDirection);
+				}
   
-            if (ShootClips.Any()) {
-                var clipToPlay = ShootClips[Random.Range(4, ShootClips.Count)];
-                clipToPlay.pitch = Random.Range(MinShootPitch, MaxShootPitch);
-                clipToPlay.Play();
-            }
+				if (ShootClips.Any ()) {
+					var clipToPlay = ShootClips [Random.Range (4, ShootClips.Count)];
+					clipToPlay.pitch = Random.Range (MinShootPitch, MaxShootPitch);
+					clipToPlay.Play ();
+				}
+			}
         }
 		
 		private bool CanShootPlayer() {
@@ -139,7 +144,7 @@ namespace Assets.Scripts {
 				_shootDirection = - (transform.position - _player.transform.position);
 				//_shootDirection = Vector3.zero - _player.transform.position;
 				_shootDirection.Normalize ();
-				_shootDirection.Scale (new Vector2 (BulletSpeed, BulletSpeed));
+				_shootDirection.Scale (new Vector2 (_bulletSpeed, _bulletSpeed));
 				return true;
 			}
 			return false;

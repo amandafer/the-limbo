@@ -18,8 +18,8 @@ public class FloorGenerator : MonoBehaviour {
 	private FloorGrid _floorGrid = new FloorGrid(6, 6);
 	public FloorGrid Grid {get {return _floorGrid;}}
 
-	public const float HorizontalDelta = 14.5f;//13.4f;
-	public const float VerticalDelta = 10;//9f;
+	public const float HorizontalDelta = 14.5f;
+	public const float VerticalDelta = 10;
 
 	// Generates the floor and the player
 	public void Awake() {

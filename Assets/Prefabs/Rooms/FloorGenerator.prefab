@@ -43,7 +43,7 @@ MonoBehaviour:
   _branchingProbability: 0.6
   _firstRoom: {fileID: 11432992, guid: 744331fefa4074a4ba18b2b2609730dc, type: 2}
   _bossRoom: {fileID: 11400000, guid: 250b1ec9be8354f4cb40cfe1e982e938, type: 2}
-  _playerPrefab: {fileID: 11435930, guid: e67769b676bf1485da9077da8969966c, type: 2}
+  _playerPrefab: {fileID: 11488878, guid: f69db3808180445ec8875588b7a6d916, type: 2}
   _enemyPrefab: {fileID: 0}
   _roomPrefabs:
   - {fileID: 11480472, guid: 9e7b7af401af242cc99cde52cd8d0965, type: 2}

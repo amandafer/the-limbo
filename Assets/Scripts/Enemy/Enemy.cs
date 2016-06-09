@@ -157,7 +157,7 @@ public class Enemy : CharacterBase {
     }
 
     IEnumerator ReallyDie() {
-        Animator.Play("Die");
+        Animator.Play("Dead");
         
 		if (gameObject.GetComponent<EnemyShootController>()._boss)
             gameObject.GetComponent<EnemyShootController>().BossExplode();

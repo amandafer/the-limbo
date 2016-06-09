@@ -204,8 +204,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _headFront: {fileID: 21300012, guid: acf88fb1d6f4449c4ab56da1bd5aafbd, type: 3}
   _headBack: {fileID: 21300026, guid: acf88fb1d6f4449c4ab56da1bd5aafbd, type: 3}
-  _headLeft: {fileID: 21300002, guid: 9d0d887ccd107423fa54af0fa7453f70, type: 3}
-  _headRight: {fileID: 21300000, guid: 9d0d887ccd107423fa54af0fa7453f70, type: 3}
+  _headLeft: {fileID: 21300022, guid: 4b102618021d84d1283c77f5cdbaa6a9, type: 3}
+  _headRight: {fileID: 21300010, guid: 4b102618021d84d1283c77f5cdbaa6a9, type: 3}
   _spriteRenderer: {fileID: 0}
 --- !u!114 &11488878
 MonoBehaviour:
@@ -229,7 +229,7 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  _health: 6
+  _health: 21
   _gunObject: {fileID: 21283810}
   _headObject: {fileID: 11455636}
 --- !u!212 &21207908

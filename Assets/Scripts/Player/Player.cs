@@ -138,7 +138,7 @@ public class Player : CharacterBase
 
     protected override void Die() {
         base.Die();
-        Animator.Play("Die");
+        Animator.Play("Dead");
         DisableCharacter();
 		StartCoroutine (Restart());
     }

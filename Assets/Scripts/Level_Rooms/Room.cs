@@ -151,6 +151,11 @@ namespace Assets.Scripts
 
             if (!ContainsEnemies) {
                 _doors.ForEach(d => d.IsOpen = true);
+				var doorOpenClip = _doors.First()._doorOpenClip;
+
+				if (doorOpenClip != null) {
+					doorOpenClip.Play();
+				}
 
                 Destroy(_bossBar);
                 if (_roomType == RoomType.BossRoom) {
@@ -198,18 +203,17 @@ namespace Assets.Scripts
 
             if (ContainsEnemies) {
                 _doors.ForEach(d => d.IsOpen = false);
-                var doorOpenClip = _doors.First()._doorOpenClip;
+				var doorCloseClip = _doors.First()._doorCloseClip;
                 
-				if (doorOpenClip != null)
-                    doorOpenClip.Play();
+				if (doorCloseClip != null)
+					doorCloseClip.Play();
             } else {
 				_doors.ForEach(d => d.IsOpen = true);
                 /*var doorCloseClip = _doors.First()._doorCloseClip;
 
                 if (doorCloseClip != null) {
                     doorCloseClip.Play();
-                }
-                */
+                }*/
             }
 
             player.CurrentRoom = this;

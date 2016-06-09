@@ -4,20 +4,7 @@ using UnityEngine;
 namespace Assets.Scripts {
     public abstract class ShootControllerBase : MonoBehaviour {
         [SerializeField]
-        private float _bulletSpeed = 0.5f;
-        public float BulletSpeed
-        {
-            get { return _bulletSpeed; }
-            set { _bulletSpeed = value; }
-        }
-
-		[SerializeField]
-		private float _shootSpeed = 0.3f;
-		public float ShootingSpeed
-		{
-			get { return _shootSpeed; }
-			set { _shootSpeed = value; }
-		}
+        public float _bulletSpeed, _shootSpeed;
 
         [SerializeField]
         private Rigidbody2D _bulletPrefab;

@@ -27,16 +27,16 @@ namespace Assets.Scripts {
 
             if (InputHelpers.IsAnyKey(KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow)) {
                 if (Input.GetKey(KeyCode.UpArrow)) {
-                    _shootDirection = new Vector2(0, BulletSpeed);
+                    _shootDirection = new Vector2(0, _bulletSpeed);
                     _shootKey = KeyCode.UpArrow;
                 } else if (Input.GetKey(KeyCode.DownArrow)) {
-                    _shootDirection = new Vector2(0, -BulletSpeed);
+                    _shootDirection = new Vector2(0, -_bulletSpeed);
                     _shootKey = KeyCode.DownArrow;
                 } else if (Input.GetKey(KeyCode.LeftArrow)) {
-                    _shootDirection = new Vector2(-BulletSpeed, 0);
+                    _shootDirection = new Vector2(-_bulletSpeed, 0);
                     _shootKey = KeyCode.LeftArrow;
                 } else if (Input.GetKey(KeyCode.RightArrow)) {
-                    _shootDirection = new Vector2(BulletSpeed, 0);
+                    _shootDirection = new Vector2(_bulletSpeed, 0);
                     _shootKey = KeyCode.RightArrow;
                 }
                 StartCoroutine(Shoot());
@@ -45,9 +45,9 @@ namespace Assets.Scripts {
 
         IEnumerator Shoot() {
             IsShooting = true;
-            while (Input.GetKey(_shootKey)) {
+			while (Input.GetKey(_shootKey) && !_player.IsDead) {
 				// Instantiate the bullet prefab and set the shooter as the player
-				var bullet = (Rigidbody2D)Instantiate(BulletPrefab, new Vector3(transform.position.x, transform.position.y, 0f), new Quaternion());
+				var bullet = (Rigidbody2D)Instantiate(BulletPrefab, new Vector3(transform.position.x, transform.position.y - 0.25f, 0f), new Quaternion());
 				bullet.GetComponent<BulletScript>().Shooter = transform.gameObject;
 
 				// Rotation of the bullet sprite
@@ -68,7 +68,7 @@ namespace Assets.Scripts {
                     clipToPlay.Play();
                 }
 
-                yield return new WaitForSeconds(ShootingSpeed);
+                yield return new WaitForSeconds(_shootSpeed);
             }
             IsShooting = false;
 			_headObject.SetHeadDirection(PlayerHeadController.HeadDirection.Down);
