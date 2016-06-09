@@ -99,6 +99,8 @@ public class Enemy : CharacterBase {
                 return JumpToPlayer();
             case MovementStyle.TowardsPlayer:
                 return MoveTowardsPlayer();
+			case MovementStyle.TowardsPlayerY:
+				return MoveTowardsPlayerInWall();
             case MovementStyle.AwayFromPlayer:
                 return MoveAwayFromPlayer();
             case MovementStyle.RandomDirection:
@@ -244,6 +246,16 @@ public class Enemy : CharacterBase {
         return moveDirection*_moveSpeed;
     }
 
+	private Vector3 MoveTowardsPlayerInWall() {
+		// could use some pathing, boo no navigationmesh for 2D
+		var currentPositionY = transform.position.y;
+		var moveDirection = _player.transform.position.y - currentPositionY;
+		var pos = new Vector3 (0, moveDirection, 0f);
+
+		pos.Normalize();
+		return pos*_moveSpeed;
+	}
+
     private Vector3 MoveAwayFromPlayer() {
 		// too simple
 		var currentPosition = transform.position;
@@ -294,6 +306,7 @@ public class Enemy : CharacterBase {
 
 public enum MovementStyle {
     TowardsPlayer,
+	TowardsPlayerY,
     AwayFromPlayer,
     RandomDirection,
 	RandomTowardsPlayer,

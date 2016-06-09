@@ -97,7 +97,7 @@ MonoBehaviour:
   MinSpawnPitch: 1
   MaxSpawnPitch: 1
   _isInstantEffect: 1
-  _healthAddition: 1
+  _healthAddition: 2
 --- !u!212 &21207118
 SpriteRenderer:
   m_ObjectHideFlags: 1

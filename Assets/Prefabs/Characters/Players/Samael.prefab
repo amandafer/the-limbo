@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpeed: 0.5
   _shootSpeed: 0.35
-  _bulletPrefab: {fileID: 5068766, guid: ba0a3e88b04eb49ed9353e8d0d5570a4, type: 2}
+  _bulletPrefab: {fileID: 5018436, guid: afa8854690fe347cfa1e911efeafa1ad, type: 2}
   _shootClips: []
   MinShootPitch: 0.9
   MaxShootPitch: 1.1
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _bloodPrefab: []
-  _maxHealth: 20
+  _maxHealth: 6
   _range: 8
   _takeDamageClips: []
   MinDamagedPitch: 0.98
@@ -229,7 +229,7 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  _health: 21
+  _health: 6
   _gunObject: {fileID: 21283810}
   _headObject: {fileID: 11455636}
 --- !u!212 &21207908

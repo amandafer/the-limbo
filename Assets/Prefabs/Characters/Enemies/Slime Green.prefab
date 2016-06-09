@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11431050}
   - 58: {fileID: 5886250}
   - 50: {fileID: 5002310}
+  - 256: {fileID: 25620510}
   m_Layer: 10
   m_Name: Slime Green
   m_TagString: Enemy
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dfc760e0f25674881a19ed6c07ba37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletSpeed: 0.5
+  _bulletSpeed: 0.4
   _shootSpeed: 0.2
   _bulletPrefab: {fileID: 5000000, guid: d8e000ca28e948446917b8de7d824315, type: 2}
   _shootClips: []
@@ -164,6 +165,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!256 &25620510
+FrictionJoint2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170066}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_MaxForce: 1
+  m_MaxTorque: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

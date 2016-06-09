@@ -26,7 +26,7 @@ public class ItemSpawner : MonoBehaviour {
 		var probability = Random.value;
 
 		if (probability <= 0.6) {
-			var item = (ItemBase)Instantiate (_itemPrefabs [0]);//[Random.Range(0, _itemPrefabs.Count)]);
+			var item = (ItemBase)Instantiate (_itemPrefabs[Random.Range(0, _itemPrefabs.Count)]);
 			item.transform.parent = transform;
 
 			// The item will spawn in random positions

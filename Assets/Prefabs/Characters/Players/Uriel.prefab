@@ -191,7 +191,7 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  _health: 6
+  _health: 8
   _gunObject: {fileID: 21219996}
   _headObject: {fileID: 11481564}
 --- !u!114 &11481564

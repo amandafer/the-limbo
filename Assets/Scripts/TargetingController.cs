@@ -9,7 +9,7 @@ public class TargetingController : MonoBehaviour {
 	{
 	    _startRotation = transform.rotation.eulerAngles.z;
 	}
-	
+	/*
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButton("Fire1"))
@@ -21,4 +21,5 @@ public class TargetingController : MonoBehaviour {
             transform.rotation = Quaternion.Euler(0, 0, targetAngle - _startRotation);
         }
 	}
+	*/
 }
