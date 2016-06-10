@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpeed: 0.4
   _shootSpeed: 0.2
-  _bulletPrefab: {fileID: 5000000, guid: d8e000ca28e948446917b8de7d824315, type: 2}
+  _bulletPrefab: {fileID: 5046318, guid: 14b522d40b8a44489a096561433048e7, type: 2}
   _shootClips: []
   MinShootPitch: 1.5
   MaxShootPitch: 1.6

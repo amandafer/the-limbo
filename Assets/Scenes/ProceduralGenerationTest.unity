@@ -378,6 +378,118 @@ Prefab:
       propertyPath: _gunObject
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 162626, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1821077368
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497602, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: _gunObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 162626, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_Name
+      value: GhostTest (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162626, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2054110378
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407982, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497602, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: _gunObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 162626, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_Name
+      value: GhostTest (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162626, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d2f9af8bcc03437f84e3f5fe8a37133, type: 2}
   m_IsPrefabParent: 0

@@ -140,12 +140,6 @@ public class Player : CharacterBase
         base.Die();
         Animator.Play("Dead");
 		CurrentRoom.PlayerIsInRoom = false;
-
-		for (int i = 0; i <= 7; i++) {
-			var newPos = new Vector3 (transform.position.x, transform.position.y + i/2, 0f);
-		}
-
-
         DisableCharacter();
 		StartCoroutine (Restart());
     }
