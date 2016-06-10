@@ -6,7 +6,7 @@ namespace Assets.Scripts.Menu {
     public class StartButton : ButtonBase {
         protected override void OnButtonClicked()
         {
-			//EditorSceneManager.LoadScene("ChooseCharacterMenu");
+			EditorSceneManager.LoadScene("ChooseCharacter");
         }
     }
 }
