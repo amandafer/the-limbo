@@ -5,14 +5,14 @@ using Assets.Scripts;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class FloorGenerator : MonoBehaviour {
-
+public class FloorGenerator {
 	public int numberOfRooms = 4;
 	public Room _firstRoom, _bossRoom;
-	public Player _playerPrefab;
 	public Enemy _enemyPrefab;
+	public Player _playerPrefab;
 	public List<Room> _roomPrefabs = new List<Room>();
 	public List<GameObject> _obstacleLayouts = new List<GameObject>();
+	//public GameObject chosenCharacter;
 
 	private float _branchingProbability = 0.6f;
 	private FloorGrid _floorGrid = new FloorGrid(6, 6);

@@ -9,7 +9,10 @@ namespace Assets.Scripts.Menu {
 			EditorSceneManager.LoadScene("ProceduralGeneration");
 		}
 
-
+		public void FixedUpdate() {
+			if (Input.GetKey("enter") || Input.GetKey("return"))
+				EditorSceneManager.LoadScene("ProceduralGeneration");
+		}
 	}
 }
 

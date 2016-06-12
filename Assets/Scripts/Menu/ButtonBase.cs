@@ -7,9 +7,7 @@ using UnityEngine;
 namespace Assets.Scripts.Menu {
     [RequireComponent(typeof(GUITexture))]
     public abstract class ButtonBase : MonoBehaviour {
-        public Texture Texture;
-        public Texture HoverTexture;
-
+        public Texture Texture, HoverTexture;
         public AudioSource ClickClip;
 
         public void OnMouseEnter() {
@@ -21,13 +19,13 @@ namespace Assets.Scripts.Menu {
         }
 
         public void OnMouseUp() {
-            if (ClickClip != null)
-            {
+            if (ClickClip != null) {
                 ClickClip.Play();
             }
             OnButtonClicked();
         }
 
+		//TODO: make it better
         protected abstract void OnButtonClicked();
     }
 }
