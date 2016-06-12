@@ -5,7 +5,7 @@ using Assets.Scripts;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class FloorGenerator {
+public class FloorGenerator : MonoBehaviour {
 	public int numberOfRooms = 4;
 	public Room _firstRoom, _bossRoom;
 	public Enemy _enemyPrefab;
