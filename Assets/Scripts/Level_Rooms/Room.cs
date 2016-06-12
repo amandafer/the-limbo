@@ -53,18 +53,22 @@ namespace Assets.Scripts
             }
         }
 
+
         IEnumerator WakeUpEnemies() {
             yield return new WaitForSeconds(1f);
             _enemies.ForEach(e => e.Enable());
 
-            if (_roomType == RoomType.BossRoom) {
+			// Sets the boss bar
+			if (_roomType == RoomType.BossRoom && ContainsEnemies) {
                 _bossBar = (GameObject)Instantiate(bossBarPrefab);
                 _bossBar.transform.position = _bossBar.transform.position + transform.position;
             }
             yield return null;
         }
 
+
         public bool ContainsEnemies { get { return _enemies.Count > 0; } }
+
 
         public void SetAdjacentRoom(Room room, RoomDirection direction) {
             var position = new Vector3();
@@ -146,6 +150,7 @@ namespace Assets.Scripts
 			enemy.Disable();
 		}
 
+
 		public void OnEnemyDied(Enemy enemy) {
 			_enemies.Remove(enemy);
 
@@ -157,8 +162,9 @@ namespace Assets.Scripts
 					doorOpenClip.Play();
 				}
 
-                Destroy(_bossBar);
-                if (_roomType == RoomType.BossRoom) {
+				if (_roomType == RoomType.BossRoom) {
+					Destroy(_bossBar);
+
                     var audioSources = GameObject.FindGameObjectWithTag("MainCamera").GetComponents<AudioSource>();
                     audioSources.ElementAt(1).Stop();
                     audioSources.ElementAt(2).Play();
@@ -193,7 +199,7 @@ namespace Assets.Scripts
         public void OnPlayerEntersRoom(Player player) {
             var audioSources = GameObject.FindGameObjectWithTag("MainCamera").GetComponents<AudioSource>();
 
-            if (_roomType == RoomType.BossRoom) {
+            if (_roomType == RoomType.BossRoom && ContainsEnemies) {
                 audioSources.ElementAt(0).Stop();
                 audioSources.ElementAt(1).Play();
             } else if (!audioSources.ElementAt(0).isPlaying)

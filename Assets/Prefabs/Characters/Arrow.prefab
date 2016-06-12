@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &137014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 499980}
+  - 131: {fileID: 13146656}
+  - 114: {fileID: 11434778}
+  m_Layer: 0
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &499980
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.40199995, y: -0.24500003, z: 1}
+  m_LocalScale: {x: 0.04, y: 0.072500005, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11434778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334c8f721d37548da8e6f0a7208e4a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Texture: {fileID: 2800000, guid: 4c04e0b9a4870433a905f1de037464e0, type: 3}
+  HoverTexture: {fileID: 2800000, guid: e4b4c2ede5a6f45e4876e5595da80254, type: 3}
+  ClickClip: {fileID: 0}
+  _charactersPrefab:
+  - {fileID: 138468, guid: f69db3808180445ec8875588b7a6d916, type: 2}
+  - {fileID: 178332, guid: 3414493f4110e44b7a207510dce9b3bb, type: 2}
+  - {fileID: 176524, guid: e67769b676bf1485da9077da8969966c, type: 2}
+  _charactersCarousel:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  choosenCharacter: {fileID: 0}
+--- !u!131 &13146656
+GUITexture:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137014}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 4c04e0b9a4870433a905f1de037464e0, type: 3}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 137014}
+  m_IsPrefabParent: 1

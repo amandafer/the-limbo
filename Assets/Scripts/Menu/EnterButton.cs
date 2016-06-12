@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEditor.SceneManagement;
 
 namespace Assets.Scripts.Menu {
@@ -8,6 +9,10 @@ namespace Assets.Scripts.Menu {
 			EditorSceneManager.LoadScene("ProceduralGeneration");
 		}
 
-
+		public void FixedUpdate() {
+			if (Input.GetKey("enter") || Input.GetKey("return"))
+				EditorSceneManager.LoadScene("ProceduralGeneration");
+		}
 	}
 }
+
