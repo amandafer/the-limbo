@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Assets.Scripts
-{
+namespace Assets.Scripts {
     [RequireComponent(typeof(Animator), typeof(SpriteRenderer))]
     public abstract class CharacterBase : MonoBehaviour {
 		public float _moveSpeed;

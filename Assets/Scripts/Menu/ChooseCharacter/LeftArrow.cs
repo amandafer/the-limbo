@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+/*using UnityEditor.SceneManagement;
 
-namespace Assets.Scripts.Menu {/*
+namespace Assets.Scripts.Menu {
 	[RequireComponent(typeof(GUITexture))]
 	public class LeftArrow : ArrowsButton {
 		protected override void arrowController() {
@@ -23,8 +23,8 @@ namespace Assets.Scripts.Menu {/*
 				Debug.Log ("Number: " + _numberCharacterSelected + " and choosen character is: " + choosenCharacter.name);
 			}
 		}
-	}*/
+	}
 }
-
+*/
 
 

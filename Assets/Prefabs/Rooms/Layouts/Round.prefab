@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100000}
-  - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   m_Layer: 12
   m_Name: Tile
@@ -29,7 +28,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200002}
   - 61: {fileID: 6100002}
-  - 114: {fileID: 11400002}
   - 50: {fileID: 5000002}
   m_Layer: 12
   m_Name: Tile
@@ -48,7 +46,6 @@ GameObject:
   - 4: {fileID: 400004}
   - 212: {fileID: 21200004}
   - 61: {fileID: 6100004}
-  - 114: {fileID: 11400004}
   - 50: {fileID: 5000004}
   m_Layer: 12
   m_Name: Tile
@@ -67,7 +64,6 @@ GameObject:
   - 4: {fileID: 400006}
   - 212: {fileID: 21200006}
   - 61: {fileID: 6100006}
-  - 114: {fileID: 11400006}
   - 50: {fileID: 5000006}
   m_Layer: 12
   m_Name: Tile
@@ -86,7 +82,6 @@ GameObject:
   - 4: {fileID: 400008}
   - 212: {fileID: 21200008}
   - 61: {fileID: 6100008}
-  - 114: {fileID: 11400008}
   - 50: {fileID: 5000008}
   m_Layer: 12
   m_Name: Tile
@@ -105,7 +100,6 @@ GameObject:
   - 4: {fileID: 400010}
   - 212: {fileID: 21200010}
   - 61: {fileID: 6100010}
-  - 114: {fileID: 11400010}
   - 50: {fileID: 5000010}
   m_Layer: 12
   m_Name: Tile
@@ -124,7 +118,6 @@ GameObject:
   - 4: {fileID: 400012}
   - 212: {fileID: 21200012}
   - 61: {fileID: 6100012}
-  - 114: {fileID: 11400012}
   - 50: {fileID: 5000012}
   m_Layer: 12
   m_Name: Tile
@@ -143,7 +136,6 @@ GameObject:
   - 4: {fileID: 400014}
   - 212: {fileID: 21200014}
   - 61: {fileID: 6100014}
-  - 114: {fileID: 11400014}
   - 50: {fileID: 5000014}
   m_Layer: 12
   m_Name: Tile
@@ -162,7 +154,6 @@ GameObject:
   - 4: {fileID: 400016}
   - 212: {fileID: 21200016}
   - 61: {fileID: 6100016}
-  - 114: {fileID: 11400016}
   - 50: {fileID: 5000016}
   m_Layer: 12
   m_Name: Tile
@@ -181,7 +172,6 @@ GameObject:
   - 4: {fileID: 400018}
   - 212: {fileID: 21200018}
   - 61: {fileID: 6100018}
-  - 114: {fileID: 11400018}
   - 50: {fileID: 5000018}
   m_Layer: 12
   m_Name: Tile
@@ -200,7 +190,6 @@ GameObject:
   - 4: {fileID: 400020}
   - 212: {fileID: 21200020}
   - 61: {fileID: 6100020}
-  - 114: {fileID: 11400020}
   - 50: {fileID: 5000020}
   m_Layer: 12
   m_Name: Tile
@@ -219,7 +208,6 @@ GameObject:
   - 4: {fileID: 400022}
   - 212: {fileID: 21200022}
   - 61: {fileID: 6100022}
-  - 114: {fileID: 11400022}
   - 50: {fileID: 5000022}
   m_Layer: 12
   m_Name: Tile
@@ -813,174 +801,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400016
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400018
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400020
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &11400022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc75b68c42afec04a91926655132c7d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destroyedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1

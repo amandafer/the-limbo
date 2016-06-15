@@ -9,6 +9,7 @@ TagManager:
   - BossHealth
   - Unit
   - Gun
+  - LevelText
   layers:
   - Default
   - TransparentFX

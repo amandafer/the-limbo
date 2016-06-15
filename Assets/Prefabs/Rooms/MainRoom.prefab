@@ -556,23 +556,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0adc18f3f83c0b64b9e13224e882196a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  X: 0
+  Y: 0
   NorthDoor: {fileID: 0}
   SouthDoor: {fileID: 0}
   EastDoor: {fileID: 0}
   WestDoor: {fileID: 0}
   _doorPrefab: {fileID: 11400000, guid: 36bdf857c960d4b4785c3043dc06251f, type: 2}
   _bossDoorPrefab: {fileID: 11400000, guid: 68d56c64275958245a3073c32d98da8f, type: 2}
-  X: 0
-  Y: 0
-  _roomType: 1
-  _levelSwitchDoorPrefab: {fileID: 0}
   _northDoorWall: {fileID: 6157716}
   _southDoorWall: {fileID: 6199532}
   _eastDoorWall: {fileID: 6130930}
   _westDoorWall: {fileID: 6105486}
+  _roomType: 1
   _enemies: []
   _bossBar: {fileID: 0}
   bossBarPrefab: {fileID: 0}
+  _levelSwitchDoorPrefab: {fileID: 0}
   _playerIsInRoom: 0
 --- !u!212 &21285486
 SpriteRenderer:

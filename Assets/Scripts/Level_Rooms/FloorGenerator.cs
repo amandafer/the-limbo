@@ -6,20 +6,20 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class FloorGenerator : MonoBehaviour {
-	public int numberOfRooms = 4;
+	public int numberOfRooms = 4, level = 1, maxLevels = 5;
 	public Room _firstRoom, _bossRoom;
-	public Enemy _enemyPrefab;
 	public Player _playerPrefab;
 	public List<Room> _roomPrefabs = new List<Room>();
 	public List<GameObject> _obstacleLayouts = new List<GameObject>();
+	public const float HorizontalDelta = 14.5f;
+	public const float VerticalDelta = 10;
 	//public GameObject chosenCharacter;
 
+	private Enemy _enemyPrefab;
 	private float _branchingProbability = 0.6f;
 	private FloorGrid _floorGrid = new FloorGrid(6, 6);
 	public FloorGrid Grid {get {return _floorGrid;}}
 
-	public const float HorizontalDelta = 14.5f;
-	public const float VerticalDelta = 10;
 
 	// Generates the floor and the player
 	public void Awake() {
@@ -53,11 +53,11 @@ public class FloorGenerator : MonoBehaviour {
 
 		//No rooms were created yet
 		int numberOfRoomsCreated = CreateBranch(firstRoom, coordinates, 0);
-
+		/*
 		if (Random.Range(0.0f, 1.0f) <= _branchingProbability) {
 			numberOfRoomsCreated = CreateBranch(firstRoom, coordinates, numberOfRoomsCreated);
 		}
-
+		*/
 		var previousRoom = firstRoom;
 		while (numberOfRoomsCreated < numberOfRooms-1) {
 			RoomDirection direction;
@@ -256,7 +256,7 @@ public class FloorGenerator : MonoBehaviour {
 
 			var enemies = enemyLayout.GetComponentsInChildren<Enemy>().ToList();
 			enemies.ForEach(e => room.AddEnemy(e, e.transform.position));
-		} else if (roomType == RoomType.NormalRoom ) {
+		}/* else if (roomType == RoomType.NormalRoom ) {
 			var obstacleLayout = (GameObject)Instantiate(_obstacleLayouts.ElementAt(Random.Range(0, _obstacleLayouts.Count)));
 			obstacleLayout.transform.parent = room.transform;
 			obstacleLayout.transform.localPosition = Vector3.zero;
@@ -273,7 +273,7 @@ public class FloorGenerator : MonoBehaviour {
 				var enemies = enemyLayout.GetComponentsInChildren<Enemy> ().ToList ();
 				enemies.ForEach (e => room.AddEnemy (e, e.transform.position));
 			}
-		}
+		}*/
 		return room;
 	}
 }

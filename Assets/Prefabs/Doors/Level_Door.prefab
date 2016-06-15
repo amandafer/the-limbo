@@ -44,7 +44,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.4, y: 0.4}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c1b7d4bdd79f040a02b8fb9d885bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelText: {fileID: 13258104, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

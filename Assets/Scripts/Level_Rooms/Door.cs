@@ -25,17 +25,9 @@ public class Door : MonoBehaviour {
 
                 if (value) {
                     _animator.SetInteger("Is Open", 1);
-                    //if (DoorOpenClip != null)
-                    //{
-                    //    DoorOpenClip.Play();
-                    //}
                     Wall.enabled = false;
                 } else {
                     _animator.SetInteger("Is Open", 0);
-                    //if (DoorCloseClip != null)
-                    //{
-                    //    DoorCloseClip.Play();
-                    //}
                     Wall.enabled = true;
                 }
                 _isOpen = value;

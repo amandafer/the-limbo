@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11465872}
   - 95: {fileID: 9594132}
   m_Layer: 14
-  m_Name: PlayerBullet
+  m_Name: UrielBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

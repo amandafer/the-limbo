@@ -144,13 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb0a79857b11454abf33fcef1bce16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 0.04
+  _moveSpeed: 0.03
   _bloodPrefab:
   - {fileID: 100000, guid: 129dbd4250084d34680284c24f5c4f3e, type: 2}
   - {fileID: 100000, guid: 01635ee5e41f163429bd6ead0df6ce24, type: 2}
   - {fileID: 100000, guid: fc26eeb75d2f5c9429045d1ab4d5456f, type: 2}
   - {fileID: 100000, guid: f41595ecfc921574f93cf2efa29b2e53, type: 2}
-  _maxHealth: 25
+  _maxHealth: 30
   _range: 8
   _takeDamageClips: []
   MinDamagedPitch: 1.5
@@ -159,7 +159,7 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  _health: 25
+  _health: 30
   _movementStyle: 0
   _wanderClipRepeatDelay: 0
   _wanderClip: {fileID: 0}

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEditor.SceneManagement;
+/*using UnityEditor.SceneManagement;
 
 namespace Assets.Scripts.Menu {
     [RequireComponent(typeof(GUITexture))]
@@ -9,3 +9,4 @@ namespace Assets.Scripts.Menu {
 		}
     }
 }
+*/

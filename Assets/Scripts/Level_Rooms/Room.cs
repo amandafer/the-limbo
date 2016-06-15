@@ -5,28 +5,23 @@ using System.Linq;
 using Assets.Scripts.Helpers;
 using UnityEngine;
 
-namespace Assets.Scripts
-{
-    public class Room : MonoBehaviour
-    {
-        private readonly List<Door> _doors = new List<Door>();
-
-		public Door NorthDoor, SouthDoor, EastDoor, WestDoor, _doorPrefab, _bossDoorPrefab;
+namespace Assets.Scripts {
+    public class Room : MonoBehaviour {
 		public int X, Y;
+		public bool IsVisibleOnMap { get; set; }
+		public bool PlayerHasVisited { get; private set; }
+		public Door NorthDoor, SouthDoor, EastDoor, WestDoor, _doorPrefab, _bossDoorPrefab;
+		public BoxCollider2D _northDoorWall, _southDoorWall, _eastDoorWall, _westDoorWall;
         public RoomType _roomType = RoomType.NormalRoom;
-        public LevelSwitchDoor _levelSwitchDoorPrefab;
-
+		public List<Enemy> _enemies = new List<Enemy>(); 
+		public GameObject _bossBar, bossBarPrefab;
+		public LevelSwitchDoor _levelSwitchDoorPrefab;
+		public readonly List<Door> _doors = new List<Door>();
         public bool IsBossRoom {
             get { return _roomType == RoomType.BossRoom; }
         }
-
-        public BoxCollider2D _northDoorWall, _southDoorWall, _eastDoorWall, _westDoorWall;
-        public List<Enemy> _enemies = new List<Enemy>(); 
-
-        public bool IsVisibleOnMap { get; set; }
-        public bool PlayerHasVisited { get; private set; }
-        public GameObject _bossBar, bossBarPrefab;
-
+			
+		private FloorGenerator floorGenerator;
         [SerializeField]
         private bool _playerIsInRoom;
         public bool PlayerIsInRoom {
@@ -153,6 +148,7 @@ namespace Assets.Scripts
 
 		public void OnEnemyDied(Enemy enemy) {
 			_enemies.Remove(enemy);
+			floorGenerator = GameObject.FindGameObjectWithTag("GameController").GetComponent<FloorGenerator>();
 
             if (!ContainsEnemies) {
                 _doors.ForEach(d => d.IsOpen = true);
@@ -170,9 +166,12 @@ namespace Assets.Scripts
                     audioSources.ElementAt(2).Play();
                     audioSources.ElementAt(0).PlayDelayed(9.629f);
                     
-					var d = (LevelSwitchDoor) Instantiate(_levelSwitchDoorPrefab);
-                    d.transform.parent = transform;
-                    d.transform.localPosition = Vector3.zero;
+					// Level door is only opened if it is not the last level
+					if (floorGenerator.level < floorGenerator.maxLevels) {
+						var d = (LevelSwitchDoor)Instantiate (_levelSwitchDoorPrefab);
+						d.transform.parent = transform;
+						d.transform.localPosition = Vector3.zero;
+					}
                 }
                 
                 SpawnItem();
