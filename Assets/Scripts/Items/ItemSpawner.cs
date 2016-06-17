@@ -16,23 +16,29 @@ public class ItemSpawner : MonoBehaviour {
         set { _spawnOnAwake = value; }
     }
 
-
+	/* Spawn on awake
+	 * TODO: not using yet, might be used 
 	public void Awake() {
         if(SpawnOnAwake)
-            Spawn();
+			Spawn();
 	}
+	*/
 
-    public void Spawn() {
+	public void Spawn(RoomType thisRoomType) {
 		var probability = Random.value;
 
-		if (probability <= 0.6) {
-			var item = (ItemBase)Instantiate (_itemPrefabs[Random.Range(0, _itemPrefabs.Count)]);
+		if ((thisRoomType != RoomType.BossRoom) && probability <= 0.6) {
+			var item = (ItemBase)Instantiate (_itemPrefabs [Random.Range (0, _itemPrefabs.Count)]);
 			item.transform.parent = transform;
 
 			// The item will spawn in random positions
 			var positionX = Random.Range (-4.5f, 4.5f);
 			var positionY = Random.Range (-2.5f, 1.5f);
 			item.transform.localPosition = new Vector3 (positionX, positionY);
+		} else if (thisRoomType == RoomType.BossRoom) {
+			var item = (ItemBase)Instantiate (_itemPrefabs [Random.Range (0, _itemPrefabs.Count)]);
+			item.transform.parent = transform;
+			item.transform.localPosition = new Vector3 (0f, 2.5f);
 		}
     }
 }

@@ -210,6 +210,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &140302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 478362}
+  - 114: {fileID: 11439498}
+  m_Layer: 0
+  m_Name: 'ItemSpawner '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -364,6 +380,7 @@ Transform:
   - {fileID: 400004}
   - {fileID: 400002}
   - {fileID: 400000}
+  - {fileID: 478362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400024
@@ -378,6 +395,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400022}
   m_RootOrder: 8
+--- !u!4 &478362
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+  m_RootOrder: 12
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -573,9 +602,24 @@ MonoBehaviour:
   _enemies: []
   _bossBar: {fileID: 0}
   bossBarPrefab: {fileID: 100002, guid: cd78254e37591f543821ffe04bba5d9a, type: 2}
-  _levelSwitchDoorPrefab: {fileID: 11400000, guid: a78b98c385adf274184f8d1ec000b309,
+  _levelSwitchDoorPrefab: {fileID: 11487490, guid: 919c833012e2242008d68becedf9b0ea,
     type: 2}
   _playerIsInRoom: 0
+--- !u!114 &11439498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a203b1f69cb2194ca0701f7bf7d114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefabs:
+  - {fileID: 11447226, guid: 8812b6b03f27c4a77a183816007bfb37, type: 2}
+  - {fileID: 11405736, guid: 3b48b955dd8f542c4a6bd585b2439862, type: 2}
+  _spawnOnAwake: 0
 --- !u!114 &11477436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -590,6 +634,7 @@ MonoBehaviour:
   _enemyLayouts:
   - {fileID: 102778, guid: 340c9caab5f9547b2831235ed3540a44, type: 2}
   - {fileID: 170486, guid: de876c1e12fe64517bd1a67ab7895250, type: 2}
+  - {fileID: 150546, guid: 90f03908dc9934d288b367ddf23ab2ce, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

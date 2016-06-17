@@ -168,9 +168,9 @@ namespace Assets.Scripts {
                     
 					// Level door is only opened if it is not the last level
 					if (floorGenerator.level < floorGenerator.maxLevels) {
-						var d = (LevelSwitchDoor)Instantiate (_levelSwitchDoorPrefab);
-						d.transform.parent = transform;
-						d.transform.localPosition = Vector3.zero;
+						var levelDoor = (LevelSwitchDoor)Instantiate (_levelSwitchDoorPrefab);
+						levelDoor.transform.parent = transform;
+						levelDoor.transform.localPosition = levelDoor.transform.position;
 					}
                 }
                 
@@ -180,14 +180,10 @@ namespace Assets.Scripts {
 
 		// Spawn items after enemies die
         private void SpawnItem() {
-            if (_roomType != RoomType.NormalRoom) {
-                return;
-            }
-            
-			var spawner = GetComponentInChildren<ItemSpawner>();
+            var spawner = GetComponentInChildren<ItemSpawner>();
             
 			if (spawner != null) {
-                spawner.Spawn();
+				spawner.Spawn(_roomType);
             } else {
                 Debug.LogError("Item Spawner missing");
             }

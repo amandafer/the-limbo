@@ -209,7 +209,8 @@ public class Enemy : CharacterBase {
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(0.6f);
-        transform.position = _player.transform.position + new Vector3(0.2f, 0, 0);
+		var random = Random.Range (0f, 1f);
+		transform.position = new Vector3(_player.transform.position.x + random, _player.transform.position.y, 0);
         yield return new WaitForSeconds(0.6f);
         _inAir = true;
         Animator.SetBool("Jumping", false);
@@ -222,17 +223,17 @@ public class Enemy : CharacterBase {
 
         if (gameObject.GetComponent<EnemyShootController>()._boss && UnityEngine.Random.Range(0, 2) < 1 && (_player.transform.position - transform.position).magnitude < 7)
         {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(2.0f, 3.0f));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(1.0f, 2.0f));
             gameObject.GetComponent<EnemyShootController>().BossShoot();
             //_inAir = true;
             _jumping = true;
 
         } else if (gameObject.GetComponent<EnemyShootController>()._boss) {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(1.0f, 2.0f));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(0f, 1.0f));
             _jumping = true;
         } else {
 
-            yield return new WaitForSeconds(UnityEngine.Random.Range(2.0f, 4.0f));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(1.0f, 3.0f));
             _jumping = true;
         }
     }

@@ -10,8 +10,8 @@ public class LevelSwitchDoor : MonoBehaviour {
 	private GameObject levelText;
 
 	public void OnTriggerEnter2D(Collider2D other) {
-		StartCoroutine(showNextLevel());
 		buildNextLevel(other);
+		StartCoroutine(showNextLevel());
     }
 
 	//public void OnTriggerExit2D() {

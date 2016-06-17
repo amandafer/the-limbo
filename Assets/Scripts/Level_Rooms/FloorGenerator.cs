@@ -256,7 +256,7 @@ public class FloorGenerator : MonoBehaviour {
 
 			var enemies = enemyLayout.GetComponentsInChildren<Enemy>().ToList();
 			enemies.ForEach(e => room.AddEnemy(e, e.transform.position));
-		}/* else if (roomType == RoomType.NormalRoom ) {
+		} else if (roomType == RoomType.NormalRoom ) {
 			var obstacleLayout = (GameObject)Instantiate(_obstacleLayouts.ElementAt(Random.Range(0, _obstacleLayouts.Count)));
 			obstacleLayout.transform.parent = room.transform;
 			obstacleLayout.transform.localPosition = Vector3.zero;
@@ -273,7 +273,7 @@ public class FloorGenerator : MonoBehaviour {
 				var enemies = enemyLayout.GetComponentsInChildren<Enemy> ().ToList ();
 				enemies.ForEach (e => room.AddEnemy (e, e.transform.position));
 			}
-		}*/
+		}
 		return room;
 	}
 }
