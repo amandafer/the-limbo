@@ -247,10 +247,10 @@ public class FloorGenerator : MonoBehaviour {
 			room.transform.position = position;
 		}
 
-		// Instantiate boss or normal enemies
+		// Instantiate boss and normal enemies according to level
 		if (roomType == RoomType.BossRoom) {
 			var enemyLayouts = room.GetComponent<EnemyLayout>().EnemyLayouts;
-			var enemyLayout = (GameObject)Instantiate(enemyLayouts.ElementAt(Random.Range(0, enemyLayouts.Count)));
+			var enemyLayout = (GameObject)Instantiate(enemyLayouts.ElementAt(level - 1));//.ElementAt(Random.Range(0, enemyLayouts.Count)));
 			//enemyLayout.transform.localPosition = Vector3.zero;
 			enemyLayout.transform.parent = room.transform;
 

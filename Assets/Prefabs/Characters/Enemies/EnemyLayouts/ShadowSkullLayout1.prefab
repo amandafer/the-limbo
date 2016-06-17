@@ -178,6 +178,7 @@ MonoBehaviour:
   _boss: 0
   _canShoot: 1
   _explodes: 0
+  _shootSpeedVaries: 0
 --- !u!114 &11426154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,7 +205,7 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  _health: 8
+  _health: 4
   _movementStyle: 5
   _wanderClipRepeatDelay: 0
   _wanderClip: {fileID: 0}
@@ -231,6 +232,7 @@ MonoBehaviour:
   _boss: 0
   _canShoot: 1
   _explodes: 0
+  _shootSpeedVaries: 0
 --- !u!114 &11459486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,7 +259,7 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  _health: 8
+  _health: 4
   _movementStyle: 5
   _wanderClipRepeatDelay: 0
   _wanderClip: {fileID: 0}

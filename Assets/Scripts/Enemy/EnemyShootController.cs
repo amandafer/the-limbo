@@ -14,6 +14,7 @@ namespace Assets.Scripts {
         public bool _boss = false;
 		public bool _canShoot = true;
 		public bool _explodes = false;
+		public bool _shootSpeedVaries = false;
 
 		public override void Start() {
 			base.Start ();
@@ -27,7 +28,6 @@ namespace Assets.Scripts {
 			base.Update ();
 
 			if (CanShootPlayer ()) {
-                //GetComponent<Animator>().SetBool("Shooting", true);
 				StartCoroutine(Shoot());
 			}
 		}
@@ -58,9 +58,23 @@ namespace Assets.Scripts {
 			        clipToPlay.pitch = Random.Range(MinShootPitch, MaxShootPitch);
                     clipToPlay.Play();
 			    }
-				yield return new WaitForSeconds (_shootSpeed*3);
+
+				//enemies with shoot speed that varies
+				GetComponent<Animator> ().SetBool ("Attacking", true);
+				if (_shootSpeedVaries) {
+					//GetComponent<Animator> ().SetBool ("Attacking", true);
+					if (_shootSpeed == 0) {
+						yield return new WaitForSeconds (0);
+						_shootSpeed = 0.3f;
+					} else {
+						yield return new WaitForSeconds (_shootSpeed * 3);
+						_shootSpeed = 0;
+					}
+				} else {
+					yield return new WaitForSeconds (_shootSpeed * 3);
+				}
 				_shooting = false;
-                //GetComponent<Animator>().SetBool("Shooting", false);
+				GetComponent<Animator> ().SetBool ("Attacking", false);
 			}
 		}
 

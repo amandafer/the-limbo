@@ -9,9 +9,9 @@ public class LevelSwitchDoor : MonoBehaviour {
 
 	private GameObject levelText;
 
-    public void OnTriggerEnter2D(Collider2D other) {
-		buildNextLevel(other);
+	public void OnTriggerEnter2D(Collider2D other) {
 		StartCoroutine(showNextLevel());
+		buildNextLevel(other);
     }
 
 	//public void OnTriggerExit2D() {
@@ -22,6 +22,8 @@ public class LevelSwitchDoor : MonoBehaviour {
 		if (other.CompareTag ("Player")) {
 			floorGenerator = GameObject.FindGameObjectWithTag ("GameController").GetComponent<FloorGenerator> ();
 			floorGenerator.numberOfRooms += 2;
+			floorGenerator.level += 1;
+			Debug.Log (floorGenerator.level);
 
 			var r = floorGenerator._roomPrefabs.First ();
 			r.transform.position = new Vector3 (0, -1.1f, 0);
@@ -34,9 +36,6 @@ public class LevelSwitchDoor : MonoBehaviour {
 			floorGenerator.Grid.FirstRoom.OnPlayerEntersRoom (other.GetComponent<Player> ());
 
 			GameObject.FindGameObjectWithTag ("MainCamera").transform.position = new Vector3 (0, -1, -10);
-
-			floorGenerator.level += 1;
-			Debug.Log (floorGenerator.level);
 		}
 	}
 
