@@ -40,11 +40,11 @@ namespace Assets.Scripts {
 				bullet.transform.position = transform.position;
 
 				if (_shootDirection.y > 0) {
-						bullet.transform.Rotate (0, 0, -90);
+					bullet.transform.Rotate (0, 0, -90);
 				} else if (_shootDirection.y < 0) {
-						bullet.transform.Rotate (0, 0, 90);
+					bullet.transform.Rotate (0, 0, 90);
 				} else if (_shootDirection.x > 0) {
-						TransformHelpers.FlipX (bullet.gameObject);
+					TransformHelpers.FlipX (bullet.gameObject);
 				}
 				bullet.AddForce (_shootDirection);
 

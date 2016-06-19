@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: a45fac01bcc144041bba94c5fbd337c4
+timeCreated: 1466274941
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Spiky_sprite_0
+    21300002: Spiky_sprite_1
+    21300004: Spiky_sprite_2
+    21300006: Spiky_sprite_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Spiky_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 414.5
+        width: 543.5
+        height: 414.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 186, y: -160}
+        - {x: 199, y: -139}
+        - {x: 265, y: -106}
+        - {x: 265, y: -97}
+        - {x: 214, y: -65}
+        - {x: 248, y: -40}
+        - {x: 245, y: -34}
+        - {x: 218, y: -14}
+        - {x: 250, y: 25}
+        - {x: 244, y: 27}
+        - {x: 190, y: 37}
+        - {x: 208, y: 80}
+        - {x: 196, y: 83}
+        - {x: 167, y: 88}
+        - {x: 176, y: 140}
+        - {x: 169, y: 142}
+        - {x: 115, y: 121}
+        - {x: 78, y: 140}
+        - {x: 41, y: 153}
+        - {x: 59, y: 192}
+        - {x: 49, y: 198}
+        - {x: -7, y: 198}
+        - {x: -30, y: 181}
+        - {x: -33, y: 166}
+        - {x: -33, y: 151}
+        - {x: -53, y: 146}
+        - {x: -80, y: 132}
+        - {x: -93, y: 123}
+        - {x: -155, y: 148}
+        - {x: -166, y: 147}
+        - {x: -154, y: 82}
+        - {x: -194, y: 80}
+        - {x: -196, y: 78}
+        - {x: -197, y: 76}
+        - {x: -180, y: 40}
+        - {x: -245, y: 27}
+        - {x: -247, y: 21}
+        - {x: -210, y: -20}
+        - {x: -243, y: -39}
+        - {x: -243, y: -42}
+        - {x: -212, y: -66}
+        - {x: -260, y: -99}
+        - {x: -263, y: -102}
+        - {x: -263, y: -107}
+        - {x: -185, y: -145}
+        - {x: -175, y: -159}
+        - {x: -161, y: -173}
+        - {x: -148, y: -184}
+        - {x: -106, y: -200}
+        - {x: -67, y: -204}
+        - {x: -55, y: -205}
+        - {x: 69, y: -205}
+        - {x: 102, y: -202}
+        - {x: 140, y: -192}
+        - {x: 165, y: -179}
+    - name: Spiky_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 414.5
+        width: 543.5
+        height: 414.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 224, y: -125}
+        - {x: 248, y: -113}
+        - {x: 261, y: -105}
+        - {x: 261, y: -102}
+        - {x: 255, y: -96}
+        - {x: 210, y: -66}
+        - {x: 230, y: -53}
+        - {x: 243, y: -38}
+        - {x: 210, y: -26}
+        - {x: 244, y: 22}
+        - {x: 245, y: 25}
+        - {x: 239, y: 28}
+        - {x: 179, y: 40}
+        - {x: 196, y: 75}
+        - {x: 193, y: 81}
+        - {x: 152, y: 81}
+        - {x: 162, y: 146}
+        - {x: 159, y: 147}
+        - {x: 154, y: 146}
+        - {x: 94, y: 124}
+        - {x: 43, y: 149}
+        - {x: 19, y: 193}
+        - {x: 6, y: 197}
+        - {x: -4, y: 198}
+        - {x: -55, y: 198}
+        - {x: -61, y: 188}
+        - {x: -46, y: 176}
+        - {x: -51, y: 149}
+        - {x: -65, y: 144}
+        - {x: -84, y: 136}
+        - {x: -98, y: 128}
+        - {x: -116, y: 122}
+        - {x: -171, y: 142}
+        - {x: -178, y: 140}
+        - {x: -167, y: 79}
+        - {x: -199, y: 83}
+        - {x: -210, y: 80}
+        - {x: -193, y: 38}
+        - {x: -232, y: 30}
+        - {x: -249, y: 25}
+        - {x: -246, y: 18}
+        - {x: -213, y: -19}
+        - {x: -251, y: -36}
+        - {x: -251, y: -41}
+        - {x: -219, y: -66}
+        - {x: -254, y: -87}
+        - {x: -267, y: -101}
+        - {x: -267, y: -111}
+        - {x: -203, y: -140}
+        - {x: -177, y: -175}
+        - {x: -143, y: -194}
+        - {x: -89, y: -205}
+        - {x: 71, y: -205}
+        - {x: 112, y: -198}
+        - {x: 147, y: -184}
+        - {x: 178, y: -156}
+    - name: Spiky_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 543.5
+        height: 414.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 197, y: -144}
+        - {x: 272, y: -110}
+        - {x: 272, y: -98}
+        - {x: 270, y: -94}
+        - {x: 223, y: -66}
+        - {x: 243, y: -53}
+        - {x: 256, y: -38}
+        - {x: 223, y: -26}
+        - {x: 257, y: 22}
+        - {x: 258, y: 25}
+        - {x: 252, y: 28}
+        - {x: 192, y: 40}
+        - {x: 209, y: 75}
+        - {x: 206, y: 81}
+        - {x: 165, y: 81}
+        - {x: 175, y: 146}
+        - {x: 172, y: 147}
+        - {x: 167, y: 146}
+        - {x: 106, y: 126}
+        - {x: 47, y: 153}
+        - {x: 41, y: 180}
+        - {x: 31, y: 192}
+        - {x: 12, y: 198}
+        - {x: -42, y: 198}
+        - {x: -48, y: 188}
+        - {x: -33, y: 176}
+        - {x: -38, y: 149}
+        - {x: -52, y: 144}
+        - {x: -71, y: 136}
+        - {x: -85, y: 128}
+        - {x: -103, y: 122}
+        - {x: -158, y: 142}
+        - {x: -165, y: 140}
+        - {x: -154, y: 79}
+        - {x: -186, y: 83}
+        - {x: -197, y: 80}
+        - {x: -180, y: 39}
+        - {x: -236, y: 25}
+        - {x: -234, y: 17}
+        - {x: -200, y: -18}
+        - {x: -238, y: -36}
+        - {x: -238, y: -41}
+        - {x: -206, y: -66}
+        - {x: -239, y: -90}
+        - {x: -254, y: -101}
+        - {x: -254, y: -108}
+        - {x: -190, y: -140}
+        - {x: -164, y: -175}
+        - {x: -129, y: -193}
+        - {x: -106, y: -199}
+        - {x: -67, y: -205}
+        - {x: 84, y: -205}
+        - {x: 125, y: -198}
+        - {x: 160, y: -184}
+        - {x: 191, y: -156}
+    - name: Spiky_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 0.5
+        width: 543.5
+        height: 414.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 233, y: -125}
+        - {x: 257, y: -113}
+        - {x: 270, y: -105}
+        - {x: 270, y: -102}
+        - {x: 264, y: -96}
+        - {x: 219, y: -66}
+        - {x: 239, y: -53}
+        - {x: 252, y: -38}
+        - {x: 219, y: -26}
+        - {x: 253, y: 22}
+        - {x: 254, y: 25}
+        - {x: 248, y: 28}
+        - {x: 188, y: 40}
+        - {x: 205, y: 75}
+        - {x: 202, y: 81}
+        - {x: 161, y: 81}
+        - {x: 171, y: 146}
+        - {x: 168, y: 147}
+        - {x: 163, y: 146}
+        - {x: 102, y: 126}
+        - {x: 43, y: 153}
+        - {x: 37, y: 180}
+        - {x: 27, y: 192}
+        - {x: 8, y: 198}
+        - {x: -46, y: 198}
+        - {x: -52, y: 188}
+        - {x: -37, y: 176}
+        - {x: -42, y: 149}
+        - {x: -56, y: 144}
+        - {x: -75, y: 136}
+        - {x: -89, y: 128}
+        - {x: -107, y: 122}
+        - {x: -162, y: 142}
+        - {x: -169, y: 140}
+        - {x: -158, y: 79}
+        - {x: -190, y: 83}
+        - {x: -201, y: 80}
+        - {x: -184, y: 39}
+        - {x: -240, y: 25}
+        - {x: -238, y: 17}
+        - {x: -204, y: -18}
+        - {x: -242, y: -36}
+        - {x: -242, y: -41}
+        - {x: -210, y: -66}
+        - {x: -258, y: -101}
+        - {x: -258, y: -108}
+        - {x: -193, y: -139}
+        - {x: -169, y: -177}
+        - {x: -110, y: -203}
+        - {x: -71, y: -205}
+        - {x: 80, y: -205}
+        - {x: 121, y: -198}
+        - {x: 156, y: -184}
+        - {x: 187, y: -156}
+      - - {x: -269, y: -105}
+        - {x: -269, y: -102}
+        - {x: -272, y: -101}
+        - {x: -272, y: -106}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

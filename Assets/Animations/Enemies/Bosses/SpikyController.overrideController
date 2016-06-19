@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SpikyController
+  m_Controller: {fileID: 9100000, guid: 9552ba88f6b884a288d68c2dcbee565f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 461c7d677b8ab4d55af48c6a0bcb779f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 915d367a7edf7453bb8bd5bfe4203c52, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 35c5d040c1e46496fbc8ec17bba2c16e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2fa405e95b3f44c5b9b511f9e73cdccf, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 88ca3ab52149c460c802858adcbac7fd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 016253e6870804c579300410bd71a18f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e332f4c7c5e014ce28f167a409ba1afa, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a0d546a79e245424fa573c4a0f0b6297, type: 2}

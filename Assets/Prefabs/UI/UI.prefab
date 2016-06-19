@@ -45,6 +45,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0.92, z: 0}
   m_LocalScale: {x: 0.09, y: 0.13, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22419270}
   m_Father: {fileID: 0}
@@ -138,7 +139,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: c01196438f0f84decad88b00ec0a3060, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 30
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -154,6 +155,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 0.60062426, y: 0.37427995, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
