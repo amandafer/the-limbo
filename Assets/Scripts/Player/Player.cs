@@ -62,7 +62,7 @@ public class Player : CharacterBase {
     }
 
     IEnumerator DestroyItem(ItemBase item) {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         Destroy(item.gameObject);
     }
 
