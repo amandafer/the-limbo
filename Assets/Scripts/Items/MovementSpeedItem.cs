@@ -1,24 +1,21 @@
 using UnityEngine;
 
-namespace Assets.Scripts.Items
-{
-	/*
-	public class MovementSpeedItem : ItemBase
-	{
+namespace Assets.Scripts.Items {
+	public class MovementSpeedItem : ItemBase {
 		[SerializeField]
-		private float _movementSpeedAddition = 0.5f;
-		public float MovementSpeedAddition
-		{
-			get { return _movementSpeedAddition; }
-			set { _movementSpeedAddition = value; }
-		}
+		public float _movementSpeedAddition;
 
-		/*
-		public override void UseItem(Player player)
-		{
-			player.GetComponent<Player>()._moveSpeed += MovementSpeedAddition;
+
+		public override bool UseItem(Player player) {
+			var tempSpeed = player._moveSpeed + _movementSpeedAddition;
+
+			if (tempSpeed > 15) {
+				_movementSpeedAddition = 15 - player._moveSpeed;
+			}
+
+			player.GetComponent<Player> ()._moveSpeed += _movementSpeedAddition;
+			return true;
 		}
-		*/
-	//}
+	}
 }
 

@@ -64,6 +64,8 @@ MonoBehaviour:
   _healthTexture: {fileID: 2800000, guid: 406ad30b4e92b4e25ac308e6f44b2119, type: 3}
   _halfHealthTexture: {fileID: 2800000, guid: f0b25b56c788d43c986bb6e2ad822502, type: 3}
   _emptyHealthTexture: {fileID: 2800000, guid: 0d5b72eb3fef74ee48d3dcb9124c5bc7, type: 3}
+  _blueHealthTexture: {fileID: 2800000, guid: cf772c75080654525bdb29413af51ba2, type: 3}
+  _blueHalfTexture: {fileID: 2800000, guid: c6e24eaf8470e473e8dc8c89b3f3960e, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

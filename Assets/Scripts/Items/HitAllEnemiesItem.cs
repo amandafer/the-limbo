@@ -1,24 +1,15 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Items
-{
-	/*
-    public class HitAllEnemiesItem : ItemBase
-    {
-        [SerializeField]
-        private int _damage = 2;
-        public int Damage
-        {
-            get { return _damage; }
-            set { _damage = value; }
-        }
+namespace Assets.Scripts.Items {
+	public class HitAllEnemiesItem : ItemBase {
+		//private int damage = player.GetComponent<Player>()._damage;
 
-		/*
-        public override void UseItem(Player player) {
+		public override bool UseItem(Player player) {
             foreach (var enemy in player.CurrentRoom._enemies) {
-                enemy.Health -= Damage;
+                //enemy.Health -= damage;
             }
+
+			return true;
         }
-		*/
-    //}
+    }
 }

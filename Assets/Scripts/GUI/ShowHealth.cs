@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
 public class ShowHealth : MonoBehaviour {
-
-    public Texture2D _healthTexture, _halfHealthTexture, _emptyHealthTexture;
+	public Texture2D _healthTexture, _halfHealthTexture, _emptyHealthTexture, _blueHealthTexture, _blueHalfTexture;
 
     private Player _playerCharacter;
 
@@ -14,6 +13,7 @@ public class ShowHealth : MonoBehaviour {
         if (_playerCharacter == null)
             return;
 
+		Texture2D fullHeart, halfHeart;
         var heartWidth = Screen.width / 20;
         var heartHeight = Screen.height / 20;
 		var origLeft = Screen.width - Screen.width / 1.1f;
@@ -22,12 +22,21 @@ public class ShowHealth : MonoBehaviour {
 
 		int i;
 
-		// the player can only have 10 hearts
+		// The player can only have 10 hearts
 		if (_playerCharacter.Health > _playerCharacter._maxHealth)
 			_playerCharacter.Health = _playerCharacter._maxHealth;
 
+		// Check who is the player and sets the heart GUI accordingly
+		if (_playerCharacter.name == "Samael") {
+			fullHeart = _blueHealthTexture; 
+			halfHeart = _blueHalfTexture;
+		} else {
+			fullHeart = _healthTexture; 
+			halfHeart = _halfHealthTexture;
+		}
+
         for (i = 1; i <= _playerCharacter.Health / 2; i++) {
-            GUI.DrawTexture(new Rect(left, top, heartWidth, heartHeight), _healthTexture, ScaleMode.ScaleToFit);
+            GUI.DrawTexture(new Rect(left, top, heartWidth, heartHeight), fullHeart, ScaleMode.ScaleToFit);
             left += heartWidth;
 
             if (i % 5 == 0) {
@@ -38,7 +47,7 @@ public class ShowHealth : MonoBehaviour {
         }
 
         if (_playerCharacter.Health % 2 == 1) {
-            GUI.DrawTexture(new Rect(left, top, heartWidth, heartHeight), _halfHealthTexture, ScaleMode.ScaleToFit);
+            GUI.DrawTexture(new Rect(left, top, heartWidth, heartHeight), halfHeart, ScaleMode.ScaleToFit);
             left += heartWidth;
 
 			if (i % 5 == 0) {

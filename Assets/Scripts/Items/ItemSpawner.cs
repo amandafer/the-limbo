@@ -27,7 +27,7 @@ public class ItemSpawner : MonoBehaviour {
 	public void Spawn(RoomType thisRoomType) {
 		var probability = Random.value;
 
-		if ((thisRoomType != RoomType.BossRoom) && probability <= 0.6) {
+		if ((thisRoomType != RoomType.BossRoom) && probability <= 0.8) {
 			var item = (ItemBase)Instantiate (_itemPrefabs [Random.Range (0, _itemPrefabs.Count)]);
 			item.transform.parent = transform;
 

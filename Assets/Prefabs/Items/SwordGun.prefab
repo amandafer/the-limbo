@@ -1,48 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &159682
+--- !u!1 &149520
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 439532}
-  - 212: {fileID: 21207118}
-  - 95: {fileID: 9599448}
-  - 114: {fileID: 11447226}
-  - 61: {fileID: 6194722}
-  - 50: {fileID: 5053396}
-  - 256: {fileID: 25696278}
+  - 4: {fileID: 407176}
+  - 212: {fileID: 21298874}
+  - 50: {fileID: 5071400}
+  - 256: {fileID: 25620654}
+  - 61: {fileID: 6190078}
+  - 114: {fileID: 11465962}
+  - 114: {fileID: 11423816}
+  - 114: {fileID: 11456284}
   m_Layer: 13
-  m_Name: HealthUP
+  m_Name: SwordGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &439532
+--- !u!4 &407176
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159682}
+  m_GameObject: {fileID: 149520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5053396
+--- !u!50 &5071400
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159682}
+  m_GameObject: {fileID: 149520}
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 0.48999998
   m_LinearDrag: 0.1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -51,46 +52,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6194722
+--- !u!61 &6190078
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159682}
+  m_GameObject: {fileID: 149520}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.45}
---- !u!95 &9599448
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159682}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 114db14043c574c76876885bd2ff8764, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11447226
+  m_Size: {x: 1, y: 1}
+--- !u!114 &11423816
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159682}
+  m_GameObject: {fileID: 149520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f248024fd8b4d9a4289236954ef864f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c8d0757338374c0dbe2faa8c9e6f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnClip: {fileID: 0}
@@ -98,13 +82,47 @@ MonoBehaviour:
   MinSpawnPitch: 1
   MaxSpawnPitch: 1
   _isInstantEffect: 1
-  _healthAddition: 2
---- !u!212 &21207118
+  shootSpeedReduction: 0.1
+--- !u!114 &11456284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31576f0eed214a3baf1d7196bc2dade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnClip: {fileID: 0}
+  _pickUpClip: {fileID: 0}
+  MinSpawnPitch: 1
+  MaxSpawnPitch: 1
+  _isInstantEffect: 1
+  damageAddition: 2
+--- !u!114 &11465962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17498aae07b24fd4aca795e14c053a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnClip: {fileID: 0}
+  _pickUpClip: {fileID: 0}
+  MinSpawnPitch: 1
+  MaxSpawnPitch: 1
+  _isInstantEffect: 1
+  rangeAddition: -1
+--- !u!212 &21298874
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159682}
+  m_GameObject: {fileID: 149520}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -125,16 +143,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 10db79b70d0d4435b82aa8c0cb45efbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9516d51e84294823aa0edadf38f68ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!256 &25696278
+--- !u!256 &25620654
 FrictionJoint2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159682}
+  m_GameObject: {fileID: 149520}
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 1
@@ -155,5 +173,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 159682}
+  m_RootGameObject: {fileID: 149520}
   m_IsPrefabParent: 1

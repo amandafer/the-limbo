@@ -1,21 +1,24 @@
 ﻿using Assets.Scripts;
 using UnityEngine;
 
-public class HealthItem : ItemBase {
+namespace Assets.Scripts.Items {
+	public class HealthItem : ItemBase {
+	    public int _healthAddition;
 
-    [SerializeField]
-    public int _healthAddition = 2;
+	    public override bool UseItem(Player player) {
+			var tempHealth = player.Health + _healthAddition;
 
-    public override bool UseItem(Player player) {
-		if (player.Health != player._maxHealth) {
-			player.Health += _healthAddition;
+			if (tempHealth != player._maxHealth &&
+				player.name != "Samael") {
+				player.Health += _healthAddition;
 
-			if (player.Health > player._maxHealth)
-				player.Health = player._maxHealth;
+				if (player.Health > player._maxHealth)
+					player.Health = player._maxHealth;
 
-			return true;
-		} else {
-			return false;
-		}
-    }
+				return true;
+			} else {
+				return false;
+			}
+	    }
+	}
 }
