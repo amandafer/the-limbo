@@ -27,7 +27,7 @@ public class ShowHealth : MonoBehaviour {
 			_playerCharacter.Health = _playerCharacter._maxHealth;
 
 		// Check who is the player and sets the heart GUI accordingly
-		if (_playerCharacter.name == "Samael") {
+		if (_playerCharacter.name.Contains("Samael")) {
 			fullHeart = _blueHealthTexture; 
 			halfHeart = _blueHalfTexture;
 		} else {

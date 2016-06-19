@@ -49,7 +49,8 @@ public class Player : CharacterBase {
                 CurrentItem.transform.position = transform.position + new Vector3(1.0f, 0, 0);
                 CurrentItem.Enable();
             }
-            //StartCoroutine(PlayPickUpAnimation(item));
+			//StartCoroutine(PlayPickUpAnimation(item));
+			item.Disable();
             CurrentItem = item;
         } else {
 			var usedItem = item.UseItem(this);
@@ -66,6 +67,7 @@ public class Player : CharacterBase {
         Destroy(item.gameObject);
     }
 
+	/*
     private IEnumerator PlayPickUpAnimation(ItemBase item) {
         item.transform.parent = transform;
         item.transform.localPosition = Vector3.zero + new Vector3(0, 3.0f, 0);
@@ -80,6 +82,7 @@ public class Player : CharacterBase {
         item.Disable();
         yield return null;
     }
+	*/
 
     protected override Vector3 DetermineMovement() {
         var movement = new Vector3();

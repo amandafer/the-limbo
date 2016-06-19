@@ -1,18 +1,14 @@
 ﻿using UnityEngine;
 
-public class ShowItem : MonoBehaviour 
-{
+public class ShowItem : MonoBehaviour {
     private Player _playerCharacter;
 
-    public void Start()
-    {
+    public void Start() {
         _playerCharacter = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 	
-	public void OnGUI() 
-    {
-        if (_playerCharacter == null || _playerCharacter.CurrentItem == null)
-        {
+	public void OnGUI() {
+        if (_playerCharacter == null || _playerCharacter.CurrentItem == null) {
             return;
         }
 

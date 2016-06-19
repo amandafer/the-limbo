@@ -16,7 +16,8 @@ namespace Assets.Scripts.Menu {
 		}
 
 		public void Start() {
-			//DontDestroyOnLoad (transform.gameObject);
+			choosenCharacter = _charactersPrefab [_numberCharacterSelected];
+			GlobalData.choosenCharacter = choosenCharacter;
 		}
 
 		public void Update() {

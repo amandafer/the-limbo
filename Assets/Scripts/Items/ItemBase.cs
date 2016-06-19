@@ -56,7 +56,7 @@ namespace Assets.Scripts {
 			var effectItemText = GameObject.FindGameObjectWithTag ("EffectItemText").GetComponent<GUIText> ();
 
 			nameItemText.enabled = true;
-			nameItemText.text = this.name;
+			nameItemText.text = this.name.Replace("(Clone)", "");
 			effectItemText.enabled = true;
 			effectItemText.text = this.GetComponent<GUIText> ().text;
 
