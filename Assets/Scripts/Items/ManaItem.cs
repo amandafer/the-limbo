@@ -18,6 +18,7 @@ namespace Assets.Scripts.Items {
 				if (player.Health > player._maxHealth)
 					player.Health = player._maxHealth;
 
+				ShowItemText ();
 				return true;
 			} else {
 				return false;

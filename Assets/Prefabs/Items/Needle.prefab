@@ -1,31 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &153822
+--- !u!1 &159960
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 477510}
-  - 212: {fileID: 21284932}
-  - 50: {fileID: 5060876}
-  - 256: {fileID: 25675038}
-  - 61: {fileID: 6148978}
-  - 114: {fileID: 11421702}
+  - 4: {fileID: 488068}
+  - 212: {fileID: 21224918}
+  - 114: {fileID: 11405736}
+  - 61: {fileID: 6184636}
+  - 50: {fileID: 5029636}
+  - 256: {fileID: 25682468}
+  - 132: {fileID: 13243316}
   m_Layer: 13
-  m_Name: SuspiciousMedicine#1
+  m_Name: Needle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &477510
+--- !u!4 &488068
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153822}
+  m_GameObject: {fileID: 159960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
@@ -33,15 +34,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5060876
+--- !u!50 &5029636
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153822}
+  m_GameObject: {fileID: 159960}
   m_UseAutoMass: 1
-  m_Mass: 0.2925
+  m_Mass: 0.25
   m_LinearDrag: 0.1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -50,29 +51,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6148978
+--- !u!61 &6184636
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153822}
+  m_GameObject: {fileID: 159960}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.15, y: -0.25}
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 1.3}
---- !u!114 &11421702
+  m_Size: {x: 1, y: 1}
+--- !u!114 &11405736
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153822}
+  m_GameObject: {fileID: 159960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f248024fd8b4d9a4289236954ef864f3, type: 3}
+  m_Script: {fileID: 11500000, guid: a968d16cffb22fb42a3861fe85367dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnClip: {fileID: 0}
@@ -80,13 +81,36 @@ MonoBehaviour:
   MinSpawnPitch: 1
   MaxSpawnPitch: 1
   _isInstantEffect: 1
-  _healthAddition: -2
---- !u!212 &21284932
+  _maxHealthAddition: 2
+--- !u!132 &13243316
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159960}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Max Health +1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!212 &21224918
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153822}
+  m_GameObject: {fileID: 159960}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -107,16 +131,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300016, guid: b29444901f06449a09a28e0632d9a50e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc8c8e95649fc492ba357823f64581d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!256 &25675038
+--- !u!256 &25682468
 FrictionJoint2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153822}
+  m_GameObject: {fileID: 159960}
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 1
@@ -137,5 +161,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 153822}
+  m_RootGameObject: {fileID: 159960}
   m_IsPrefabParent: 1

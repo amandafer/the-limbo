@@ -15,6 +15,7 @@ namespace Assets.Scripts.Items {
 			}
 
 			player.GetComponent<PlayerShootController>()._shootSpeed -= shootSpeedReduction;
+			ShowItemText ();
 			return true;
         }
     }

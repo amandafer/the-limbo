@@ -215,7 +215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 494798, guid: 10f8baba80c6e482998642641a12e7f9, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 187740, guid: 10f8baba80c6e482998642641a12e7f9, type: 2}
       propertyPath: m_IsActive
@@ -223,53 +223,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10f8baba80c6e482998642641a12e7f9, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &423520336
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 128332, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11477380, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &859164171
 Prefab:
@@ -413,6 +366,10 @@ Prefab:
     - target: {fileID: 191282, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
       propertyPath: m_TagString
       value: EffectItemText
+      objectReference: {fileID: 0}
+    - target: {fileID: 13258104, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}

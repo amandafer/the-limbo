@@ -6,15 +6,14 @@ namespace Assets.Scripts.Items {
 	    public int _healthAddition;
 
 	    public override bool UseItem(Player player) {
-			var tempHealth = player.Health + _healthAddition;
-
-			if (tempHealth != player._maxHealth &&
-				player.name != "Samael") {
+			if (player.Health != player._maxHealth &&
+				player.name != "Samael" || _healthAddition < 0) {
 				player.Health += _healthAddition;
 
 				if (player.Health > player._maxHealth)
 					player.Health = player._maxHealth;
 
+				ShowItemText ();
 				return true;
 			} else {
 				return false;

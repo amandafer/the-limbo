@@ -14,6 +14,7 @@ namespace Assets.Scripts.Items {
 			}
 
 			player.GetComponent<Player> ()._moveSpeed += _movementSpeedAddition;
+			ShowItemText ();
 			return true;
 		}
 	}

@@ -8,6 +8,8 @@ namespace Assets.Scripts.Items {
         public override bool UseItem(Player player) {
         	if (player._maxHealth <= 20) {
             	player._maxHealth += _maxHealthAddition;
+
+				ShowItemText ();
             	return true;
             } else {
             	return false;

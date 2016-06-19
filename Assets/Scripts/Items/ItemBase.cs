@@ -47,19 +47,39 @@ namespace Assets.Scripts {
             player.OnPickUp(this);
         }
 
-		IEnumerator ShowItemText() {
-			var nameItemText = GameObject.FindGameObjectWithTag("NameItemText").GetComponent<GUIText>();
-			var effectItemText = GameObject.FindGameObjectWithTag("EffectItemText").GetComponent<GUIText>();
+		public void ShowItemText() {
+			var nameItemText = GameObject.FindGameObjectWithTag ("NameItemText").GetComponent<GUIText> ();
+			var effectItemText = GameObject.FindGameObjectWithTag ("EffectItemText").GetComponent<GUIText> ();
 
 			nameItemText.enabled = true;
 			nameItemText.text = this.name;
 			effectItemText.enabled = true;
-			effectItemText = this.guiText;
+			effectItemText.text = this.GetComponent<GUIText> ().text;
 
-			yield return new WaitForSeconds(2);
-			nameItemText.enabled = false;
-			effectItemText.enabled = false;
+			//yield return new WaitForSeconds (2);
+			for (int i = 0; i < 5; i++) {
+			}
+			nameItemText.GetComponent<GUIText> ().enabled = false;
+			effectItemText.GetComponent<GUIText> ().enabled = false;
+			//StartCoroutine (TimeText ());
 		}
+		/*
+		IEnumerator TimeText() {
+			var nameItemText = GameObject.FindGameObjectWithTag ("NameItemText").GetComponent<GUIText> ();
+			var effectItemText = GameObject.FindGameObjectWithTag ("EffectItemText").GetComponent<GUIText> ();
+
+			nameItemText.enabled = true;
+			nameItemText.text = this.name;
+			effectItemText.enabled = true;
+			effectItemText.text = this.GetComponent<GUIText> ().text;
+
+			//yield return new WaitForSeconds (2);
+			for (int i = 0; i < 5; i++) {
+			}
+			nameItemText.GetComponent<GUIText> ().enabled = false;
+			effectItemText.GetComponent<GUIText> ().enabled = false;
+		}
+		*/
 
         public abstract bool UseItem(Player player);
     }
