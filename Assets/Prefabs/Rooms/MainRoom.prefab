@@ -284,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -613,6 +613,12 @@ MonoBehaviour:
   - {fileID: 11429274, guid: bfa4925a3001342f8b5ce3dc164e3514, type: 2}
   - {fileID: 11403336, guid: f0953d9edcb86482c83023d4128946b5, type: 2}
   - {fileID: 11463300, guid: 8eabe07094e68497db027d1f00d178ae, type: 2}
+  - {fileID: 11475448, guid: 56cea2501dc4b40f2a08ec754f53e893, type: 2}
+  - {fileID: 11447226, guid: 8812b6b03f27c4a77a183816007bfb37, type: 2}
+  - {fileID: 11447226, guid: 8812b6b03f27c4a77a183816007bfb37, type: 2}
+  - {fileID: 11447226, guid: 8812b6b03f27c4a77a183816007bfb37, type: 2}
+  - {fileID: 11447226, guid: 8812b6b03f27c4a77a183816007bfb37, type: 2}
+  - {fileID: 11475448, guid: 56cea2501dc4b40f2a08ec754f53e893, type: 2}
   - {fileID: 11475448, guid: 56cea2501dc4b40f2a08ec754f53e893, type: 2}
   _spawnOnAwake: 0
 --- !u!114 &11480472

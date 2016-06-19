@@ -49,7 +49,7 @@ public class Player : CharacterBase {
                 CurrentItem.transform.position = transform.position + new Vector3(1.0f, 0, 0);
                 CurrentItem.Enable();
             }
-            StartCoroutine(PlayPickUpAnimation(item));
+            //StartCoroutine(PlayPickUpAnimation(item));
             CurrentItem = item;
         } else {
 			var usedItem = item.UseItem(this);

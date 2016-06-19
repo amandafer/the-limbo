@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 namespace Assets.Scripts {
     public abstract class ItemBase : MonoBehaviour {
@@ -45,6 +46,20 @@ namespace Assets.Scripts {
                 _pickUpClip.Play();
             player.OnPickUp(this);
         }
+
+		IEnumerator ShowItemText() {
+			var nameItemText = GameObject.FindGameObjectWithTag("NameItemText").GetComponent<GUIText>();
+			var effectItemText = GameObject.FindGameObjectWithTag("EffectItemText").GetComponent<GUIText>();
+
+			nameItemText.enabled = true;
+			nameItemText.text = this.name;
+			effectItemText.enabled = true;
+			effectItemText = this.guiText;
+
+			yield return new WaitForSeconds(2);
+			nameItemText.enabled = false;
+			effectItemText.enabled = false;
+		}
 
         public abstract bool UseItem(Player player);
     }

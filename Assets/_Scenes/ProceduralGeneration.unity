@@ -122,7 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446196, guid: 085005d79bfba4148bf0fe139579d9a5, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 155600, guid: 085005d79bfba4148bf0fe139579d9a5, type: 2}
       propertyPath: m_IsActive
@@ -261,7 +261,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 490858, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 128332, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
       propertyPath: m_IsActive
@@ -402,9 +402,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
+    - target: {fileID: 13100000, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120556, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
+      propertyPath: m_TagString
+      value: NameItemText
+      objectReference: {fileID: 0}
+    - target: {fileID: 191282, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
+      propertyPath: m_TagString
+      value: EffectItemText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}

@@ -13,6 +13,7 @@ GameObject:
   - 256: {fileID: 25686098}
   - 61: {fileID: 6154696}
   - 114: {fileID: 11447448}
+  - 132: {fileID: 13204418}
   m_Layer: 13
   m_Name: BagOfPills#1
   m_TagString: Untagged
@@ -81,6 +82,29 @@ MonoBehaviour:
   MaxSpawnPitch: 1
   _isInstantEffect: 1
   damageAddition: 1
+--- !u!132 &13204418
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129574}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Damage +1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!212 &21227942
 SpriteRenderer:
   m_ObjectHideFlags: 1

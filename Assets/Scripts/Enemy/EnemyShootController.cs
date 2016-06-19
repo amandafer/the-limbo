@@ -60,9 +60,7 @@ namespace Assets.Scripts {
 			    }
 
 				//enemies with shoot speed that varies
-				GetComponent<Animator> ().SetBool ("Attacking", true);
 				if (_shootSpeedVaries) {
-					//GetComponent<Animator> ().SetBool ("Attacking", true);
 					if (_shootSpeed == 0) {
 						yield return new WaitForSeconds (0);
 						_shootSpeed = 0.3f;
@@ -74,7 +72,6 @@ namespace Assets.Scripts {
 					yield return new WaitForSeconds (_shootSpeed * 3);
 				}
 				_shooting = false;
-				GetComponent<Animator> ().SetBool ("Attacking", false);
 			}
 		}
 

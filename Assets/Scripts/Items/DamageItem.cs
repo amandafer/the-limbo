@@ -16,6 +16,7 @@ namespace Assets.Scripts.Items {
 
 			player.GetComponent<Player> ()._damage += damageAddition;
 			*/
+			ShowItemText ();
 			return true;
 		}
 	}
