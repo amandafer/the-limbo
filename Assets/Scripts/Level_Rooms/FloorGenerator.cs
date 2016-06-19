@@ -8,13 +8,13 @@ using Random = UnityEngine.Random;
 public class FloorGenerator : MonoBehaviour {
 	public int numberOfRooms = 4, level = 1, maxLevels = 5;
 	public Room _firstRoom, _bossRoom;
-	public Player _playerPrefab;
 	public List<Room> _roomPrefabs = new List<Room>();
 	public List<GameObject> _obstacleLayouts = new List<GameObject>();
 	public const float HorizontalDelta = 14.5f;
 	public const float VerticalDelta = 10;
-	//public GameObject chosenCharacter;
 
+	//private GameObject chosenCharacter = ;
+	private Player _playerPrefab = GlobalData.choosenCharacter;
 	private Enemy _enemyPrefab;
 	private float _branchingProbability = 0.6f;
 	private FloorGrid _floorGrid = new FloorGrid(6, 6);

@@ -6,10 +6,10 @@ using UnityEditor.SceneManagement;
 
 namespace Assets.Scripts.Menu {
 	public class ArrowsButton : ButtonBase {
-		public List<GameObject> _charactersPrefab = new List<GameObject>();
+		public List<Player> _charactersPrefab = new List<Player>();
 		public List<GameObject> _charactersCarousel = new List<GameObject> ();
 		protected int _numberCharacterSelected = 1;
-		public GameObject choosenCharacter;
+		public Player choosenCharacter;
 
 		protected override void OnButtonClicked() {
 			//EditorSceneManager.LoadScene("ProceduralGeneration");
@@ -22,7 +22,7 @@ namespace Assets.Scripts.Menu {
 		public void Update() {
 			arrowController ();
 
-			GameObject _object = _charactersPrefab [_numberCharacterSelected];
+			Player _object = _charactersPrefab [_numberCharacterSelected];
 			foreach (var character in _charactersCarousel) {
 				if (character.name == _object.name) {
 					character.GetComponent<GUITexture> ().enabled = true;
@@ -44,6 +44,7 @@ namespace Assets.Scripts.Menu {
 					_numberCharacterSelected -= 1;
 				}
 
+				GlobalData.choosenCharacter = choosenCharacter;
 				Debug.Log ("Number: " + _numberCharacterSelected + " and choosen character is: " + choosenCharacter.name);
 			} /*else if (Input.GetKey (KeyCode.RightArrow)) {
 				int temp = _numberCharacterSelected + 1;
