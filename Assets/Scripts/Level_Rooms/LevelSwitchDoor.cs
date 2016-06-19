@@ -9,7 +9,9 @@ public class LevelSwitchDoor : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D other) {
 		buildNextLevel(other);
-		ShowLevel showLevel = new ShowLevel();
+		GameObject UI = new GameObject();
+		ShowLevel showLevel = UI.AddComponent<ShowLevel>();
+
 		StartCoroutine(showLevel.Start());
 
 		//StartCoroutine(showNextLevel());
