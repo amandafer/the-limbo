@@ -30,6 +30,7 @@ GameObject:
   - 114: {fileID: 11428854}
   - 114: {fileID: 11488878}
   - 58: {fileID: 5855464}
+  - 61: {fileID: 6144780}
   m_Layer: 19
   m_Name: Samael
   m_TagString: Player
@@ -148,7 +149,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -156,6 +157,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -1}
   serializedVersion: 2
   m_Radius: 1
+--- !u!61 &6144780
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138468}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -1}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5}
 --- !u!95 &9599724
 Animator:
   serializedVersion: 3
@@ -234,6 +249,7 @@ MonoBehaviour:
   MaxDiePitch: 1
   _mirrorAnimation: 0
   _health: 6
+  _damage: 3
   _gunObject: {fileID: 21283810}
   _headObject: {fileID: 11455636}
 --- !u!212 &21207908

@@ -46,6 +46,7 @@ GameObject:
   - 114: {fileID: 11494664}
   - 114: {fileID: 11435930}
   - 58: {fileID: 5824812}
+  - 61: {fileID: 6136814}
   m_Layer: 19
   m_Name: Uriel
   m_TagString: Player
@@ -148,7 +149,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176524}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -156,6 +157,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -1}
   serializedVersion: 2
   m_Radius: 1
+--- !u!61 &6136814
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176524}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -1}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5}
 --- !u!95 &9513278
 Animator:
   serializedVersion: 3
@@ -196,6 +211,7 @@ MonoBehaviour:
   MaxDiePitch: 1
   _mirrorAnimation: 0
   _health: 8
+  _damage: 1
   _gunObject: {fileID: 21219996}
   _headObject: {fileID: 11481564}
 --- !u!114 &11481564

@@ -1,0 +1,291 @@
+fileFormatVersion: 2
+guid: c0b676b2a50464f70b37ea960cd44129
+timeCreated: 1466405688
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: HealthPotion_0
+    21300002: HealthPotion_1
+    21300004: HealthPotion_2
+    21300006: HealthPotion_3
+    21300008: HealthPotion_4
+    21300010: HealthPotion_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: HealthPotion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5, y: 0.72}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: -86.48001}
+        - {x: 144, y: -79.48001}
+        - {x: 116, y: -42.48001}
+        - {x: 77, y: 9.519989}
+        - {x: 74, y: 37.51999}
+        - {x: 84, y: 59.51999}
+        - {x: 84, y: 89.51999}
+        - {x: 69, y: 103.51999}
+        - {x: 56, y: 107.51999}
+        - {x: -59, y: 107.51999}
+        - {x: -70, y: 103.51999}
+        - {x: -86, y: 88.51999}
+        - {x: -84, y: 59.51999}
+        - {x: -76, y: 42.51999}
+        - {x: -72, y: 15.519989}
+        - {x: -150, y: -87.48001}
+        - {x: -150, y: -160.48001}
+        - {x: -126, y: -182.48001}
+        - {x: -112, y: -190.48001}
+        - {x: -101, y: -194.48001}
+        - {x: 81, y: -194.48001}
+        - {x: 109, y: -192.48001}
+        - {x: 138, y: -172.48001}
+        - {x: 150, y: -159.48001}
+    - name: HealthPotion_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 300
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5, y: 0.72}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: -156.48001}
+        - {x: 150, y: -83.48001}
+        - {x: 117, y: -39.48001}
+        - {x: 78, y: 11.519989}
+        - {x: 81, y: 48.51999}
+        - {x: 86, y: 91.51999}
+        - {x: 79, y: 99.51999}
+        - {x: 64, y: 107.51999}
+        - {x: -62, y: 107.51999}
+        - {x: -70, y: 105.51999}
+        - {x: -83, y: 95.51999}
+        - {x: -85, y: 63.51999}
+        - {x: -71, y: 32.51999}
+        - {x: -71, y: 18.519989}
+        - {x: -134, y: -64.48001}
+        - {x: -150, y: -86.48001}
+        - {x: -150, y: -156.48001}
+        - {x: -133, y: -175.48001}
+        - {x: -111, y: -188.48001}
+        - {x: -100, y: -191.48001}
+        - {x: -66, y: -194.48001}
+        - {x: 70, y: -194.48001}
+        - {x: 99, y: -191.48001}
+        - {x: 112, y: -188.48001}
+        - {x: 136, y: -170.48001}
+    - name: HealthPotion_2
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 0
+        width: 300
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5, y: 0.72}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: -88.48001}
+        - {x: 129, y: -61.48001}
+        - {x: 93, y: -13.480011}
+        - {x: 65, y: 24.519989}
+        - {x: 75, y: 45.51999}
+        - {x: 79, y: 60.51999}
+        - {x: 80, y: 89.51999}
+        - {x: 66, y: 102.51999}
+        - {x: 53, y: 107.51999}
+        - {x: -62, y: 107.51999}
+        - {x: -73, y: 103.51999}
+        - {x: -89, y: 88.51999}
+        - {x: -87, y: 59.51999}
+        - {x: -80, y: 42.51999}
+        - {x: -72, y: 23.519989}
+        - {x: -98, y: -14.480011}
+        - {x: -150, y: -81.48001}
+        - {x: -150, y: -160.48001}
+        - {x: -134, y: -179.48001}
+        - {x: -107, y: -194.48001}
+        - {x: 96, y: -194.48001}
+        - {x: 106, y: -191.48001}
+        - {x: 126, y: -178.48001}
+        - {x: 150, y: -152.48001}
+    - name: HealthPotion_3
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 0
+        width: 300
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5, y: 0.72}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: -90.48001}
+        - {x: 135, y: -70.48001}
+        - {x: 111, y: -37.48001}
+        - {x: 75, y: 9.519989}
+        - {x: 68, y: 28.519989}
+        - {x: 85, y: 72.51999}
+        - {x: 82, y: 89.51999}
+        - {x: 67, y: 102.51999}
+        - {x: 54, y: 107.51999}
+        - {x: -62, y: 107.51999}
+        - {x: -72, y: 103.51999}
+        - {x: -88, y: 88.51999}
+        - {x: -86, y: 62.51999}
+        - {x: -74, y: 30.519989}
+        - {x: -75, y: 16.519989}
+        - {x: -114, y: -35.48001}
+        - {x: -150, y: -82.48001}
+        - {x: -150, y: -159.48001}
+        - {x: -147, y: -165.48001}
+        - {x: -118, y: -190.48001}
+        - {x: -103, y: -193.48001}
+        - {x: -66, y: -194.48001}
+        - {x: 99, y: -194.48001}
+        - {x: 128, y: -179.48001}
+        - {x: 146, y: -158.48001}
+        - {x: 150, y: -153.48001}
+    - name: HealthPotion_4
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 0
+        width: 300
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69, y: 19.919998}
+        - {x: 82, y: 59.92}
+        - {x: 86, y: 89.92}
+        - {x: 64, y: 109.92}
+        - {x: 57, y: 142.92}
+        - {x: 53, y: 145.92}
+        - {x: 9, y: 145.92}
+        - {x: -15, y: 113.92}
+        - {x: -56, y: 109.92}
+        - {x: -77, y: 133.92}
+        - {x: -105, y: 130.92}
+        - {x: -111, y: 123.92}
+        - {x: -112, y: 92.92}
+        - {x: -88, y: 84.92}
+        - {x: -85, y: 58.92}
+        - {x: -75, y: 19.919998}
+        - {x: -134, y: -64.08}
+        - {x: -150, y: -86.08}
+        - {x: -150, y: -159.08}
+        - {x: -144, y: -169.08}
+        - {x: -112, y: -193.08}
+        - {x: -99, y: -196.08}
+        - {x: 101, y: -196.08}
+        - {x: 123, y: -188.08}
+        - {x: 150, y: -156.08}
+        - {x: 150, y: -89.08}
+    - name: HealthPotion_5
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 0
+        width: 298
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5, y: 0.503}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 149, y: -86.15201}
+        - {x: 136, y: -67.15201}
+        - {x: 95, y: -12.152008}
+        - {x: 66, y: 24.847992}
+        - {x: 85, y: 66.84799}
+        - {x: 78, y: 102.84799}
+        - {x: 60, y: 109.84799}
+        - {x: 33, y: 115.84799}
+        - {x: -41, y: 115.84799}
+        - {x: -64, y: 109.84799}
+        - {x: -77, y: 103.84799}
+        - {x: -86, y: 93.84799}
+        - {x: -88, y: 60.847992}
+        - {x: -74, y: 20.847992}
+        - {x: -149, y: -78.15201}
+        - {x: -149, y: -170.15201}
+        - {x: -111, y: -193.15201}
+        - {x: 99, y: -193.15201}
+        - {x: 109, y: -190.15201}
+        - {x: 123, y: -181.15201}
+        - {x: 149, y: -159.15201}
+      - - {x: 87, y: 136.84799}
+        - {x: 83, y: 122.84799}
+        - {x: 83, y: 84.84799}
+        - {x: 87, y: 81.84799}
+        - {x: 130, y: 81.84799}
+        - {x: 135, y: 88.84799}
+        - {x: 135, y: 126.84799}
+        - {x: 118, y: 136.84799}
+      - - {x: -80, y: 190.84799}
+        - {x: -112, y: 190.84799}
+        - {x: -116, y: 185.84799}
+        - {x: -116, y: 167.84799}
+        - {x: -110, y: 160.84799}
+        - {x: -82, y: 160.84799}
+        - {x: -76, y: 164.84799}
+        - {x: -76, y: 187.84799}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

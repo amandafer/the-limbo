@@ -7,7 +7,7 @@ namespace Assets.Scripts.Items {
 
 	    public override bool UseItem(Player player) {
 			if (player.Health != player._maxHealth &&
-				player.name != "Samael" || _healthAddition < 0) {
+				!player.name.Contains("Samael") || _healthAddition < 0 || !this._isInstantEffect) {
 				player.Health += _healthAddition;
 
 				if (player.Health > player._maxHealth)

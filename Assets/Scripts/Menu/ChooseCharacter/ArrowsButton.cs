@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 
 namespace Assets.Scripts.Menu {
 	public class ArrowsButton : ButtonBase {
@@ -46,7 +45,7 @@ namespace Assets.Scripts.Menu {
 				}
 
 				GlobalData.choosenCharacter = choosenCharacter;
-				Debug.Log ("Number: " + _numberCharacterSelected + " and choosen character is: " + choosenCharacter.name);
+				//Debug.Log ("Number: " + _numberCharacterSelected + " and choosen character is: " + choosenCharacter.name);
 			} /*else if (Input.GetKey (KeyCode.RightArrow)) {
 				int temp = _numberCharacterSelected + 1;
 

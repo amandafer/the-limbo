@@ -75,7 +75,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 8
-  _shooter: {fileID: 0}
 --- !u!212 &21224590
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -102,8 +101,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1735560919
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300006, guid: 690746c456e4aab4f8c4b1c560a3048d, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 0.5}
+  m_Sprite: {fileID: 21300004, guid: 1392ef18fd8794b6da2958a3bc2fd2b0, type: 3}
+  m_Color: {r: 0.9393474, g: 0.94109935, b: 1, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000

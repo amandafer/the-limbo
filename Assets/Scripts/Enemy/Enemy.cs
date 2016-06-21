@@ -205,13 +205,13 @@ public class Enemy : CharacterBase {
 			clipToPlay.Play();
 		}
 
-		yield return new WaitForSeconds(0.35f);
+		yield return new WaitForSeconds(2f);
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(1f);
 		var random = Random.Range (0f, 1f);
 		transform.position = new Vector3(_player.transform.position.x + random, _player.transform.position.y, 0);
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(1f);
         _inAir = true;
         Animator.SetBool("Jumping", false);
 

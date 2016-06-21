@@ -6,7 +6,7 @@ namespace Assets.Scripts.Items {
 		private int _healthAddition;
 
 		public override bool UseItem(Player player) {
-			if (player.name == "Samael") {
+			if (player.name.Contains("Samael")) {
 				_healthAddition = 2;
 			} else {
 				_healthAddition = 1;

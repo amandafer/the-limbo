@@ -1,22 +1,17 @@
 ﻿using System;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Menu {
 	[RequireComponent(typeof(GUITexture))]
 	public class EnterButton : ButtonBase {
-		
-
 		protected override void OnButtonClicked() {
-			EditorSceneManager.LoadScene("ProceduralGeneration");
+			SceneManager.LoadScene("ProceduralGeneration");
 		}
 
 		public void FixedUpdate() {
 			if (Input.GetKey ("enter") || Input.GetKey ("return"))
-				
-
-
-				EditorSceneManager.LoadScene ("ProceduralGeneration");
+				SceneManager.LoadScene ("ProceduralGeneration");
 		}
 	}
 }

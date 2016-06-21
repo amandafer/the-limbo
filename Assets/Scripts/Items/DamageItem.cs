@@ -5,17 +5,15 @@ namespace Assets.Scripts.Items {
 		public int damageAddition;
 
 		public override bool UseItem(Player player) {
-			/*
-			var tempDamage = player._moveSpeed + _movementSpeedAddition;
+			var tempDamage = player._damage + damageAddition;
 
 			if (tempDamage > 10) {
-				damageAddition = 10 - player._moveSpeed;
-			} else if (tempDamage < ) {
-				damageAddition = player._moveSpeed - ;
+				damageAddition = 10 - player._damage;
+			} else if (tempDamage < 1) {
+				damageAddition = player._damage - 1;
 			}
 
 			player.GetComponent<Player> ()._damage += damageAddition;
-			*/
 			ShowItemText ();
 			return true;
 		}

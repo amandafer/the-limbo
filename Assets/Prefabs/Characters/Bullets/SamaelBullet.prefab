@@ -93,7 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 8
-  _shooter: {fileID: 138468, guid: f69db3808180445ec8875588b7a6d916, type: 2}
 --- !u!212 &21200774
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -121,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 817c252781cf43046ba8d1c7535bdf79, type: 3}
-  m_Color: {r: 1, g: 0.53610003, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.6424978, b: 0.28524047, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000

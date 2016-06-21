@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(PlayerShootController))]
 public class Player : CharacterBase {
+	public int _damage;
     public Vector2 Momentum { get; private set; }
     public SpriteRenderer _gunObject;
     public PlayerHeadController _headObject;

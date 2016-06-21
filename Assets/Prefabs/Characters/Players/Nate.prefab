@@ -46,7 +46,8 @@ GameObject:
   - 114: {fileID: 11459526}
   - 114: {fileID: 11424128}
   - 58: {fileID: 5817112}
-  m_Layer: 19
+  - 61: {fileID: 6134872}
+  m_Layer: 9
   m_Name: Nate
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -148,7 +149,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -156,6 +157,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -1}
   serializedVersion: 2
   m_Radius: 1
+--- !u!61 &6134872
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178332}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -1}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5}
 --- !u!95 &9592998
 Animator:
   serializedVersion: 3
@@ -200,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9495067e66f46c64eaed5075b7e8d68d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 7
+  _moveSpeed: 8
   _bloodPrefab: []
   _maxHealth: 6
   _range: 4
@@ -212,6 +227,7 @@ MonoBehaviour:
   MaxDiePitch: 1
   _mirrorAnimation: 0
   _health: 6
+  _damage: 2
   _gunObject: {fileID: 21242718}
   _headObject: {fileID: 11403282}
 --- !u!114 &11459526
@@ -227,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpeed: 0.5
   _shootSpeed: 0.35
-  _bulletPrefab: {fileID: 5018436, guid: afa8854690fe347cfa1e911efeafa1ad, type: 2}
+  _bulletPrefab: {fileID: 5012054, guid: 45db6a1f3fff34bca980b43ba2dce07c, type: 2}
   _shootClips: []
   MinShootPitch: 0.9
   MaxShootPitch: 1.1

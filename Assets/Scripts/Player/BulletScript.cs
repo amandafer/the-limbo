@@ -21,8 +21,8 @@ public class BulletScript : MonoBehaviour {
 		ShootControllerBase shootController = player.GetComponent<PlayerShootController>();
 
 		if (characterAttacked.CompareTag("Enemy") && _shooter.Equals(player)) {
-			//TODO: add players force
-			characterAttacked.GetComponentInParent<Enemy>().Health--;
+			int damage = player.GetComponent<Player>()._damage;
+			characterAttacked.GetComponentInParent<Enemy>().Health -= damage;
 		} else if (characterAttacked.CompareTag("Player") && !_shooter.Equals(player)) {
 			shootController = _shooter.GetComponent<EnemyShootController>();
 

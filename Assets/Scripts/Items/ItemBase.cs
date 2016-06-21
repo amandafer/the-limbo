@@ -52,17 +52,19 @@ namespace Assets.Scripts {
 		}
 		
 		public IEnumerator itemText() {
-			var nameItemText = GameObject.FindGameObjectWithTag ("NameItemText").GetComponent<GUIText> ();
-			var effectItemText = GameObject.FindGameObjectWithTag ("EffectItemText").GetComponent<GUIText> ();
+			if (this._isInstantEffect) {
+				var nameItemText = GameObject.FindGameObjectWithTag ("NameItemText").GetComponent<GUIText> ();
+				var effectItemText = GameObject.FindGameObjectWithTag ("EffectItemText").GetComponent<GUIText> ();
 
-			nameItemText.enabled = true;
-			nameItemText.text = this.name.Replace("(Clone)", "");
-			effectItemText.enabled = true;
-			effectItemText.text = this.GetComponent<GUIText> ().text;
+				nameItemText.enabled = true;
+				nameItemText.text = this.name.Replace ("(Clone)", "");
+				effectItemText.enabled = true;
+				effectItemText.text = this.GetComponent<GUIText> ().text;
 
-			yield return new WaitForSeconds(1.0f) ;
-			nameItemText.GetComponent<GUIText> ().enabled = false;
-			effectItemText.GetComponent<GUIText> ().enabled = false;
+				yield return new WaitForSeconds (1.3f);
+				nameItemText.GetComponent<GUIText> ().enabled = false;
+				effectItemText.GetComponent<GUIText> ().enabled = false;
+			}
 		}
 
 
