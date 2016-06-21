@@ -210,15 +210,10 @@ namespace Assets.Scripts {
 					doorCloseClip.Play();
             } else {
 				_doors.ForEach(d => d.IsOpen = true);
-                /*var doorCloseClip = _doors.First()._doorCloseClip;
-
-                if (doorCloseClip != null) {
-                    doorCloseClip.Play();
-                }*/
             }
 
             player.CurrentRoom = this;
-            //Debug.Log("Player entered room: " + name);
+			Debug.Log("Player entered room: " + player.CurrentRoom);
         }
     }
 }

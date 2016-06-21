@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5069760}
   - 256: {fileID: 25631762}
   - 61: {fileID: 6188676}
-  - 114: {fileID: 11477380}
+  - 114: {fileID: 11403952}
   m_Layer: 13
   m_Name: Attack Powder
   m_TagString: Untagged
@@ -64,7 +64,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.9, y: 1.2}
---- !u!114 &11477380
+--- !u!114 &11403952
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 128332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9728fd4ae6b30d242a6afca3566b8fd5, type: 3}
+  m_Script: {fileID: 11500000, guid: f31576f0eed214a3baf1d7196bc2dade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnClip: {fileID: 0}
@@ -80,6 +80,7 @@ MonoBehaviour:
   MinSpawnPitch: 1.5
   MaxSpawnPitch: 1.6
   _isInstantEffect: 0
+  damageAddition: 3
 --- !u!212 &21200232
 SpriteRenderer:
   m_ObjectHideFlags: 1

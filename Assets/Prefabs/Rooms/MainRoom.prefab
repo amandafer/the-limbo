@@ -620,6 +620,8 @@ MonoBehaviour:
   - {fileID: 11447226, guid: 8812b6b03f27c4a77a183816007bfb37, type: 2}
   - {fileID: 11475448, guid: 56cea2501dc4b40f2a08ec754f53e893, type: 2}
   - {fileID: 11475448, guid: 56cea2501dc4b40f2a08ec754f53e893, type: 2}
+  - {fileID: 11403952, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
+  - {fileID: 11427496, guid: dce832f297ee145ddb7707e56e18c733, type: 2}
   _spawnOnAwake: 0
 --- !u!114 &11480472
 MonoBehaviour:

@@ -5,18 +5,18 @@ AnimatorOverrideController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SamaelController
+  m_Name: NateController
   m_Controller: {fileID: 9100000, guid: 52f21eae028f4464783b080572e79f20, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: c4ddcd833f0e04af09422340ca9d0146, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 97212ef6cb8634885870878279c5dbf6, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 7b4fbc754416c449f8182ea1a51c7d3b, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 92bfb7f4247a44876a0bbd96f0d70e5c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ae5545360c4564d699e2449031ac51ce, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 18c21ec637e11422eb9945019b6ee68a, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 020814f7ea5c2478faf615fab0335956, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b23519268cc174f99a5cd159cf5cc040, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7b4fbc754416c449f8182ea1a51c7d3b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 084d3e302e9f44bf58a5ea86c5540934, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 46611d34b427e469e8cf75d26cd36746, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: b4fa14d2409514d3ab09d52d20fcb485, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: d45f71ca0976e42cba95c26c1988d2d7, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 40bad3c2df8a44c739529ca576f9f497, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0c034443358ca43e8a9ab8568b334e51, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 0285541df97db49cbb06590b54ace838, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 0285541df97db49cbb06590b54ace838, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d45f71ca0976e42cba95c26c1988d2d7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1fbaf61fb90444c53b432f5ba987d0d6, type: 2}

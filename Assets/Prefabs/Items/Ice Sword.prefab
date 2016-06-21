@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 447494}
   - 212: {fileID: 21229570}
-  - 114: {fileID: 11427496}
   - 50: {fileID: 5079232}
   - 256: {fileID: 25660392}
   - 61: {fileID: 6153874}
@@ -64,22 +63,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.6}
---- !u!114 &11427496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00031772351f6422cbc803139f5277ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnClip: {fileID: 0}
-  _pickUpClip: {fileID: 0}
-  MinSpawnPitch: 1
-  MaxSpawnPitch: 1
-  _isInstantEffect: 1
 --- !u!212 &21229570
 SpriteRenderer:
   m_ObjectHideFlags: 1

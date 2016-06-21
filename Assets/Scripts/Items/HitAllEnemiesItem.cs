@@ -2,12 +2,16 @@
 
 namespace Assets.Scripts.Items {
 	public class HitAllEnemiesItem : ItemBase {
-		//private int damage = player.GetComponent<Player>()._damage;
+		private int damage;
 
 		public override bool UseItem(Player player) {
-            foreach (var enemy in player.CurrentRoom._enemies) {
-                //enemy.Health -= damage;
-            }
+			damage = player.GetComponent<Player>()._damage;
+
+			if (player.CurrentRoom.ContainsEnemies) {
+				foreach (var enemy in player.CurrentRoom._enemies) {
+					enemy.Health -= damage;
+				}
+			} 
 
 			return true;
         }

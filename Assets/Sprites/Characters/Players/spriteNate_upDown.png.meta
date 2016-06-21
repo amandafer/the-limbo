@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: 93c64b713df44424c9c3d7191d73b204
+timeCreated: 1466534877
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spriteNate_upDown_0
+    21300002: spriteNate_upDown_1
+    21300004: spriteNate_upDown_2
+    21300006: spriteNate_upDown_3
+    21300008: spriteNate_upDown_4
+    21300010: spriteNate_upDown_5
+    21300012: spriteNate_upDown_6
+    21300014: spriteNate_upDown_7
+    21300016: spriteNate_upDown_8
+    21300018: spriteNate_upDown_9
+    21300020: spriteNate_upDown_10
+    21300022: spriteNate_upDown_11
+    21300024: spriteNate_upDown_12
+    21300026: spriteNate_upDown_13
+    21300028: spriteNate_upDown_14
+    21300030: spriteNate_upDown_15
+    21300032: spriteNate_upDown_16
+    21300034: spriteNate_upDown_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spriteNate_upDown_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 505
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47.3198, y: -18.5}
+        - {x: -59.6802, y: -18.5}
+        - {x: -86.6802, y: -46.5}
+        - {x: -86.6802, y: -92.5}
+        - {x: -56.6802, y: -129.5}
+        - {x: -46.6802, y: -137.5}
+        - {x: 67.3198, y: -137.5}
+        - {x: 88.3198, y: -104.5}
+        - {x: 88.3198, y: -59.5}
+        - {x: 62.3198, y: -21.5}
+    - name: spriteNate_upDown_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 505
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60.98416, y: -18.5}
+        - {x: -86.98416, y: -39.5}
+        - {x: -86.98416, y: -89.5}
+        - {x: -62.98416, y: -137.5}
+        - {x: 61.01584, y: -137.5}
+        - {x: 87.01584, y: -87.5}
+        - {x: 87.01584, y: -51.5}
+        - {x: 63.01584, y: -18.5}
+    - name: spriteNate_upDown_2
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 505
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -86.78815, y: -104.5}
+        - {x: -43.788147, y: -137.5}
+        - {x: 74.21185, y: -137.5}
+        - {x: 87.21185, y: -123.5}
+        - {x: 87.21185, y: -38.5}
+        - {x: 72.21185, y: -18.5}
+        - {x: -58.788147, y: -18.5}
+        - {x: -86.78815, y: -52.5}
+    - name: spriteNate_upDown_3
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 505
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59.19702, y: -18.5}
+        - {x: -75.80298, y: -18.5}
+        - {x: -80.80298, y: -19.5}
+        - {x: -86.80298, y: -43.5}
+        - {x: -86.80298, y: -107.5}
+        - {x: -62.80298, y: -137.5}
+        - {x: 61.19702, y: -137.5}
+        - {x: 75.19702, y: -120.5}
+        - {x: 88.19702, y: -92.5}
+        - {x: 88.19702, y: -49.5}
+    - name: spriteNate_upDown_4
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 505
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86.10394, y: -18.5}
+        - {x: -86.89606, y: -18.5}
+        - {x: -86.89606, y: -112.5}
+        - {x: -55.896057, y: -137.5}
+        - {x: 62.103943, y: -137.5}
+        - {x: 88.10394, y: -100.5}
+        - {x: 88.10394, y: -28.5}
+    - name: spriteNate_upDown_5
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 505
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64.70007, y: -18.5}
+        - {x: -86.70007, y: -51.5}
+        - {x: -86.70007, y: -123.5}
+        - {x: -81.70007, y: -132.5}
+        - {x: -57.700073, y: -137.5}
+        - {x: 74.29993, y: -137.5}
+        - {x: 88.29993, y: -114.5}
+        - {x: 88.29993, y: -50.5}
+        - {x: 60.299927, y: -18.5}
+    - name: spriteNate_upDown_6
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 505
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -69.71484, y: -18.5}
+        - {x: -86.71484, y: -24.5}
+        - {x: -86.71484, y: -85.5}
+        - {x: -58.714844, y: -137.5}
+        - {x: 58.285156, y: -137.5}
+        - {x: 87.28516, y: -114.5}
+        - {x: 87.28516, y: -37.5}
+        - {x: 78.28516, y: -18.5}
+    - name: spriteNate_upDown_7
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 505
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 83.19202, y: -126.5}
+        - {x: 87.19202, y: -110.5}
+        - {x: 87.19202, y: -46.5}
+        - {x: 56.192017, y: -18.5}
+        - {x: -57.807983, y: -18.5}
+        - {x: -86.80798, y: -48.5}
+        - {x: -86.80798, y: -92.5}
+        - {x: -62.807983, y: -134.5}
+        - {x: -50.807983, y: -137.5}
+        - {x: -5.8079834, y: -137.5}
+        - {x: -2.8079834, y: -134.5}
+        - {x: 6.1920166, y: -137.5}
+        - {x: 36.192017, y: -137.5}
+    - name: spriteNate_upDown_8
+      rect:
+        serializedVersion: 2
+        x: 2551
+        y: 505
+        width: 306
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 102.983154, y: 135.5}
+        - {x: 70.983154, y: 140.5}
+        - {x: -71.016846, y: 140.5}
+        - {x: -85.016846, y: 102.5}
+        - {x: -85.016846, y: 13.5}
+        - {x: -80.016846, y: -7.5}
+        - {x: -61.016846, y: -21.5}
+        - {x: -30.016846, y: -36.5}
+        - {x: 25.983154, y: -36.5}
+        - {x: 32.983154, y: -35.5}
+        - {x: 70.983154, y: -13.5}
+        - {x: 109.983154, y: 82.5}
+        - {x: 109.983154, y: 127.5}
+    - name: spriteNate_upDown_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59.955444, y: -19.5}
+        - {x: -86.955444, y: -45.5}
+        - {x: -86.955444, y: -108.5}
+        - {x: -71.955444, y: -138.5}
+        - {x: 80.044556, y: -138.5}
+        - {x: 88.044556, y: -123.5}
+        - {x: 88.044556, y: -45.5}
+        - {x: 63.044556, y: -19.5}
+    - name: spriteNate_upDown_10
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 0
+        width: 245
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -76.47031, y: -19.5}
+        - {x: -87.47031, y: -50.5}
+        - {x: -87.47031, y: -117.5}
+        - {x: -73.47031, y: -138.5}
+        - {x: 74.52969, y: -138.5}
+        - {x: 87.52969, y: -95.5}
+        - {x: 87.52969, y: -52.5}
+        - {x: 58.529694, y: -19.5}
+    - name: spriteNate_upDown_11
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 0
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45.436615, y: -19.5}
+        - {x: -46.563385, y: -19.5}
+        - {x: -75.563385, y: -35.5}
+        - {x: -86.563385, y: -63.5}
+        - {x: -86.563385, y: -93.5}
+        - {x: -46.563385, y: -138.5}
+        - {x: 8.436615, y: -138.5}
+        - {x: 57.436615, y: -131.5}
+        - {x: 88.436615, y: -99.5}
+        - {x: 88.436615, y: -55.5}
+        - {x: 79.436615, y: -28.5}
+    - name: spriteNate_upDown_12
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 0
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59.86737, y: -19.5}
+        - {x: -86.86737, y: -45.5}
+        - {x: -86.86737, y: -104.5}
+        - {x: -67.86737, y: -138.5}
+        - {x: 65.13263, y: -138.5}
+        - {x: 87.13263, y: -91.5}
+        - {x: 87.13263, y: -40.5}
+        - {x: 60.13263, y: -19.5}
+    - name: spriteNate_upDown_13
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 0
+        width: 245
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71.8822, y: -19.5}
+        - {x: -86.8822, y: -40.5}
+        - {x: -86.8822, y: -100.5}
+        - {x: -67.8822, y: -138.5}
+        - {x: 63.117798, y: -138.5}
+        - {x: 88.1178, y: -103.5}
+        - {x: 88.1178, y: -19.5}
+    - name: spriteNate_upDown_14
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 0
+        width: 243
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -78.47534, y: -19.5}
+        - {x: -86.47534, y: -38.5}
+        - {x: -86.47534, y: -85.5}
+        - {x: -59.47534, y: -138.5}
+        - {x: 58.52466, y: -138.5}
+        - {x: 87.52466, y: -105.5}
+        - {x: 87.52466, y: -30.5}
+        - {x: 84.52466, y: -19.5}
+    - name: spriteNate_upDown_15
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 0
+        width: 244
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61.779297, y: -19.5}
+        - {x: -86.7793, y: -46.5}
+        - {x: -86.7793, y: -86.5}
+        - {x: -80.7793, y: -102.5}
+        - {x: -66.7793, y: -117.5}
+        - {x: -38.779297, y: -138.5}
+        - {x: 61.220703, y: -138.5}
+        - {x: 88.2207, y: -101.5}
+        - {x: 88.2207, y: -24.5}
+        - {x: 87.2207, y: -19.5}
+    - name: spriteNate_upDown_16
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 0
+        width: 245
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66.70593, y: -19.5}
+        - {x: -53.294067, y: -19.5}
+        - {x: -75.29407, y: -23.5}
+        - {x: -87.29407, y: -57.5}
+        - {x: -87.29407, y: -97.5}
+        - {x: -52.294067, y: -138.5}
+        - {x: 73.70593, y: -138.5}
+        - {x: 87.70593, y: -101.5}
+        - {x: 87.70593, y: -56.5}
+        - {x: 81.70593, y: -24.5}
+    - name: spriteNate_upDown_17
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 0
+        width: 303
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.74463, y: 139.5}
+        - {x: -102.74463, y: 92.5}
+        - {x: -78.74463, y: -9.5}
+        - {x: -49.74463, y: -38.5}
+        - {x: 81.25537, y: -38.5}
+        - {x: 93.25537, y: 40.5}
+        - {x: 93.25537, y: 74.5}
+        - {x: 72.25537, y: 139.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
