@@ -54,7 +54,7 @@ namespace Assets.Scripts {
             _enemies.ForEach(e => e.Enable());
 
 			// Sets the boss bar
-			if (_roomType == RoomType.BossRoom && ContainsEnemies) {
+			if (_roomType != RoomType.NormalRoom && ContainsEnemies) {
                 _bossBar = (GameObject)Instantiate(bossBarPrefab);
                 _bossBar.transform.position = _bossBar.transform.position + transform.position;
             }
@@ -81,6 +81,12 @@ namespace Assets.Scripts {
                     case RoomType.BossRoom:
                         doorPrefab = _bossDoorPrefab;
                         break;
+					case RoomType.DevilRoom:
+						doorPrefab = _bossDoorPrefab;
+						break;
+					case RoomType.AngelRoom:
+						doorPrefab = _bossDoorPrefab;
+						break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
@@ -158,7 +164,7 @@ namespace Assets.Scripts {
 					doorOpenClip.Play();
 				}
 
-				if (_roomType == RoomType.BossRoom) {
+				if (_roomType != RoomType.NormalRoom) {
 					Destroy(_bossBar);
 
                     var audioSources = GameObject.FindGameObjectWithTag("MainCamera").GetComponents<AudioSource>();
@@ -221,5 +227,7 @@ namespace Assets.Scripts {
 public enum RoomType {
     StartRoom,
     NormalRoom,
-    BossRoom
+    BossRoom,
+	AngelRoom, 
+	DevilRoom
 }

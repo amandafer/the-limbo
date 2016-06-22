@@ -6,8 +6,7 @@ namespace Assets.Scripts.Items {
 	public class DamageItem : ItemBase {
 		public int damageAddition;
 
-		public override bool IsInstantlyDestroyedAfterUse
-		{
+		public override bool IsInstantlyDestroyedAfterUse {
 			get { return false; }
 		}
 

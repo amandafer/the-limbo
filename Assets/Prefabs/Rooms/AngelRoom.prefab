@@ -893,7 +893,7 @@ MonoBehaviour:
   _southDoorWall: {fileID: 6134606}
   _eastDoorWall: {fileID: 6180922}
   _westDoorWall: {fileID: 6197628}
-  _roomType: 2
+  _roomType: 3
   _enemies: []
   _bossBar: {fileID: 0}
   bossBarPrefab: {fileID: 100002, guid: cd78254e37591f543821ffe04bba5d9a, type: 2}

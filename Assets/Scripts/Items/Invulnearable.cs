@@ -5,6 +5,10 @@ using System.Collections;
 namespace Assets.Scripts.Items {
 	public class Invulnearable : ItemBase {
 
+		public override bool IsInstantlyDestroyedAfterUse {
+			get { return false; }
+		}
+
 		public override bool UseItem(Player player) {
 			StartCoroutine (Invulnerability (player));
 			return true;

@@ -45,6 +45,8 @@ MonoBehaviour:
   maxLevels: 5
   _firstRoom: {fileID: 11432992, guid: 744331fefa4074a4ba18b2b2609730dc, type: 2}
   _bossRoom: {fileID: 11400000, guid: 250b1ec9be8354f4cb40cfe1e982e938, type: 2}
+  _devilRoom: {fileID: 11496100, guid: 8c1016cc1b2f2472a9da2d71ed7f7539, type: 2}
+  _angelRoom: {fileID: 11406364, guid: 9f35959ba1ea841dbb0e6895921f15d8, type: 2}
   _roomPrefabs:
   - {fileID: 11480472, guid: 9e7b7af401af242cc99cde52cd8d0965, type: 2}
   _obstacleLayouts:

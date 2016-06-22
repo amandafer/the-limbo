@@ -58,6 +58,9 @@ public class FloorGenerator : MonoBehaviour {
 		}
 		*/
 		var previousRoom = firstRoom;
+		if (level == maxLevels)
+			numberOfRooms += 1;
+
 		while (numberOfRoomsCreated < numberOfRooms-1) {
 			RoomDirection direction;
 			try {
@@ -97,7 +100,8 @@ public class FloorGenerator : MonoBehaviour {
 		if (level != maxLevels) {
 			CreateBossRoom (previousRoom, coordinates, RoomType.BossRoom);
 		} else {
-			
+			CreateBossRoom (previousRoom, coordinates, RoomType.AngelRoom);
+			CreateBossRoom (previousRoom, coordinates, RoomType.DevilRoom);
 		}	
 
 		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any()) {
@@ -201,29 +205,8 @@ public class FloorGenerator : MonoBehaviour {
 		var direction = validDirections.ElementAt(Random.Range(0, validDirections.Count()));
 		AddNewRoom(previousRoom, direction, DetermineNewCoordinates(direction, coordinates), roomType);
 	}
-	/*
-	private void CreateDevilRoom(Room previousRoom, RoomCoordinates coordinates) {
-		//Debug.Log("Room before boss: "+ previousRoom.name);
-		var validDirections = _floorGrid.GetValidDirectionsFromRoom(coordinates.X, coordinates.Y).ToList();
-		if (!validDirections.Any()) {
-			throw new Exception("Failed to create boss room.");
-		}
 
-		var direction = validDirections.ElementAt(Random.Range(0, validDirections.Count()));
-		AddNewRoom(previousRoom, direction, DetermineNewCoordinates(direction, coordinates), RoomType.DevilRoom);
-	}
 
-	private void CreateAngelRoom(Room previousRoom, RoomCoordinates coordinates) {
-		//Debug.Log("Room before boss: "+ previousRoom.name);
-		var validDirections = _floorGrid.GetValidDirectionsFromRoom(coordinates.X, coordinates.Y).ToList();
-		if (!validDirections.Any()) {
-			throw new Exception("Failed to create boss room.");
-		}
-
-		var direction = validDirections.ElementAt(Random.Range(0, validDirections.Count()));
-		AddNewRoom(previousRoom, direction, DetermineNewCoordinates(direction, coordinates), RoomType.AngelRoom);
-	}
-	*/
 	private static RoomDirection GetOppositeRoomDirection(RoomDirection direction) {
 		return (RoomDirection)(((int)direction + 2) % 4);
 	}
@@ -241,6 +224,12 @@ public class FloorGenerator : MonoBehaviour {
 				break;
 			case RoomType.BossRoom:
 				prefab = _bossRoom;
+				break;
+			case RoomType.DevilRoom:
+				prefab = _devilRoom;
+				break;
+			case RoomType.AngelRoom:
+				prefab = _angelRoom;
 				break;
 			default:
 				throw new ArgumentOutOfRangeException("roomType");

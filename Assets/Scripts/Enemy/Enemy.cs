@@ -52,7 +52,7 @@ public class Enemy : CharacterBase {
                     break;
                 case 1:
                     MovementStyle = MovementStyle.RandomDirection;
-                    //gameObject.GetComponent<EnemyShootController>()._canShoot = false;
+                    gameObject.GetComponent<EnemyShootController>()._canShoot = false;
                     Flying();
                     break;
                 case 2:

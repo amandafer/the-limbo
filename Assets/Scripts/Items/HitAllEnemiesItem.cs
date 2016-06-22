@@ -4,6 +4,10 @@ namespace Assets.Scripts.Items {
 	public class HitAllEnemiesItem : ItemBase {
 		private int damage;
 
+		public override bool IsInstantlyDestroyedAfterUse {
+			get { return false; }
+		}
+
 		public override bool UseItem(Player player) {
 			damage = player.GetComponent<Player>()._damage;
 
