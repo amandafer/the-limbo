@@ -38,7 +38,7 @@ public class ItemSpawner : MonoBehaviour {
 		} else if (thisRoomType == RoomType.BossRoom) {
 			var item = (ItemBase)Instantiate (_itemPrefabs [Random.Range (0, _itemPrefabs.Count)]);
 			item.transform.parent = transform;
-			item.transform.localPosition = new Vector3 (0f, 2.5f);
+			item.transform.localPosition = new Vector3 (0f, -2f);
 		}
     }
 }

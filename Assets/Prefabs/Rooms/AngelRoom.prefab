@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyLayouts:
-  - {fileID: 0}
+  - {fileID: 141740, guid: 9b3edef06d7614183b91fe6cd0119acf, type: 2}
 --- !u!212 &21235232
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -111,8 +111,6 @@ public class FloorGenerator : MonoBehaviour {
 
 			coordinates = _floorGrid.GetCoordinatesForRoom(previousRoom);
 		}
-		//var dir = _floorGrid.GetValidDirectionsFromRoom(coordinates).First();
-		//AddNewRoom(previousRoom, dir, DetermineNewCoordinates(dir, coordinates), RoomType.TreasureRoom);
 	}
 
 	// Creates the "graph" of the level and the room coordinates
@@ -216,56 +214,64 @@ public class FloorGenerator : MonoBehaviour {
 		Room prefab;
 		// Type of the room
 		switch (roomType) {
-			case RoomType.StartRoom:
-				prefab = _firstRoom;
-				break;
-			case RoomType.NormalRoom:
-				prefab = _roomPrefabs.First();
-				break;
-			case RoomType.BossRoom:
-				prefab = _bossRoom;
-				break;
-			case RoomType.DevilRoom:
-				prefab = _devilRoom;
-				break;
-			case RoomType.AngelRoom:
-				prefab = _angelRoom;
-				break;
-			default:
-				throw new ArgumentOutOfRangeException("roomType");
+		case RoomType.StartRoom:
+			prefab = _firstRoom;
+			break;
+		case RoomType.NormalRoom:
+			prefab = _roomPrefabs.First ();
+			break;
+		case RoomType.BossRoom:
+			prefab = _bossRoom;
+			break;
+		case RoomType.DevilRoom:
+			prefab = _devilRoom;
+			break;
+		case RoomType.AngelRoom:
+			prefab = _angelRoom;
+			break;
+		default:
+			throw new ArgumentOutOfRangeException ("roomType");
 		}
 
-		var room = (Room)Instantiate(prefab);
+		var room = (Room)Instantiate (prefab);
 		// Direction of the room
 		if (previousRoom != null) {
 			var position = previousRoom.transform.position;
 
 			switch (direction) {
-				case RoomDirection.North:
-					position.y += VerticalDelta;
-					break;
-				case RoomDirection.East:
-					position.x += HorizontalDelta;
-					break;
-				case RoomDirection.South:
-					position.y -= VerticalDelta;
-					break;
-				case RoomDirection.West:
-					position.x -= HorizontalDelta;
-					break;
+			case RoomDirection.North:
+				position.y += VerticalDelta;
+				break;
+			case RoomDirection.East:
+				position.x += HorizontalDelta;
+				break;
+			case RoomDirection.South:
+				position.y -= VerticalDelta;
+				break;
+			case RoomDirection.West:
+				position.x -= HorizontalDelta;
+				break;
 			}
 			room.transform.position = position;
 		}
 
 		// Instantiate boss and normal enemies according to level
 		if (roomType == RoomType.BossRoom) {
-			var enemyLayouts = room.GetComponent<EnemyLayout>().EnemyLayouts;
-			var enemyLayout = (GameObject)Instantiate(enemyLayouts.ElementAt(level - 1));//.ElementAt(Random.Range(0, enemyLayouts.Count)));
+			var enemyLayouts = room.GetComponent<EnemyLayout> ().EnemyLayouts;
+			var enemyLayout = (GameObject)Instantiate (enemyLayouts.ElementAt (level - 1));//.ElementAt(Random.Range(0, enemyLayouts.Count)));
 			//enemyLayout.transform.localPosition = Vector3.zero;
 			enemyLayout.transform.parent = room.transform;
 
-			var enemies = enemyLayout.GetComponentsInChildren<Enemy>().ToList();
-			enemies.ForEach(e => room.AddEnemy(e, e.transform.position));
+			var enemies = enemyLayout.GetComponentsInChildren<Enemy> ().ToList ();
+			enemies.ForEach (e => room.AddEnemy (e, e.transform.position));
+		} else if (roomType == RoomType.AngelRoom ||
+				   roomType == RoomType.DevilRoom) { 
+			var enemyLayouts = room.GetComponent<EnemyLayout> ().EnemyLayouts;
+			var enemyLayout = (GameObject)Instantiate (enemyLayouts.ElementAt (0));//.ElementAt(Random.Range(0, enemyLayouts.Count)));
+			enemyLayout.transform.parent = room.transform;
+
+			var enemies = enemyLayout.GetComponentsInChildren<Enemy> ().ToList ();
+			enemies.ForEach (e => room.AddEnemy (e, e.transform.position));
 		} else if (roomType == RoomType.NormalRoom ) {
 			var obstacleLayout = (GameObject)Instantiate(_obstacleLayouts.ElementAt(Random.Range(0, _obstacleLayouts.Count)));
 			obstacleLayout.transform.parent = room.transform;
