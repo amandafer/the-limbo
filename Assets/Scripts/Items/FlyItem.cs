@@ -5,11 +5,12 @@ namespace Assets.Scripts.Items
 {
     public class FlyItem : ItemBase
     {
+		/*
         public override bool IsInstantlyDestroyedAfterUse
         {
             get { return false; }
         }
-
+*/
         public override bool UseItem(Player player)
 		{
 			/*
@@ -18,9 +19,9 @@ namespace Assets.Scripts.Items
             spriteRenderer.sortingOrder = -1;
             transform.localPosition = Vector3.zero + new Vector3(0, 1.5f, 0);
             spriteRenderer.enabled = true;
-
+			*/
             StartCoroutine(Fly(player));
-        	*/
+        	
 			return true;
         }
 

@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: b7135315c38f64df08f691f4ad494135
+timeCreated: 1466555477
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: blueFire_0
+    21300002: blueFire_1
+    21300004: blueFire_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: blueFire_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 531
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 100.5, y: -126}
+        - {x: 145.5, y: -77}
+        - {x: 145.5, y: -66}
+        - {x: 142.5, y: -38}
+        - {x: 145.5, y: 4}
+        - {x: 145.5, y: 57}
+        - {x: 133.5, y: 98}
+        - {x: 92.5, y: 144}
+        - {x: 69.5, y: 161}
+        - {x: 87.5, y: 196}
+        - {x: 97.5, y: 233}
+        - {x: 72.5, y: 289}
+        - {x: 66.5, y: 292}
+        - {x: 50.5, y: 292}
+        - {x: 42.5, y: 216}
+        - {x: 35.5, y: 169}
+        - {x: 29.5, y: 216}
+        - {x: -8.5, y: 181}
+        - {x: -43.5, y: 174}
+        - {x: -92.5, y: 155}
+        - {x: -114.5, y: 137}
+        - {x: -140.5, y: 110}
+        - {x: -160.5, y: 76}
+        - {x: -164.5, y: 57}
+        - {x: -164.5, y: -3}
+        - {x: -145.5, y: -46}
+        - {x: -124.5, y: -80}
+        - {x: -127.5, y: -115}
+        - {x: -104.5, y: -156}
+        - {x: -55.5, y: -178}
+        - {x: -5.5, y: -190}
+        - {x: 9.5, y: -192}
+        - {x: 42.5, y: -192}
+        - {x: 56.5, y: -185}
+        - {x: 72.5, y: -175}
+        - {x: 100.5, y: -142}
+      - - {x: -46.5, y: 255}
+        - {x: -51.5, y: 244}
+        - {x: -51.5, y: 214}
+        - {x: -47.5, y: 205}
+        - {x: -28.5, y: 192}
+        - {x: -16.5, y: 192}
+        - {x: -13.5, y: 195}
+        - {x: -13.5, y: 245}
+        - {x: -16.5, y: 255}
+    - name: blueFire_1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 0
+        width: 531
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117.5, y: -82}
+        - {x: 113.5, y: -54}
+        - {x: 138.5, y: -6}
+        - {x: 141.5, y: 8}
+        - {x: 141.5, y: 61}
+        - {x: 140.5, y: 79}
+        - {x: 122.5, y: 113}
+        - {x: 91.5, y: 146}
+        - {x: 69.5, y: 166}
+        - {x: 66.5, y: 208}
+        - {x: 63.5, y: 211}
+        - {x: 56.5, y: 202}
+        - {x: 50.5, y: 192}
+        - {x: 31.5, y: 183}
+        - {x: -4.5, y: 183}
+        - {x: -3.5, y: 212}
+        - {x: -16.5, y: 220}
+        - {x: -30.5, y: 220}
+        - {x: -33.5, y: 211}
+        - {x: -36.5, y: 182}
+        - {x: -77.5, y: 173}
+        - {x: -105.5, y: 156}
+        - {x: -138.5, y: 126}
+        - {x: -155.5, y: 105}
+        - {x: -168.5, y: 71}
+        - {x: -168.5, y: 15}
+        - {x: -164.5, y: -15}
+        - {x: -137.5, y: -54}
+        - {x: -114.5, y: -87}
+        - {x: -88.5, y: -140}
+        - {x: -43.5, y: -172}
+        - {x: -25.5, y: -175}
+        - {x: 19.5, y: -175}
+        - {x: 33.5, y: -174}
+        - {x: 75.5, y: -153}
+        - {x: 104.5, y: -116}
+    - name: blueFire_2
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 0
+        width: 531
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123.5, y: -84}
+        - {x: 142.5, y: -18}
+        - {x: 142.5, y: 48}
+        - {x: 138.5, y: 72}
+        - {x: 117.5, y: 102}
+        - {x: 88.5, y: 130}
+        - {x: 43.5, y: 155}
+        - {x: -6.5, y: 159}
+        - {x: 7.5, y: 177}
+        - {x: -7.5, y: 211}
+        - {x: -24.5, y: 211}
+        - {x: -48.5, y: 172}
+        - {x: -81.5, y: 135}
+        - {x: -95.5, y: 124}
+        - {x: -112.5, y: 107}
+        - {x: -123.5, y: 94}
+        - {x: -136.5, y: 72}
+        - {x: -144.5, y: 45}
+        - {x: -144.5, y: 2}
+        - {x: -143.5, y: -13}
+        - {x: -129.5, y: -41}
+        - {x: -115.5, y: -104}
+        - {x: -77.5, y: -161}
+        - {x: -41.5, y: -179}
+        - {x: -16.5, y: -182}
+        - {x: 32.5, y: -182}
+        - {x: 55.5, y: -178}
+        - {x: 82.5, y: -152}
+        - {x: 96.5, y: -111}
+      - - {x: 20.5, y: 217}
+        - {x: 16.5, y: 217}
+        - {x: 13.5, y: 216}
+        - {x: 6.5, y: 191}
+        - {x: 6.5, y: 175}
+        - {x: 17.5, y: 164}
+        - {x: 21.5, y: 164}
+        - {x: 24.5, y: 165}
+        - {x: 30.5, y: 182}
+        - {x: 30.5, y: 202}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

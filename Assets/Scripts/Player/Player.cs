@@ -8,13 +8,13 @@ using UnityEngine.SceneManagement;
 public class Player : CharacterBase {
 	public int _damage;
     public Vector2 Momentum { get; private set; }
-    public SpriteRenderer _gunObject;
+    public SpriteRenderer _gunObject, _shieldObject;
     public PlayerHeadController _headObject;
     public ItemBase CurrentItem { get; private set; }
-    public Room CurrentRoom { get; set; }
+	public Room CurrentRoom { get; set; }
+	public bool _invulnerable = false;
 
     private PlayerShootController _shootController;
-	private bool _invulnerable = false;
 
     public void Start() {
         _shootController = GetComponent<PlayerShootController>();
@@ -64,7 +64,7 @@ public class Player : CharacterBase {
     }
 
     IEnumerator DestroyItem(ItemBase item) {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3.5f);
         Destroy(item.gameObject);
     }
 

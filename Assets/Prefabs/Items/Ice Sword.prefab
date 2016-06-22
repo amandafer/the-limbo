@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5079232}
   - 256: {fileID: 25660392}
   - 61: {fileID: 6153874}
+  - 114: {fileID: 11494474}
   m_Layer: 13
   m_Name: Ice Sword
   m_TagString: Untagged
@@ -63,6 +64,22 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.6}
+--- !u!114 &11494474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a91ae2d12c94916b8e720a3a22a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnClip: {fileID: 0}
+  _pickUpClip: {fileID: 0}
+  MinSpawnPitch: 1.5
+  MaxSpawnPitch: 1.6
+  _isInstantEffect: 0
 --- !u!212 &21229570
 SpriteRenderer:
   m_ObjectHideFlags: 1

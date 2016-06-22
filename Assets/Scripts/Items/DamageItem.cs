@@ -6,7 +6,10 @@ namespace Assets.Scripts.Items {
 	public class DamageItem : ItemBase {
 		public int damageAddition;
 
-		private Room itemUsedRoom;
+		public override bool IsInstantlyDestroyedAfterUse
+		{
+			get { return false; }
+		}
 
 		public override bool UseItem(Player player) {
 			var tempDamage = player._damage + damageAddition;
@@ -18,11 +21,9 @@ namespace Assets.Scripts.Items {
 			}
 
 			player._damage += damageAddition;
-			itemUsedRoom = player.CurrentRoom;
-
 
 			if (this._isInstantEffect == false) {
-				StartCoroutine (temporaryAddDamage (player.CurrentRoom));
+				StartCoroutine (temporaryAddDamage (player));
 			} else {
 				ShowItemText ();
 			}
@@ -30,14 +31,14 @@ namespace Assets.Scripts.Items {
 			return true;
 		}
 
-		private IEnumerator temporaryAddDamage(Room currentRoom) {
-			var _currentRoom = currentRoom;
+		private IEnumerator temporaryAddDamage(Player player) {
+			var currentRoom = player.CurrentRoom;
 
-			while (_currentRoom == currentRoom) {
-				Debug.Log ("player current room = " + currentRoom.name);
+			while (player.CurrentRoom == currentRoom) {
 				yield return null;
 			}
-			//Destroy(gameObject);
+			Destroy(gameObject);
+			player._damage -= damageAddition;
 		}
 
 	}

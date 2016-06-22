@@ -7,13 +7,12 @@ using Random = UnityEngine.Random;
 
 public class FloorGenerator : MonoBehaviour {
 	public int numberOfRooms = 4, level = 1, maxLevels = 5;
-	public Room _firstRoom, _bossRoom;
+	public Room _firstRoom, _bossRoom, _devilRoom, _angelRoom;
 	public List<Room> _roomPrefabs = new List<Room>();
 	public List<GameObject> _obstacleLayouts = new List<GameObject>();
 	public const float HorizontalDelta = 14.5f;
 	public const float VerticalDelta = 10;
 
-	//private GameObject chosenCharacter = ;
 	private Player _playerPrefab = GlobalData.choosenCharacter;
 	private Enemy _enemyPrefab;
 	private float _branchingProbability = 0.6f;
@@ -94,9 +93,12 @@ public class FloorGenerator : MonoBehaviour {
 			coordinates = _floorGrid.GetCoordinatesForRoom(previousRoom);
 		}
 
-		// Boss room should not appear at the start room
-		//if (previousRoom._roomType != RoomType.StartRoom)
-			CreateBossRoom(previousRoom, coordinates);
+		// Boss room should not appear at the last level
+		if (level != maxLevels) {
+			CreateBossRoom (previousRoom, coordinates, RoomType.BossRoom);
+		} else {
+			
+		}	
 
 		if (!_floorGrid.GetValidDirectionsFromRoom(previousRoom).Any()) {
 			var validRooms = _floorGrid.Rooms.Where(
@@ -189,8 +191,7 @@ public class FloorGenerator : MonoBehaviour {
 		return previousRoom;
 	}
 
-	private void CreateBossRoom(Room previousRoom, RoomCoordinates coordinates)
-	{
+	private void CreateBossRoom(Room previousRoom, RoomCoordinates coordinates, RoomType roomType) {
 		//Debug.Log("Room before boss: "+ previousRoom.name);
 		var validDirections = _floorGrid.GetValidDirectionsFromRoom(coordinates.X, coordinates.Y).ToList();
 		if (!validDirections.Any()) {
@@ -198,17 +199,37 @@ public class FloorGenerator : MonoBehaviour {
 		}
 
 		var direction = validDirections.ElementAt(Random.Range(0, validDirections.Count()));
-		AddNewRoom(previousRoom, direction, DetermineNewCoordinates(direction, coordinates), RoomType.BossRoom);
+		AddNewRoom(previousRoom, direction, DetermineNewCoordinates(direction, coordinates), roomType);
+	}
+	/*
+	private void CreateDevilRoom(Room previousRoom, RoomCoordinates coordinates) {
+		//Debug.Log("Room before boss: "+ previousRoom.name);
+		var validDirections = _floorGrid.GetValidDirectionsFromRoom(coordinates.X, coordinates.Y).ToList();
+		if (!validDirections.Any()) {
+			throw new Exception("Failed to create boss room.");
+		}
+
+		var direction = validDirections.ElementAt(Random.Range(0, validDirections.Count()));
+		AddNewRoom(previousRoom, direction, DetermineNewCoordinates(direction, coordinates), RoomType.DevilRoom);
 	}
 
-	private static RoomDirection GetOppositeRoomDirection(RoomDirection direction)
-	{
+	private void CreateAngelRoom(Room previousRoom, RoomCoordinates coordinates) {
+		//Debug.Log("Room before boss: "+ previousRoom.name);
+		var validDirections = _floorGrid.GetValidDirectionsFromRoom(coordinates.X, coordinates.Y).ToList();
+		if (!validDirections.Any()) {
+			throw new Exception("Failed to create boss room.");
+		}
+
+		var direction = validDirections.ElementAt(Random.Range(0, validDirections.Count()));
+		AddNewRoom(previousRoom, direction, DetermineNewCoordinates(direction, coordinates), RoomType.AngelRoom);
+	}
+	*/
+	private static RoomDirection GetOppositeRoomDirection(RoomDirection direction) {
 		return (RoomDirection)(((int)direction + 2) % 4);
 	}
 
 	// Creates the room with coordinates and instantiate the enemies
-	private Room CreateRoom(Room previousRoom, RoomDirection direction, RoomType roomType = RoomType.NormalRoom)
-	{
+	private Room CreateRoom(Room previousRoom, RoomDirection direction, RoomType roomType = RoomType.NormalRoom) {
 		Room prefab;
 		// Type of the room
 		switch (roomType) {

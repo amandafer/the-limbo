@@ -213,7 +213,7 @@ namespace Assets.Scripts {
             }
 
             player.CurrentRoom = this;
-			Debug.Log("Player entered room: " + player.CurrentRoom);
+			//Debug.Log("Player entered room: " + player.CurrentRoom);
         }
     }
 }

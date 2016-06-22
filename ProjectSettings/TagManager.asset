@@ -11,6 +11,8 @@ TagManager:
   - Gun
   - NameItemText
   - EffectItemText
+  - LevelText
+  - Fire
   layers:
   - Default
   - TransparentFX

@@ -633,6 +633,19 @@ MonoBehaviour:
   _itemPrefabs:
   - {fileID: 11447226, guid: 8812b6b03f27c4a77a183816007bfb37, type: 2}
   - {fileID: 11405736, guid: 3b48b955dd8f542c4a6bd585b2439862, type: 2}
+  - {fileID: 11475448, guid: 56cea2501dc4b40f2a08ec754f53e893, type: 2}
+  - {fileID: 11463300, guid: 8eabe07094e68497db027d1f00d178ae, type: 2}
+  - {fileID: 11465962, guid: 04630a80c8a14435287bcd9f000180dd, type: 2}
+  - {fileID: 11404328, guid: 83815db5a45b442a5b83e2d0ab6361c4, type: 2}
+  - {fileID: 11494956, guid: 0c26351a0d71144b690d266112920964, type: 2}
+  - {fileID: 11429274, guid: bfa4925a3001342f8b5ce3dc164e3514, type: 2}
+  - {fileID: 11421838, guid: a61ac25b7b8cb41debf1fc9443bfbf67, type: 2}
+  - {fileID: 11447448, guid: 22a7b90d0a0be4037bf0ecfb8d62c15f, type: 2}
+  - {fileID: 11403952, guid: 0fc2627dcae51455d941a2627e2d2713, type: 2}
+  - {fileID: 11403336, guid: f0953d9edcb86482c83023d4128946b5, type: 2}
+  - {fileID: 11423894, guid: 86f6396f5bd1a4472bb0e1254ee2c5e8, type: 2}
+  - {fileID: 11494474, guid: dce832f297ee145ddb7707e56e18c733, type: 2}
+  - {fileID: 11444514, guid: 085005d79bfba4148bf0fe139579d9a5, type: 2}
   _spawnOnAwake: 0
 --- !u!114 &11477436
 MonoBehaviour:
