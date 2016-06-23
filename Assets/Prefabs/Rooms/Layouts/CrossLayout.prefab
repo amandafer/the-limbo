@@ -419,9 +419,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyLayouts:
-  - {fileID: 195158, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
   - {fileID: 144078, guid: d1855d5ee242f49d3ac3fb1b06a0501d, type: 2}
-  - {fileID: 190972, guid: 1ad76b0d8eaf54cf793beb3e2677828d, type: 2}
+  - {fileID: 195158, guid: 7c725462f0c534d14966e7f9dc9d4483, type: 2}
+  - {fileID: 137546, guid: e9ebb3d741ab34de3a3f4719394272fb, type: 2}
+  - {fileID: 170066, guid: 7787a3784d43e43fcb0d5e0b13cd3f9e, type: 2}
+  - {fileID: 138342, guid: 8655e7e82aa72469fb97cf2278d4d814, type: 2}
   - {fileID: 144510, guid: 7ce36569dca0e4d0b8087e12801cedee, type: 2}
   - {fileID: 116372, guid: 30b72c8fdc70b4a77a142043d22bf094, type: 2}
 --- !u!212 &21200002

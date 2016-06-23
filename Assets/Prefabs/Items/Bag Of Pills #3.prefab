@@ -79,7 +79,7 @@ MonoBehaviour:
   _pickUpClip: {fileID: 0}
   MinSpawnPitch: 1.5
   MaxSpawnPitch: 1.6
-  _isInstantEffect: 1
+  _isInstantEffect: 0
 --- !u!212 &21291858
 SpriteRenderer:
   m_ObjectHideFlags: 1
