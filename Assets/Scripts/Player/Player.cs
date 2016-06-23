@@ -47,7 +47,7 @@ public class Player : CharacterBase {
         if (!item._isInstantEffect) {
             if (CurrentItem != null) {
                 CurrentItem.transform.parent = transform.parent;
-                CurrentItem.transform.position = transform.position + new Vector3(1.0f, 0, 0);
+                CurrentItem.transform.position = transform.position + new Vector3(1.5f, 0, 0);
                 CurrentItem.Enable();
             }
 			//StartCoroutine(PlayPickUpAnimation(item));
