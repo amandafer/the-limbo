@@ -315,7 +315,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f35959ba1ea841dbb0e6895921f15d8, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1290580940
+--- !u!1001 &1475934632
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -354,6 +354,50 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 13102654, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: ec96f7509ae5b49a297e3b9074afeae9, type: 3}
+    - target: {fileID: 113882, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
+      propertyPath: m_Name
+      value: MusicPostIt
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1475934633 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 164880, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
+  m_PrefabInternal: {fileID: 1475934632}
+--- !u!1 &1475934634 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 137578, guid: ad1bf6a16d406f1488cb4568e6c4fc40, type: 2}
+  m_PrefabInternal: {fileID: 1475934632}
+--- !u!114 &1475934635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1475934633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a590288aad7c46bcada0506e42e0332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Texture: {fileID: 2800000, guid: 3a42cb755445b49ba80e485927c65ada, type: 3}
+  HoverTexture: {fileID: 2800000, guid: 8b0c570dfbc7742fd89c87b0b443eb37, type: 3}
+  ClickClip: {fileID: 0}
+--- !u!114 &1475934636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1475934634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734f1646f8eda49dc92ecfff0878370f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Texture: {fileID: 2800000, guid: 3d83ceebdb1f04508b6911ad35ab9175, type: 3}
+  HoverTexture: {fileID: 2800000, guid: fb31d8b0f1ca94ecc8b668d9da90ed17, type: 3}
+  ClickClip: {fileID: 0}

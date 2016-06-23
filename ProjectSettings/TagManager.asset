@@ -13,6 +13,7 @@ TagManager:
   - EffectItemText
   - LevelText
   - Fire
+  - ShowOnPause
   layers:
   - Default
   - TransparentFX
