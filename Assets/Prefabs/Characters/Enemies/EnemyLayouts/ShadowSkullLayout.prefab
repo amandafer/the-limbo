@@ -178,9 +178,6 @@ MonoBehaviour:
   _bulletCollideClips: []
   MinBulletCollidePitch: 0.9
   MaxBulletCollidePitch: 1.1
-  _shootDirection: {x: 0, y: 0}
-  _shooting: 0
-  _player: {fileID: 0}
   _boss: 0
   _canShoot: 1
   _explodes: 0
@@ -203,7 +200,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: fc26eeb75d2f5c9429045d1ab4d5456f, type: 2}
   - {fileID: 100000, guid: f41595ecfc921574f93cf2efa29b2e53, type: 2}
   _maxHealth: 0
-  _range: 8
+  _range: 4
   _takeDamageClips: []
   MinDamagedPitch: 1.5
   MaxDamagedPitch: 1.6
@@ -211,19 +208,10 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  ShouldMove: 0
-  Animator: {fileID: 0}
-  SpriteRenderer: {fileID: 0}
   _health: 4
-  _player: {fileID: 0}
-  _randomDirection: {x: 0, y: 0, z: 0}
-  _turning: 0
-  _jumping: 0
-  _inAir: 1
   _movementStyle: 5
   _wanderClipRepeatDelay: 0
   _wanderClip: {fileID: 0}
-  <OwnerRoom>k__BackingField: {fileID: 0}
 --- !u!114 &11455276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,9 +232,6 @@ MonoBehaviour:
   _bulletCollideClips: []
   MinBulletCollidePitch: 0.9
   MaxBulletCollidePitch: 1.1
-  _shootDirection: {x: 0, y: 0}
-  _shooting: 0
-  _player: {fileID: 0}
   _boss: 0
   _canShoot: 1
   _explodes: 0
@@ -269,7 +254,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: fc26eeb75d2f5c9429045d1ab4d5456f, type: 2}
   - {fileID: 100000, guid: f41595ecfc921574f93cf2efa29b2e53, type: 2}
   _maxHealth: 0
-  _range: 8
+  _range: 4
   _takeDamageClips: []
   MinDamagedPitch: 1.5
   MaxDamagedPitch: 1.6
@@ -277,19 +262,10 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
-  ShouldMove: 0
-  Animator: {fileID: 0}
-  SpriteRenderer: {fileID: 0}
   _health: 4
-  _player: {fileID: 0}
-  _randomDirection: {x: 0, y: 0, z: 0}
-  _turning: 0
-  _jumping: 0
-  _inAir: 1
   _movementStyle: 5
   _wanderClipRepeatDelay: 0
   _wanderClip: {fileID: 0}
-  <OwnerRoom>k__BackingField: {fileID: 0}
 --- !u!212 &21254274
 SpriteRenderer:
   m_ObjectHideFlags: 1

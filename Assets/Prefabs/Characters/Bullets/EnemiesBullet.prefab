@@ -74,8 +74,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff44dd721a704243b4213e956b5bf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8
-  _shooter: {fileID: 0}
+  playerRange: 0
+  enemyRange: 0
 --- !u!212 &21282192
 SpriteRenderer:
   m_ObjectHideFlags: 1

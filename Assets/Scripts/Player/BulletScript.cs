@@ -4,10 +4,11 @@ using System.Collections;
 using Assets.Scripts;
 
 public class BulletScript : MonoBehaviour {
-    public float range;
+	public float playerRange, enemyRange;
 
 	private bool _isFading;
 	private Vector2 _start;
+	private GameObject player;
 	private GameObject _shooter;
 	public GameObject Shooter {
 		set { _shooter = value; }
@@ -17,7 +18,7 @@ public class BulletScript : MonoBehaviour {
 	// Bullet collides with something and handles health
     public void OnCollisionEnter2D(Collision2D collision) {
         GameObject characterAttacked = collision.gameObject;
-		GameObject player = GameObject.FindWithTag("Player");
+		player = GameObject.FindWithTag("Player");
 		ShootControllerBase shootController = player.GetComponent<PlayerShootController>();
 
 		if (characterAttacked.CompareTag("Enemy") && _shooter.Equals(player)) {
@@ -47,12 +48,15 @@ public class BulletScript : MonoBehaviour {
 
 		if (_shooter.CompareTag("Enemy")) {
 			transform.gameObject.layer = LayerMask.NameToLayer("Enemy bullet");
+			var enemy = GameObject.FindWithTag ("Enemy");
+			var enemyComponent = enemy.GetComponent<Enemy> ();
+			enemyRange = enemyComponent._range;
 		}
 		_start = new Vector2(transform.position.x, transform.position.y);
         
-		var p = GameObject.FindWithTag("Player");
-        var pc = p.GetComponent<Player>();
-        range = pc._range;
+		player = GameObject.FindWithTag("Player");
+		var playerComponent = player.GetComponent<Player>();
+		playerRange = playerComponent._range;
     }
 
 
@@ -75,6 +79,12 @@ public class BulletScript : MonoBehaviour {
 	public void Update () {
 	    var xDistance = Mathf.Abs(_start.x - transform.position.x);
 	    var yDistance = Mathf.Abs(_start.y - transform.position.y);
+		float range;
+
+		if (_shooter.Equals (player))
+			range = playerRange;
+		else
+			range = enemyRange;
 
 	    if (!_isFading && (xDistance > range*0.8 || yDistance > range*0.8)) {
 	        _isFading = true;

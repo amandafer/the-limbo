@@ -176,7 +176,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: fc26eeb75d2f5c9429045d1ab4d5456f, type: 2}
   - {fileID: 100000, guid: f41595ecfc921574f93cf2efa29b2e53, type: 2}
   _maxHealth: 0
-  _range: 8
+  _range: 4
   _takeDamageClips: []
   MinDamagedPitch: 1.5
   MaxDamagedPitch: 1.6
@@ -206,7 +206,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: fc26eeb75d2f5c9429045d1ab4d5456f, type: 2}
   - {fileID: 100000, guid: f41595ecfc921574f93cf2efa29b2e53, type: 2}
   _maxHealth: 0
-  _range: 8
+  _range: 4
   _takeDamageClips: []
   MinDamagedPitch: 1.5
   MaxDamagedPitch: 1.6
