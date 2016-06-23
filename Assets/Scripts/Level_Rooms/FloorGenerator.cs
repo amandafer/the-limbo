@@ -273,17 +273,46 @@ public class FloorGenerator : MonoBehaviour {
 			var enemies = enemyLayout.GetComponentsInChildren<Enemy> ().ToList ();
 			enemies.ForEach (e => room.AddEnemy (e, e.transform.position));
 		} else if (roomType == RoomType.NormalRoom ) {
+			// Adds a random layout to the room
 			var obstacleLayout = (GameObject)Instantiate(_obstacleLayouts.ElementAt(Random.Range(0, _obstacleLayouts.Count)));
 			obstacleLayout.transform.parent = room.transform;
 			obstacleLayout.transform.localPosition = Vector3.zero;
 
 			// Add enemies for rooms type normal
 			var enemyLayouts = obstacleLayout.GetComponent<EnemyLayout>().EnemyLayouts;
+			/* This will check the level and read the array of enemies
+			 * It will help to set the number of enemies in a room per level
+			 */ 
+			int startArrayFrom = 0, endArrayAt = enemyLayouts.Count;
+			switch (level) {
+			case (1):
+				startArrayFrom = 0;
+				endArrayAt = 6;
+				break;
+			case (2):
+				startArrayFrom = 0;
+				endArrayAt = 9;
+				break;
+			case (3):
+				startArrayFrom = 1;
+				endArrayAt = 9;
+				break;
+			case (4):
+				startArrayFrom = 1;
+				endArrayAt = 13;
+				break;
+			case (5):
+				startArrayFrom = 7;
+				endArrayAt = 15;
+				break;
+			default:
+				break;
+			}
 
 			if (enemyLayouts.Count == 0)
 				Debug.Log ("Empty list of enemies");
 			else {
-				var enemyLayout = (GameObject)Instantiate (enemyLayouts.ElementAt (Random.Range(0, enemyLayouts.Count)));
+				var enemyLayout = (GameObject)Instantiate (enemyLayouts.ElementAt (Random.Range(startArrayFrom, endArrayAt)));
 				//enemyLayout.transform.localPosition = Vector3.zero;
 				enemyLayout.transform.parent = room.transform;
 				var enemies = enemyLayout.GetComponentsInChildren<Enemy> ().ToList ();

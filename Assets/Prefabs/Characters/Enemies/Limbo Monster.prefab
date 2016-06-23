@@ -16,7 +16,7 @@ GameObject:
   - 50: {fileID: 5077336}
   - 256: {fileID: 25682464}
   m_Layer: 10
-  m_Name: Limbo Monster1
+  m_Name: Limbo Monster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2, y: 2.58, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,9 +103,13 @@ MonoBehaviour:
   _bulletCollideClips: []
   MinBulletCollidePitch: 0.9
   MaxBulletCollidePitch: 1.1
+  _shootDirection: {x: 0, y: 0}
+  _shooting: 0
+  _player: {fileID: 0}
   _boss: 0
   _canShoot: 1
   _explodes: 0
+  _shootSpeedVaries: 0
 --- !u!114 &11469804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,10 +136,19 @@ MonoBehaviour:
   MinDiePitch: 1
   MaxDiePitch: 1
   _mirrorAnimation: 0
+  ShouldMove: 0
+  Animator: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
   _health: 8
+  _player: {fileID: 0}
+  _randomDirection: {x: 0, y: 0, z: 0}
+  _turning: 0
+  _jumping: 0
+  _inAir: 1
   _movementStyle: 0
   _wanderClipRepeatDelay: 0
   _wanderClip: {fileID: 0}
+  <OwnerRoom>k__BackingField: {fileID: 0}
 --- !u!212 &21271340
 SpriteRenderer:
   m_ObjectHideFlags: 1

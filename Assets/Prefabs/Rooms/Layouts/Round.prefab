@@ -804,6 +804,15 @@ MonoBehaviour:
   - {fileID: 138342, guid: 8655e7e82aa72469fb97cf2278d4d814, type: 2}
   - {fileID: 144510, guid: 7ce36569dca0e4d0b8087e12801cedee, type: 2}
   - {fileID: 116372, guid: 30b72c8fdc70b4a77a142043d22bf094, type: 2}
+  - {fileID: 126480, guid: 7279705a090bb41d98adecad7e6bf345, type: 2}
+  - {fileID: 193870, guid: 0faa82df5e5f0467d855073adb433699, type: 2}
+  - {fileID: 134308, guid: bc3d5fadb629f46e6a8b4dcce8ebf3dd, type: 2}
+  - {fileID: 140860, guid: 3c0142b5975a34b3386416aec73baf61, type: 2}
+  - {fileID: 162310, guid: e8cb587c432604854a73d797f4ee2e38, type: 2}
+  - {fileID: 175990, guid: c4d0111f37d1e4c66bc343b8e418c174, type: 2}
+  - {fileID: 188404, guid: 54cca836df25a44a7a2bdd88d8439843, type: 2}
+  - {fileID: 196886, guid: d46b52a17fa02405ebfba51d852b9b3c, type: 2}
+  - {fileID: 155588, guid: a5ed42beea30847d7a4d90c0b7f92c02, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
