@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6, y: -1.5, z: 0}
+  m_LocalPosition: {x: 3.26, y: -2.23, z: 0}
   m_LocalScale: {x: 0.5221582, y: 0.53490055, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3612456, y: 0, z: 0}
+  m_LocalPosition: {x: -6.3612456, y: 2.5, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -112,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 1.6, z: 0}
+  m_LocalPosition: {x: 3.19, y: 2.41, z: -0}
   m_LocalScale: {x: 0.5221582, y: 0.53490055, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -527,7 +527,7 @@ FrictionJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -3.5, y: 1.6}
+  m_ConnectedAnchor: {x: -4.09, y: 2.41}
   m_MaxForce: 1
   m_MaxTorque: 1
 --- !u!256 &25617874
@@ -544,7 +544,7 @@ FrictionJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -3.5, y: -1.5}
+  m_ConnectedAnchor: {x: -4.16, y: -2.23}
   m_MaxForce: 1
   m_MaxTorque: 1
 --- !u!1001 &100100000
