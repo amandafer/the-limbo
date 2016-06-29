@@ -23,7 +23,7 @@ public class BulletScript : MonoBehaviour {
 
 		if (characterAttacked.CompareTag("Enemy") && _shooter.Equals(player)) {
 			int damage = player.GetComponent<Player>()._damage;
-			int actualDamage = 1 + (damage / 5);
+			int actualDamage = 1 + (damage / 2);
 
 			characterAttacked.GetComponentInParent<Enemy>().Health -= actualDamage;
 		} else if (characterAttacked.CompareTag("Player") && !_shooter.Equals(player)) {

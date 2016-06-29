@@ -21,7 +21,7 @@ public class LevelSwitchDoor : MonoBehaviour {
 		floorGenerator = GameObject.FindGameObjectWithTag ("GameController").GetComponent<FloorGenerator> ();
 		floorGenerator.numberOfRooms += 2;
 		floorGenerator.level += 1;
-		Debug.Log (floorGenerator.level);
+		//Debug.Log (floorGenerator.level);
 
 		var r = floorGenerator._roomPrefabs.First ();
 		r.transform.position = new Vector3 (0, 0f, 0);

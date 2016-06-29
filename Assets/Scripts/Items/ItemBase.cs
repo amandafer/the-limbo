@@ -61,7 +61,7 @@ namespace Assets.Scripts {
 				effectItemText.enabled = true;
 				effectItemText.text = this.GetComponent<GUIText> ().text;
 
-				yield return new WaitForSeconds (1.3f);
+				yield return new WaitForSeconds (1.5f);
 				nameItemText.GetComponent<GUIText> ().enabled = false;
 				effectItemText.GetComponent<GUIText> ().enabled = false;
 			}

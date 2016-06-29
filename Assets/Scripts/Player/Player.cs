@@ -46,11 +46,20 @@ public class Player : CharacterBase {
     public void OnPickUp(ItemBase item) {      
         if (!item._isInstantEffect) {
             if (CurrentItem != null) {
-                CurrentItem.transform.parent = transform.parent;
+				CurrentItem.transform.parent = CurrentRoom.transform;
+				/*
+				var newPosition = transform.position + new Vector3(1.5f, 0, 0);
+				if (newPosition.x < -4.7) {
+					newPosition = transform.position + new Vector3 (1.5f, 0, 0);
+				} else if (newPosition.x > 4.6) {
+					newPosition = transform.position + new Vector3(-1.5f, 0, 0);
+				}
+				*/
                 CurrentItem.transform.position = transform.position + new Vector3(1.5f, 0, 0);
                 CurrentItem.Enable();
             }
 			//StartCoroutine(PlayPickUpAnimation(item));
+			item.transform.parent = transform.parent;
 			item.Disable();
             CurrentItem = item;
         } else {

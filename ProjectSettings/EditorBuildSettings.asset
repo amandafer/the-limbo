@@ -10,4 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/ChooseCharacter.unity
   - enabled: 1
+    path: Assets/_Scenes/CutScene1.unity
+  - enabled: 1
     path: Assets/_Scenes/ProceduralGeneration.unity
