@@ -9,6 +9,7 @@ public class BulletScript : MonoBehaviour {
 	private bool _isFading;
 	private Vector2 _start;
 	private GameObject player;
+	private GameObject enemy;
 	private GameObject _shooter;
 	public GameObject Shooter {
 		set { _shooter = value; }
@@ -48,9 +49,7 @@ public class BulletScript : MonoBehaviour {
 
 		if (_shooter.CompareTag("Enemy")) {
 			transform.gameObject.layer = LayerMask.NameToLayer("Enemy bullet");
-			var enemy = GameObject.FindWithTag ("Enemy");
-			var enemyComponent = enemy.GetComponent<Enemy> ();
-			enemyRange = enemyComponent._range;
+			enemy = GameObject.FindWithTag ("Enemy");
 		}
 		_start = new Vector2(transform.position.x, transform.position.y);
         
@@ -80,6 +79,8 @@ public class BulletScript : MonoBehaviour {
 	    var xDistance = Mathf.Abs(_start.x - transform.position.x);
 	    var yDistance = Mathf.Abs(_start.y - transform.position.y);
 		float range;
+		var enemyComponent = enemy.GetComponent<Enemy> ();
+		enemyRange = enemyComponent._range;
 
 		if (_shooter.Equals (player))
 			range = playerRange;

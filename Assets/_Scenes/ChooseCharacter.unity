@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71704968440940769b098744cb9a38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movieclips: {fileID: 15200000, guid: 3ea5be5bf76b54c2980c4e17f27ce1f4, type: 3}
 --- !u!82 &4091175
 AudioSource:
   m_ObjectHideFlags: 0
@@ -512,7 +511,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1066400317}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9a2ea9917cc0c44a68532896e5b28042, type: 3}
