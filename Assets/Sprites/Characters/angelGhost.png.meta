@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: 5376e251148a949b48230871c7c1be4b
+timeCreated: 1467275460
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: angelGhost_0
+    21300002: angelGhost_1
+    21300004: angelGhost_2
+    21300006: angelGhost_3
+    21300008: angelGhost_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: angelGhost_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: -145}
+        - {x: -77, y: -155}
+        - {x: -77, y: -185}
+        - {x: -62, y: -208}
+        - {x: -35, y: -208}
+        - {x: -33, y: -189}
+        - {x: -33, y: -149}
+        - {x: -38, y: -145}
+      - - {x: 113, y: 55}
+        - {x: 112, y: 67}
+        - {x: 91, y: 128}
+        - {x: 57, y: 147}
+        - {x: -35, y: 147}
+        - {x: -71, y: 137}
+        - {x: -86, y: 127}
+        - {x: -109, y: 57}
+        - {x: -118, y: 5}
+        - {x: -118, y: -57}
+        - {x: -62, y: -144}
+        - {x: -31, y: -159}
+        - {x: -26, y: -162}
+        - {x: -6, y: -162}
+        - {x: 5, y: -160}
+        - {x: 51, y: -119}
+        - {x: 102, y: -79}
+        - {x: 113, y: -58}
+    - name: angelGhost_1
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 113, y: 55}
+        - {x: 112, y: 67}
+        - {x: 85, y: 124}
+        - {x: 72, y: 137}
+        - {x: 46, y: 146}
+        - {x: 33, y: 147}
+        - {x: -35, y: 147}
+        - {x: -71, y: 137}
+        - {x: -86, y: 127}
+        - {x: -109, y: 57}
+        - {x: -118, y: 3}
+        - {x: -118, y: -51}
+        - {x: -108, y: -70}
+        - {x: -76, y: -103}
+        - {x: -33, y: -129}
+        - {x: -25, y: -162}
+        - {x: 3, y: -162}
+        - {x: 27, y: -143}
+        - {x: 99, y: -77}
+        - {x: 113, y: -58}
+    - name: angelGhost_2
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 113, y: 55}
+        - {x: 112, y: 67}
+        - {x: 85, y: 124}
+        - {x: 72, y: 137}
+        - {x: 46, y: 146}
+        - {x: 33, y: 147}
+        - {x: -35, y: 147}
+        - {x: -71, y: 137}
+        - {x: -86, y: 127}
+        - {x: -109, y: 57}
+        - {x: -118, y: 3}
+        - {x: -118, y: -51}
+        - {x: -108, y: -70}
+        - {x: -76, y: -103}
+        - {x: -33, y: -129}
+        - {x: -25, y: -162}
+        - {x: 3, y: -162}
+        - {x: 27, y: -143}
+        - {x: 99, y: -77}
+        - {x: 113, y: -58}
+    - name: angelGhost_3
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -76, y: -186}
+        - {x: -75, y: -192}
+        - {x: -62, y: -204}
+        - {x: -50, y: -208}
+        - {x: -32, y: -208}
+        - {x: -32, y: -145}
+        - {x: -63, y: -145}
+        - {x: -76, y: -153}
+      - - {x: 113, y: 68}
+        - {x: 91, y: 128}
+        - {x: 57, y: 147}
+        - {x: -35, y: 147}
+        - {x: -71, y: 137}
+        - {x: -86, y: 127}
+        - {x: -109, y: 57}
+        - {x: -118, y: 3}
+        - {x: -118, y: -51}
+        - {x: -108, y: -70}
+        - {x: -77, y: -104}
+        - {x: -29, y: -134}
+        - {x: -30, y: -161}
+        - {x: -26, y: -162}
+        - {x: -1, y: -162}
+        - {x: 18, y: -153}
+        - {x: 77, y: -102}
+        - {x: 113, y: -63}
+    - name: angelGhost_4
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: -145}
+        - {x: -76, y: -152}
+        - {x: -76, y: -186}
+        - {x: -66, y: -208}
+        - {x: -41, y: -208}
+        - {x: -32, y: -189}
+        - {x: -32, y: -155}
+        - {x: -37, y: -145}
+      - - {x: 112, y: 67}
+        - {x: 91, y: 128}
+        - {x: 57, y: 147}
+        - {x: -35, y: 147}
+        - {x: -71, y: 137}
+        - {x: -86, y: 127}
+        - {x: -109, y: 57}
+        - {x: -118, y: 3}
+        - {x: -118, y: -51}
+        - {x: -107, y: -69}
+        - {x: -78, y: -117}
+        - {x: -54, y: -140}
+        - {x: -7, y: -147}
+        - {x: 13, y: -156}
+        - {x: 41, y: -156}
+        - {x: 87, y: -103}
+        - {x: 113, y: -61}
+        - {x: 113, y: 44}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: acc03144669814c038fd1682a371e064
+timeCreated: 1467275470
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: devilGhost_0
+    21300002: devilGhost_1
+    21300004: devilGhost_2
+    21300006: devilGhost_3
+    21300008: devilGhost_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: devilGhost_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: -145}
+        - {x: -77, y: -155}
+        - {x: -77, y: -185}
+        - {x: -62, y: -208}
+        - {x: -35, y: -208}
+        - {x: -33, y: -189}
+        - {x: -33, y: -149}
+        - {x: -38, y: -145}
+      - - {x: 59, y: 206}
+        - {x: 52, y: 187}
+        - {x: 79, y: 169}
+        - {x: 83, y: 179}
+        - {x: 88, y: 161}
+        - {x: -2, y: 217}
+        - {x: -132, y: 217}
+        - {x: -134, y: 216}
+        - {x: -134, y: 25}
+        - {x: -97, y: -125}
+        - {x: -39, y: -149}
+        - {x: -34, y: -126}
+        - {x: -37, y: -122}
+        - {x: -26, y: -135}
+        - {x: -29, y: -152}
+        - {x: -31, y: -162}
+        - {x: 10, y: -162}
+        - {x: 79, y: -124}
+        - {x: 130, y: -40}
+        - {x: 130, y: 217}
+        - {x: 79, y: 217}
+        - {x: 73, y: 214}
+    - name: devilGhost_1
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 129, y: 217}
+        - {x: 81, y: 217}
+        - {x: 58, y: 208}
+        - {x: 52, y: 187}
+        - {x: 79, y: 169}
+        - {x: 83, y: 179}
+        - {x: 88, y: 161}
+        - {x: 27, y: 129}
+        - {x: -49, y: 122}
+        - {x: -48, y: 200}
+        - {x: -66, y: 212}
+        - {x: -105, y: 217}
+        - {x: -114, y: 217}
+        - {x: -134, y: 197}
+        - {x: -134, y: 72}
+        - {x: -90, y: -22}
+        - {x: -26, y: -162}
+        - {x: 22, y: -162}
+        - {x: 106, y: 2}
+        - {x: 130, y: 55}
+        - {x: 130, y: 210}
+    - name: devilGhost_2
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -76}
+        - {x: 48, y: -101}
+        - {x: 65, y: -98}
+        - {x: 123, y: 29}
+        - {x: 130, y: 52}
+        - {x: 130, y: 205}
+        - {x: 115, y: 217}
+        - {x: 67, y: 217}
+        - {x: 59, y: 206}
+        - {x: 52, y: 187}
+        - {x: 79, y: 169}
+        - {x: 83, y: 179}
+        - {x: 88, y: 161}
+        - {x: -10, y: 217}
+        - {x: -122, y: 217}
+        - {x: -134, y: 185}
+        - {x: -134, y: 42}
+        - {x: -33, y: -162}
+        - {x: 0, y: -162}
+        - {x: 13, y: -156}
+        - {x: 25, y: -141}
+        - {x: 34, y: -127}
+        - {x: 31, y: -93}
+    - name: devilGhost_3
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -76, y: -186}
+        - {x: -75, y: -192}
+        - {x: -62, y: -204}
+        - {x: -50, y: -208}
+        - {x: -32, y: -208}
+        - {x: -32, y: -145}
+        - {x: -63, y: -145}
+        - {x: -76, y: -153}
+      - - {x: -43, y: -73}
+        - {x: -43, y: -116}
+        - {x: -27, y: -162}
+        - {x: 2, y: -162}
+        - {x: 31, y: -153}
+        - {x: 31, y: -75}
+        - {x: 21, y: -73}
+      - - {x: 82, y: 217}
+        - {x: 73, y: 214}
+        - {x: 59, y: 206}
+        - {x: 52, y: 187}
+        - {x: 79, y: 169}
+        - {x: 83, y: 179}
+        - {x: 88, y: 161}
+        - {x: -6, y: 217}
+        - {x: -134, y: 217}
+        - {x: -134, y: 7}
+        - {x: -91, y: -53}
+        - {x: 66, y: -53}
+        - {x: 122, y: -32}
+        - {x: 130, y: 33}
+        - {x: 130, y: 195}
+        - {x: 115, y: 217}
+    - name: devilGhost_4
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 0
+        width: 714
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: -145}
+        - {x: -76, y: -152}
+        - {x: -76, y: -186}
+        - {x: -66, y: -208}
+        - {x: -41, y: -208}
+        - {x: -32, y: -189}
+        - {x: -32, y: -155}
+        - {x: -37, y: -145}
+      - - {x: 127, y: 217}
+        - {x: 82, y: 217}
+        - {x: 73, y: 214}
+        - {x: 59, y: 206}
+        - {x: 52, y: 187}
+        - {x: 79, y: 169}
+        - {x: 83, y: 179}
+        - {x: 88, y: 161}
+        - {x: -49, y: 122}
+        - {x: -48, y: 200}
+        - {x: -66, y: 212}
+        - {x: -105, y: 217}
+        - {x: -114, y: 217}
+        - {x: -134, y: 197}
+        - {x: -134, y: 73}
+        - {x: -86, y: -18}
+        - {x: -95, y: -123}
+        - {x: -14, y: -156}
+        - {x: 47, y: -156}
+        - {x: 126, y: 28}
+        - {x: 130, y: 40}
+        - {x: 130, y: 202}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
