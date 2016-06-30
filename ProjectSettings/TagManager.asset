@@ -15,6 +15,7 @@ TagManager:
   - Fire
   - ShowOnPause
   - cutscene
+  - UI
   layers:
   - Default
   - TransparentFX

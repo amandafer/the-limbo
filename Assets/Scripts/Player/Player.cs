@@ -67,7 +67,7 @@ public class Player : CharacterBase {
 
 			if (usedItem) {
 				item.Disable ();
-				StartCoroutine (DestroyItem (item));
+				//StartCoroutine (DestroyItem (item));
 			}
         }
     }
