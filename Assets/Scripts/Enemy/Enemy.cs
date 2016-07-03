@@ -154,8 +154,12 @@ public class Enemy : CharacterBase {
     protected override void Die() {
         base.Die();
         OwnerRoom.OnEnemyDied(this);
-        Disable();
-        StartCoroutine(ReallyDie());
+
+		int level = GameObject.FindGameObjectWithTag ("GameController").GetComponent<FloorGenerator> ().level;
+		if (level != 5 || OwnerRoom._roomType == RoomType.NormalRoom) {
+			Disable ();
+			StartCoroutine (ReallyDie ());
+		}
     }
 
     IEnumerator ReallyDie() {
@@ -167,8 +171,12 @@ public class Enemy : CharacterBase {
 		gameObject.GetComponent<CircleCollider2D>().enabled = false;
         float t = gameObject.GetComponent<EnemyShootController>()._boss ? 1.1f : 0.7f;
         gameObject.GetComponent<EnemyShootController>().enabled = false;
-        yield return new WaitForSeconds(t);
-        Destroy(gameObject);
+        
+		//int level = GameObject.FindGameObjectWithTag ("GameController").GetComponent<FloorGenerator> ().level;
+		//if (level != 5 || OwnerRoom._roomType == RoomType.NormalRoom) {
+			yield return new WaitForSeconds (t);
+			Destroy (gameObject);
+		//}
     }
 
 	private void Flying() {
@@ -295,7 +303,7 @@ public class Enemy : CharacterBase {
 
 	public void Disable(Room room = null) {
 		if (room != null)
-			OwnerRoom =room;
+			OwnerRoom = room;
 		GetComponents<MonoBehaviour>().ToList().ForEach(e => e.enabled = false);
         GetComponent<CircleCollider2D>().enabled = true;
 	}

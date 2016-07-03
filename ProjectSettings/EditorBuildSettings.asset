@@ -13,3 +13,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/CutScene1.unity
   - enabled: 1
     path: Assets/_Scenes/ProceduralGeneration.unity
+  - enabled: 1
+    path: Assets/_Scenes/CutSceneFinal1.unity
+  - enabled: 1
+    path: Assets/_Scenes/CutSceneFinal2.unity

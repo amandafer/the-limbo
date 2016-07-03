@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Texture: {fileID: 2800000, guid: b89dee41dc3d04d7696e53ba9777bd99, type: 3}
   HoverTexture: {fileID: 2800000, guid: 2dbc25b8e9da64f88be6f80f3b94d441, type: 3}
-  ClickClip: {fileID: 79424018}
+  ClickClip: {fileID: 0}
 --- !u!1 &418691557
 GameObject:
   m_ObjectHideFlags: 0

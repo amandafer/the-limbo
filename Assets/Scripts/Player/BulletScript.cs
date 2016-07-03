@@ -84,7 +84,7 @@ public class BulletScript : MonoBehaviour {
 			range = playerRange;
 		else {
 			range = enemy._range;
-			Debug.Log (enemy._range);
+			//Debug.Log (enemy._range);
 		}
 
 	    if (!_isFading && (xDistance > range*0.8 || yDistance > range*0.8)) {

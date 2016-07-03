@@ -8,6 +8,7 @@ using UnityEngine;
 namespace Assets.Scripts {
     public class Room : MonoBehaviour {
 		public int X, Y;
+		public bool lastBossDefeated = false;
 		public bool IsVisibleOnMap { get; set; }
 		public bool PlayerHasVisited { get; private set; }
 		public Door NorthDoor, SouthDoor, EastDoor, WestDoor, _doorPrefab, _bossDoorPrefab;
@@ -153,36 +154,60 @@ namespace Assets.Scripts {
 
 
 		public void OnEnemyDied(Enemy enemy) {
-			_enemies.Remove(enemy);
-			floorGenerator = GameObject.FindGameObjectWithTag("GameController").GetComponent<FloorGenerator>();
+			floorGenerator = GameObject.FindGameObjectWithTag ("GameController").GetComponent<FloorGenerator> ();
+			var audioSources = GameObject.FindGameObjectWithTag ("MainCamera").GetComponents<AudioSource> ();
 
-            if (!ContainsEnemies) {
-                _doors.ForEach(d => d.IsOpen = true);
-				var doorOpenClip = _doors.First()._doorOpenClip;
+			if (floorGenerator.level < floorGenerator.maxLevels || _roomType == RoomType.NormalRoom) {
+				_enemies.Remove (enemy);
 
-				if (doorOpenClip != null) {
-					doorOpenClip.Play();
-				}
+				if (!ContainsEnemies) {
+					_doors.ForEach (d => d.IsOpen = true);
+					var doorOpenClip = _doors.First ()._doorOpenClip;
 
-				if (_roomType != RoomType.NormalRoom) {
-					Destroy(_bossBar);
+					if (doorOpenClip != null) {
+						doorOpenClip.Play ();
+					}
 
-                    var audioSources = GameObject.FindGameObjectWithTag("MainCamera").GetComponents<AudioSource>();
-                    audioSources.ElementAt(1).Stop();
-                    audioSources.ElementAt(2).Play();
-                    audioSources.ElementAt(0).PlayDelayed(9.629f);
+					if (_roomType != RoomType.NormalRoom) {
+						Destroy (_bossBar);
+
+						audioSources.ElementAt (1).Stop ();
+						audioSources.ElementAt (2).Play ();
+						audioSources.ElementAt (0).PlayDelayed (9.629f);
                     
-					// Level door is only opened if it is not the last level
-					if (floorGenerator.level < floorGenerator.maxLevels) {
 						var levelDoor = (LevelSwitchDoor)Instantiate (_levelSwitchDoorPrefab);
 						levelDoor.transform.parent = transform;
 						levelDoor.transform.localPosition = levelDoor.transform.position;
 					}
-                }
-                
-                SpawnItem();
-            }
+					SpawnItem ();
+				}
+			} else if ((_roomType == RoomType.AngelRoom) || (_roomType == RoomType.DevilRoom)) {
+				Destroy (_bossBar);
+				audioSources.ElementAt (1).Stop ();
+				audioSources.ElementAt (2).Play ();
+				audioSources.ElementAt (0).PlayDelayed (9.629f);
+
+				// Disable player
+				GameObject player = GameObject.FindGameObjectWithTag ("Player");
+				player.GetComponent<Player> ().enabled = false;
+				player.GetComponent<PlayerShootController> ().enabled = false;
+				player.GetComponent<Rigidbody2D> ().isKinematic = true;
+				player.GetComponent<Animator>().Play ("Idle");
+
+				// Enemy goes to players direction
+				//enemy.GetComponent<Enemy> ().enabled = true;
+				enemy.GetComponent<EnemyShootController> ().enabled = false;
+				enemy.GetComponent<Animator> ().Play ("Dead");
+				lastBossDefeated = true;
+				StartCoroutine(ghostTowardsPlayer(enemy));
+			}
         }
+
+		IEnumerator ghostTowardsPlayer (Enemy enemy) {
+			yield return new WaitForSeconds (1.2f);
+			enemy.Health = 1;
+			enemy.MovementStyle = MovementStyle.TowardsPlayer;
+		}
 
 		// Spawn items after enemies die
         private void SpawnItem() {

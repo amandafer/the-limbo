@@ -38,10 +38,23 @@ public class Player : CharacterBase {
 
     public void OnCollisionEnter2D(Collision2D collision) {
 		// The player loses HP with it collides with the enemy or a game object that contains the name Bullet
-		if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.name.Contains("Bullet") ) {
+		if (collision.gameObject.CompareTag("Enemy") && (CurrentRoom.lastBossDefeated == true)) {
+			Destroy (collision.gameObject);
+			StartCoroutine(nextScene());
+		} else if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.name.Contains("Bullet") ) {
             Health--;
-        }
+		}
     }
+
+	IEnumerator nextScene() {
+		yield return new WaitForSeconds (0.2f);
+
+		if (CurrentRoom._roomType == RoomType.AngelRoom) {
+			SceneManager.LoadScene ("CutsceneFinal1");
+		} else if (CurrentRoom._roomType == RoomType.DevilRoom) {
+			SceneManager.LoadScene ("CutsceneFinal2");
+		}
+	}
 
     public void OnPickUp(ItemBase item) {      
         if (!item._isInstantEffect) {
