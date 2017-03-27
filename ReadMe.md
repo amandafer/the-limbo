@@ -7,14 +7,14 @@
 *The Limbo is a game based on Binding of Isacc. It was developed using Unity 3D and the characters designed using Inkscape.*
 
 ### Table of Contents
-1. [Introduction](#introduction-)
-  1. [How to Play](#download-)
-  2. [About](#about-)
-2. [Characters](#characters-)
-  1. [Main Characters](#main-characters-)
-  2. [Bosses](#bosses-)
-  3. [Enemies](#enemies-)
-3. [Items](#items)
+- [Introduction](#introduction-)
+  * [How to Play](#download-)
+  * [About](#about-)
+- [Characters](#characters-)
+  * [Main Characters](#main-characters-)
+  * [Bosses](#bosses-)
+  * [Enemies](#enemies-)
+- [Items](#items)
 
 ### Introduction <a name="introduction"></a>
 #### How to Play <a name="download"></a>
